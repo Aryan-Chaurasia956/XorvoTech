@@ -1,0 +1,177 @@
+@import url('https://fonts.cdnfonts.com/css/rostex');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Custom Theme - #473472, #53629E, #87BAC3, #D6F4ED */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 260 36% 36%; /* #473472 - Dark Purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 228 32% 47%; /* #53629E - Medium Blue-Purple */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 194 41% 91%; /* #D6F4ED - Light Mint */
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 228 32% 47%; /* #53629E - Medium Blue-Purple */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 194 41% 91%; /* #D6F4ED */
+    --input: 194 41% 91%;
+    --ring: 228 32% 47%; /* #53629E */
+
+    --radius: 0.5rem;
+    
+    /* Custom theme gradients */
+    --card-gradient: linear-gradient(135deg, hsl(0 0% 100% / 0.9) 0%, hsl(194 41% 95% / 0.95) 100%);
+    --glow-accent: 228 32% 47%; /* #53629E */
+    --glow-blue: 194 28% 65%; /* #87BAC3 */
+    --glow-cyan: 194 41% 91%; /* #D6F4ED */
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Sophos Dark Mode (same as root for consistency) */
+    --background: 210 100% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 210 95% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 210 95% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 206 66% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 90% 18%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 70% 15%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 180 50% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 60% 20%;
+    --input: 210 80% 15%;
+    --ring: 206 66% 25%;
+    --sidebar-background: 210 95% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 206 66% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 90% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 210 60% 18%;
+    --sidebar-ring: 206 66% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  /* Pause animation on hover */
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Custom theme glowing effects - #53629E, #87BAC3 */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(83, 98, 158, 0.3), 0 0 40px rgba(83, 98, 158, 0.15);
+  }
+  
+  .glow-blue-strong {
+    box-shadow: 0 0 30px rgba(83, 98, 158, 0.5), 0 0 60px rgba(83, 98, 158, 0.3), 0 0 90px rgba(83, 98, 158, 0.15);
+  }
+  
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(135, 186, 195, 0.3), 0 0 40px rgba(135, 186, 195, 0.15);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(83, 98, 158, 0.5), 0 0 20px rgba(83, 98, 158, 0.3);
+  }
+  
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 25px rgba(83, 98, 158, 0.4), 0 0 50px rgba(83, 98, 158, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  /* Custom gradient background - #D6F4ED, #87BAC3 */
+  .bg-security-gradient {
+    background: linear-gradient(135deg, hsl(194 41% 97%) 0%, hsl(194 28% 90%) 50%, hsl(194 41% 95%) 100%);
+  }
+  
+  /* Glowing border effect for custom theme */
+  .border-glow {
+    border: 1px solid rgba(83, 98, 158, 0.4);
+    box-shadow: inset 0 0 20px rgba(83, 98, 158, 0.05), 0 0 20px rgba(83, 98, 158, 0.1);
+  }
+}
+/* Global image rendering and performance hints */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Defer rendering of offscreen sections to improve scroll performance */
+.scroll-anchor {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
