@@ -2,9 +2,6 @@ import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Cloud, Server, Settings, Database, ArrowRight, Users } from "lucide-react";
 import { SiCyberdefenders } from "react-icons/si";
-import AnimatedContent from './AnimatedContent';
-import SplitText from './SplitText';
-import LetterGlitch from './LetterGlitch';
 
 // Lazy load ServiceGrid for better performance
 const ServiceGrid = lazy(() => import('./ServiceGrid'));
@@ -143,7 +140,7 @@ const SolutionsSection = () => {
 
   return (
     <section ref={sectionRef} className="relative py-8 md:py-12 overflow-hidden">
-      {/* Animated Background */}
+      {/* Simple Background */}
       <div className="absolute inset-0">
         {/* Background Image Layer */}
         <div
@@ -152,22 +149,11 @@ const SolutionsSection = () => {
         ></div>
         {/* Soft Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/70 via-white/70 to-cyan-50/70"></div>
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        {/* LetterGlitch Effect Layer */}
-        <LetterGlitch
-          className="absolute inset-0 opacity-25 mix-blend-lighten"
-          glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
-          glitchSpeed={60}
-          smooth={true}
-          outerVignette={false}
-          centerVignette={false}
-          backgroundColor="transparent"
-        />
       </div>
       
       {/* Floating Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
