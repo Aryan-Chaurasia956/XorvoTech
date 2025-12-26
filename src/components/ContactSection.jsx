@@ -268,7 +268,7 @@ const ContactSection = () => {
         newsletter: formData.marketingConsent
       };
 
-      const response = await fetch('http://localhost:3001/api/contact/submit', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://xorvo-website.vercel.app'}/api/contact/submit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
