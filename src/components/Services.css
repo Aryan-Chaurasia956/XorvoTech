@@ -82,15 +82,130 @@
     border-radius: 16px;
     z-index: 10;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
     pointer-events: none;
 }
 
 .services-cards.noah > div:hover::after {
-    opacity: 0;
+    transform: translateX(-100%);
 }
 
-/* Gradient backgrounds for each card */
+/* Background images for Cloud & Infrastructure service cards - First Face Overlay */
+#cloud-migration::after {
+  background-image: url('/pexels-ivan-cujic-20495-109479.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+#vps-hosting::after {
+  background-image: url('/pexels-divinetechygirl-1181354.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+#infrastructure-design::after {
+  background-image: url('/1ftgjbeeee_generated.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+#hybrid-multi-cloud::after {
+  background-image: url('/sigmund-_dJCBtdUu74-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+#backup-disaster-recovery::after {
+  background-image: url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+#infrastructure-monitoring::after {
+  background-image: url('/green-prophet-WUHtXGyJa_Q-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+#containers-kubernetes::after {
+  background-image: url('/infrastructure-design-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+#load-balancing-ha::after {
+  background-image: url('/jason-leung-iKfVCtcPgqI-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+/* Compliance & Audit card - First Face Overlay */
+#compliance-audit::after {
+  background-image: url('/pexels-kunitsky-210990.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+}
+
+/* Add dark gradient overlay on first face for text readability */
+#cloud-migration::before,
+#vps-hosting::before,
+#infrastructure-design::before,
+#hybrid-multi-cloud::before,
+#backup-disaster-recovery::before,
+#infrastructure-monitoring::before,
+#containers-kubernetes::before,
+#load-balancing-ha::before,
+#compliance-audit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+/* Ensure heading text is above the gradient overlay */
+#cloud-migration::after,
+#vps-hosting::after,
+#infrastructure-design::after,
+#hybrid-multi-cloud::after,
+#backup-disaster-recovery::after,
+#infrastructure-monitoring::after,
+#containers-kubernetes::after,
+#load-balancing-ha::after,
+#compliance-audit::after {
+  z-index: 2;
+}
+
+/* Background images for Cloud & Infrastructure service cards - Full Card - REMOVED */
 /* .noah>div.john {
     background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #0f172a 100%);
 }
@@ -806,9 +921,37 @@
 }
 
 
+/* Cybersecurity Services hero background image */
+#cybersecurity-hero {
+  background-image: url('/solutions/markus-spiske-iar-afB0QQw-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Improve text readability over Cybersecurity Services hero background */
+#cybersecurity-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.7) 0%,
+    rgba(15, 23, 42, 0.6) 40%,
+    rgba(15, 23, 42, 0.8) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+#cybersecurity-hero h1,
+#cybersecurity-hero p {
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+}
+
 /* Second Services hero background image */
 .services-hero-2 {
-  background-image: url('/solutions/markus-spiske-iar-afB0QQw-unsplash.jpg');
+  background-image: url('/philipp-katzenberger-iIJrUoeRoCQ-unsplash-min.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
