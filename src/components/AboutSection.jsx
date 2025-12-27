@@ -28,7 +28,7 @@ const AboutSection = () => {
             {/* Main Title */}
             <div className="mb-6">
               <SplitText 
-                text="About Us"
+                text="Who We Are"
                 tag="h2"
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg"
                 delay={60}

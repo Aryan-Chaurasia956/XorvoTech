@@ -13,9 +13,7 @@ const WhyChooseSection = () => {
   const clients = [
     { src: "/sgt-university.png", alt: "SGT University" },
     { src: "/pw.png", alt: "Physics Wallah" },
-    { src: "/uniqlo.png", alt: "Uniqlo" },
-    { src: "/my-hero-academia.png", alt: "MHA" },
-    { src: "/cars24.png", alt: "Car24" }
+    { src: "/uniqlo.png", alt: "Uniqlo" }
   ];
 
   return (
@@ -96,7 +94,7 @@ const WhyChooseSection = () => {
                   <div 
                     className="absolute inset-0 transition-all duration-700 scale-110 group-hover:scale-100"
                     style={{
-                      backgroundImage: index === 0 ? "url('https://images.unsplash.com/photo-1550745165-9bc0b252726a?w=800&h=600&fit=crop')" :
+                      backgroundImage: index === 0 ? "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop')" :
                                     index === 1 ? "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop')" :
                                     index === 2 ? "url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop')" :
                                     "url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop')",
@@ -151,7 +149,10 @@ const WhyChooseSection = () => {
                         <CheckCircle2 className="h-6 w-6 text-white" />
                       </div>
                       <h3 className="text-lg font-bold leading-tight">
-                        {reason.split(' ').slice(0, 3).join(' ')}
+                        {index === 0 ? "IT Integration" :
+                         index === 1 ? "Secure Solutions" :
+                         index === 2 ? "Expert Services" :
+                         "Proven Results"}
                       </h3>
                     </div>
                     
@@ -319,11 +320,11 @@ const WhyChooseSection = () => {
             </h2>
             
             <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-lg">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {clients.map((client, index) => (
                   <div
                     key={index}
-                    className="group relative bg-gray-50 border border-gray-200 rounded-xl p-6 hover:bg-white hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105 flex items-center justify-center min-h-[120px]"
+                    className="group relative bg-gray-50 border border-gray-200 rounded-xl p-8 hover:bg-white hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105 flex items-center justify-center h-[140px]"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
@@ -331,12 +332,97 @@ const WhyChooseSection = () => {
                       <LazyImage 
                         src={client.src} 
                         alt={client.alt}
-                        className="max-w-full max-h-[80px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                        className="max-w-full max-h-[100px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                         placeholder="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Crect width='120' height='80' fill='%23f3f4f6'/%3E%3C/svg%3E"
                       />
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Client Reviews Section - Full Width */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+          <div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 text-center" style={{ fontFamily: "'Rostex', 'Arial Black', sans-serif" }}>
+              CLIENT <span className="text-accent">REVIEWS</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Review 1 */}
+              <div className="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:border-accent/30 transition-all duration-500 hover:shadow-xl hover:shadow-accent/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/3 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative">
+                  {/* Quote Icon */}
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+                    <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  
+                  {/* Review Content */}
+                  <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                    "We are abundantly happy with Xorvo team service and support from the last one year. Your support is excellent and more accessible. The Implementation of Fortinet and Aruba networks served us to achieve our work more smoothly."
+                  </p>
+                  
+                  {/* Client Info */}
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-lg">Vivek Patil</h4>
+                      <p className="text-gray-600">Sr. Network Engineer</p>
+                      <p className="text-accent font-medium">HCIN Network Private Limited</p>
+                    </div>
+                    
+                    {/* Rating */}
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Review 2 */}
+              <div className="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:border-accent/30 transition-all duration-500 hover:shadow-xl hover:shadow-accent/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/3 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative">
+                  {/* Quote Icon */}
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+                    <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  
+                  {/* Review Content */}
+                  <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                    "The service and support of the Xorvo Team are awesome and we have been engaged with Xorvo for the last 2 years. Always ready to support us anytime with a suitable Solution. Great to have worked with WebVeer."
+                  </p>
+                  
+                  {/* Client Info */}
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-lg">IT Team</h4>
+                      <p className="text-gray-600">Technology Department</p>
+                      <p className="text-accent font-medium">Simpolo Vitrifed Pvt Ltd.</p>
+                    </div>
+                    
+                    {/* Rating */}
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

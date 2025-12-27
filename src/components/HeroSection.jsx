@@ -99,7 +99,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
         <div className="max-w-4xl text-left space-y-8">
           {/* Headline with staggered word animations */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight" style={{ fontFamily: "'Rostex', 'Arial Black', sans-serif" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" style={{ fontFamily: " 'Arial Black', sans-serif", WebkitTextStroke: "0px", textShadow: "none" }}>
             {/* <span
               className={`block text-white mb-4 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
