@@ -66,24 +66,251 @@ const WhyChooseSection = () => {
               />
             </div>
             
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-lg">
-              <ul className="space-y-4 mb-8">
-                {reasons.map((reason, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700">
-                    <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-base md:text-lg">{reason}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="flex items-center gap-2 text-accent font-semibold text-lg">
-                <ArrowRight className="h-5 w-5" />
-                <p>Partner with Xorvo Technologies. Power your business with smarter IT.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {reasons.map((reason, index) => (
+                <div
+                  key={index}
+                  className="group relative h-[120px] lg:h-[140px] xl:h-[160px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 ease-out hover:z-10 hover:h-[300px] lg:hover:h-[350px] xl:hover:h-[400px] hover:shadow-2xl"
+                  onMouseEnter={(e) => {
+                    const parent = e.currentTarget.parentElement;
+                    const siblings = Array.from(parent.children).filter(child => child !== e.currentTarget);
+                    siblings.forEach(sibling => {
+                      sibling.style.transform = 'scale(0.92)';
+                      sibling.style.opacity = '0.6';
+                      sibling.style.filter = 'blur(1px)';
+                    });
+                  }}
+                  onMouseLeave={(e) => {
+                    const parent = e.currentTarget.parentElement;
+                    const siblings = Array.from(parent.children).filter(child => child !== e.currentTarget);
+                    siblings.forEach(sibling => {
+                      sibling.style.transform = 'scale(1)';
+                      sibling.style.opacity = '1';
+                      sibling.style.filter = 'blur(0px)';
+                    });
+                  }}
+                >
+                  {/* Dynamic background images with color overlays */}
+                  <div 
+                    className="absolute inset-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                    style={{
+                      backgroundImage: index === 0 ? "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop')" :
+                                    index === 1 ? "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop')" :
+                                    index === 2 ? "url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop')" :
+                                    "url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop')",
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
+                    }}
+                  />
+                  
+                  {/* Color gradient overlays that change on hover */}
+                  <div className="absolute inset-0 transition-all duration-700" 
+                       style={{
+                         background: index === 0 ? 'linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(37,99,235,0.75) 50%, rgba(29,78,216,0.85) 100%)':
+                                     index === 1 ? 'linear-gradient(135deg, rgba(16,185,129,0.85) 0%, rgba(5,150,105,0.75) 50%, rgba(4,120,87,0.85) 100%)':
+                                     index === 2 ? 'linear-gradient(135deg, rgba(139,92,246,0.85) 0%, rgba(124,58,237,0.75) 50%, rgba(109,40,217,0.85) 100%)':
+                                     'linear-gradient(135deg, rgba(251,146,60,0.85) 0%, rgba(245,158,11,0.75) 50%, rgba(217,119,6,0.85) 100%)'
+                       }}
+                  />
+                  
+                  {/* Animated gradient overlay on hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                       style={{
+                         background: index === 0 ? 'linear-gradient(135deg, rgba(59,130,246,0.95) 0%, rgba(37,99,235,0.85) 50%, rgba(29,78,216,0.95) 100%)':
+                                     index === 1 ? 'linear-gradient(135deg, rgba(16,185,129,0.95) 0%, rgba(5,150,105,0.85) 50%, rgba(4,120,87,0.95) 100%)':
+                                     index === 2 ? 'linear-gradient(135deg, rgba(139,92,246,0.95) 0%, rgba(124,58,237,0.85) 50%, rgba(109,40,217,0.95) 100%)':
+                                     'linear-gradient(135deg, rgba(251,146,60,0.95) 0%, rgba(245,158,11,0.85) 50%, rgba(217,119,6,0.95) 100%)'
+                       }}
+                  />
+                  
+                  {/* Animated particles effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                    <div className="absolute top-10 left-10 w-2 h-2 bg-white/20 rounded-full animate-pulse" />
+                    <div className="absolute top-20 right-8 w-3 h-3 bg-white/15 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
+                    <div className="absolute bottom-16 left-12 w-2 h-2 bg-white/25 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+                    <div className="absolute bottom-8 right-16 w-4 h-4 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }} />
+                  </div>
+                  
+                  {/* Content container */}
+                  <div className="relative h-full p-6 flex flex-col justify-center text-white group-hover:p-8 transition-all duration-700 overflow-hidden">
+                    {/* Initial state - Compact (only shows when not hovered) */}
+                    <div className="flex flex-col items-center justify-center text-center group-hover:hidden animate-fadeIn">
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-3 transition-all duration-500`}
+                           style={{
+                             background: index === 0 ? 'rgba(59,130,246,0.2)':
+                                        index === 1 ? 'rgba(16,185,129,0.2)':
+                                        index === 2 ? 'rgba(139,92,246,0.2)':
+                                        'rgba(251,146,60,0.2)',
+                             border: `1px solid ${index === 0 ? 'rgba(59,130,246,0.3)':
+                                              index === 1 ? 'rgba(16,185,129,0.3)':
+                                              index === 2 ? 'rgba(139,92,246,0.3)':
+                                              'rgba(251,146,60,0.3)'}`
+                           }}>
+                        <CheckCircle2 className="h-6 w-6 text-white" />
+                      </div>
+                      <h3 className="text-lg font-bold leading-tight">
+                        {index === 0 ? "IT Integration" :
+                         index === 1 ? "Secure Solutions" :
+                         index === 2 ? "Expert Services" :
+                         "Proven Results"}
+                      </h3>
+                    </div>
+                    
+                    {/* Expanded state - Full content (only shows when hovered) */}
+                    <div className="hidden group-hover:block h-full animate-slideUp overflow-y-auto">
+                      <div className="flex flex-col h-full justify-between">
+                        <div>
+                          <div className="flex items-start gap-4 mb-4">
+                            <div className={`w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
+                                 style={{
+                                   background: index === 0 ? 'rgba(59,130,246,0.25)':
+                                              index === 1 ? 'rgba(16,185,129,0.25)':
+                                              index === 2 ? 'rgba(139,92,246,0.25)':
+                                              'rgba(251,146,60,0.25)',
+                                   border: `1px solid ${index === 0 ? 'rgba(59,130,246,0.4)':
+                                                    index === 1 ? 'rgba(16,185,129,0.4)':
+                                                    index === 2 ? 'rgba(139,92,246,0.4)':
+                                                    'rgba(251,146,60,0.4)'}`
+                                 }}>
+                              <CheckCircle2 className="h-6 w-6 text-white" />
+                            </div>
+                            <h3 className="text-xl font-bold leading-tight">{reason}</h3>
+                          </div>
+                          
+                          <p className="text-sm text-white/90 leading-relaxed mb-4">
+                            {index === 0 && "Complete IT infrastructure management with enterprise-grade security. We handle everything from network setup to 24/7 monitoring and maintenance."}
+                            {index === 1 && "Scalable cloud solutions that grow with your business. Future-ready architecture ensuring seamless expansion and technological advancement."}
+                            {index === 2 && "Expert cybersecurity protection and advanced networking solutions. Certified professionals safeguard your digital assets with cutting-edge technology."}
+                            {index === 3 && "Proven delivery excellence with maximum ROI guarantee. Minimal downtime, optimized performance, and measurable business results."}
+                          </p>
+                        </div>
+                        
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3 text-sm text-white/80">
+                            <div className={`w-2 h-2 rounded-full`}
+                                 style={{
+                                   backgroundColor: index === 0 ? '#3b82f6':
+                                                      index === 1 ? '#10b981':
+                                                      index === 2 ? '#8b5cf6':
+                                                      '#fb923c'
+                                 }} />
+                            <span>
+                              {index === 0 && "24/7 System Monitoring"}
+                              {index === 1 && "Auto-Scaling Infrastructure"}
+                              {index === 2 && "Advanced Threat Protection"}
+                              {index === 3 && "Performance Optimization"}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm text-white/80">
+                            <div className={`w-2 h-2 rounded-full`}
+                                 style={{
+                                   backgroundColor: index === 0 ? '#3b82f6':
+                                                      index === 1 ? '#10b981':
+                                                      index === 2 ? '#8b5cf6':
+                                                      '#fb923c'
+                                 }} />
+                            <span>
+                              {index === 0 && "Enterprise Security"}
+                              {index === 1 && "Cloud Migration Support"}
+                              {index === 2 && "Compliance Management"}
+                              {index === 3 && "Cost Efficiency"}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-3 text-sm text-white/80">
+                            <div className={`w-2 h-2 rounded-full`}
+                                 style={{
+                                   backgroundColor: index === 0 ? '#3b82f6':
+                                                      index === 1 ? '#10b981':
+                                                      index === 2 ? '#8b5cf6':
+                                                      '#fb923c'
+                                 }} />
+                            <span>
+                              {index === 0 && "Seamless Integration"}
+                              {index === 1 && "Zero Downtime Deployment"}
+                              {index === 2 && "Real-time Analytics"}
+                              {index === 3 && "Guaranteed Uptime"}
+                            </span>
+                          </div>
+                          
+                          </div>
+                      </div>
+                    </div>
+                    
+                    {/* Enhanced hover indicator */}
+                    <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-2 group-hover:translate-x-0">
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110`}
+                           style={{
+                             background: index === 0 ? 'rgba(59,130,246,0.3)':
+                                        index === 1 ? 'rgba(16,185,129,0.3)':
+                                        index === 2 ? 'rgba(139,92,246,0.3)':
+                                        'rgba(251,146,60,0.3)',
+                             border: `1px solid ${index === 0 ? 'rgba(59,130,246,0.5)':
+                                              index === 1 ? 'rgba(16,185,129,0.5)':
+                                              index === 2 ? 'rgba(139,92,246,0.5)':
+                                              'rgba(251,146,60,0.5)'}`
+                           }}>
+                        <div className="w-2 h-2 rounded-full bg-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* CTA Section */}
+            <div className="text-center animate-fadeInUp">
+              <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-accent via-accent/90 to-accent/80 text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:from-accent hover:to-accent/90 backdrop-blur-sm border border-white/20">
+                <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
+                  <ArrowRight className="h-3 w-3 text-white" />
+                </div>
+                <span>Partner with Xorvo Technologies. Power your business with smarter IT.</span>
               </div>
             </div>
           </div>
           </div>
         </div>
+
+        {/* Custom Styles */}
+        <style jsx>{`
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          
+          @keyframes slideUp {
+            from { 
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to { 
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          @keyframes fadeInUp {
+            from { 
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to { 
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          .animate-fadeIn {
+            animation: fadeIn 0.6s ease-out;
+          }
+          
+          .animate-slideUp {
+            animation: slideUp 0.7s ease-out;
+          }
+          
+          .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+          }
+        `}</style>
 
         {/* Our Clients Section - Full Width */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16">
@@ -111,6 +338,91 @@ const WhyChooseSection = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Client Reviews Section - Full Width */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+          <div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 text-center" style={{ fontFamily: "'Rostex', 'Arial Black', sans-serif" }}>
+              CLIENT <span className="text-accent">REVIEWS</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Review 1 */}
+              <div className="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:border-accent/30 transition-all duration-500 hover:shadow-xl hover:shadow-accent/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/3 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative">
+                  {/* Quote Icon */}
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+                    <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  
+                  {/* Review Content */}
+                  <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                    "We are abundantly happy with Xorvo team service and support from the last one year. Your support is excellent and more accessible. The Implementation of Fortinet and Aruba networks served us to achieve our work more smoothly."
+                  </p>
+                  
+                  {/* Client Info */}
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-lg">Vivek Patil</h4>
+                      <p className="text-gray-600">Sr. Network Engineer</p>
+                      <p className="text-accent font-medium">HCIN Network Private Limited</p>
+                    </div>
+                    
+                    {/* Rating */}
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Review 2 */}
+              <div className="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:border-accent/30 transition-all duration-500 hover:shadow-xl hover:shadow-accent/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/3 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative">
+                  {/* Quote Icon */}
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+                    <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
+                  
+                  {/* Review Content */}
+                  <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                    "The service and support of the Xorvo Team are awesome and we have been engaged with Xorvo for the last 2 years. Always ready to support us anytime with a suitable Solution. Great to have worked with WebVeer."
+                  </p>
+                  
+                  {/* Client Info */}
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-lg">IT Team</h4>
+                      <p className="text-gray-600">Technology Department</p>
+                      <p className="text-accent font-medium">Simpolo Vitrifed Pvt Ltd.</p>
+                    </div>
+                    
+                    {/* Rating */}
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
