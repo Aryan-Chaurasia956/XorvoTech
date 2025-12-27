@@ -428,7 +428,7 @@ const Services = () => {
         {/* Network Security */}
         <div className='john' data-heading='Network Security'>
           <div className='text-2xl'>Network Security</div>
-          <div>A secure network is the foundation of every digital business. Xorvo Technology Pvt. Ltd. delivers robust network security solutions that protect your infrastructure from unauthorized access, cyber intrusions, and advanced persistent threats.</div>
+          <div>A secure network is the foundation of every digital business. Xorvo Technologies delivers robust network security solutions that protect your infrastructure from unauthorized access, cyber intrusions, and advanced persistent threats.</div>
           
           <div>We design and implement secure network architectures using next-generation firewalls, intrusion detection and prevention systems (IDS/IPS), network segmentation, VPNs, and zero-trust principles. Our continuous monitoring and policy enforcement ensure safe data flow across on-premises, cloud, and hybrid environments.</div>
           
@@ -450,7 +450,7 @@ const Services = () => {
         {/* Endpoint Protection */}
         <div className='felix' data-heading='Endpoint Protection'>
           <div className='text-2xl'>Endpoint Protection</div>
-          <div>Endpoints are often the primary entry point for cyberattacks. Xorvo Technology Pvt. Ltd. provides advanced endpoint protection to secure laptops, desktops, servers, and mobile devices across your organization.</div>
+          <div>Endpoints are often the primary entry point for cyberattacks. Xorvo Technologies provides advanced endpoint protection to secure laptops, desktops, servers, and mobile devices across your organization.</div>
           
           <div>We deploy next-generation antivirus, endpoint detection and response (EDR), real-time threat monitoring, and automated containment to protect against malware, ransomware, and zero-day attacks. Our centralized management ensures complete visibility and control across office, remote, and hybrid environments.</div>
           
