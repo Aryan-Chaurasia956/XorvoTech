@@ -376,13 +376,13 @@ const Navbar = () => {
 
       {/* Mobile Menu - Shows on Mobile & Tablet */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-black/98 backdrop-blur-sm border-t border-border animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden bg-white border-t border-border animate-in slide-in-from-top duration-300">
           <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-4rem)] overflow-y-auto">
             {navItems.map((item) => (
               <div key={item.name} className="border-b border-border/50 last:border-0">
                 <button
                   onClick={() => setMobileActiveSection(mobileActiveSection === item.name ? null : item.name)}
-                  className="w-full flex items-center justify-between py-4 text-white font-medium hover:text-cyan-400 transition-colors"
+                  className="w-full flex items-center justify-between py-4 text-black font-medium hover:text-blue-600 transition-colors"
                 >
                   {item.name}
                 </button>
@@ -392,7 +392,7 @@ const Navbar = () => {
                   <div className="pb-4 space-y-4 sm:space-y-6">
                     {item.columns.map((column, idx) => (
                       <div key={idx} className="space-y-2 sm:space-y-3">
-                        <h4 className="text-cyan-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                        <h4 className="text-blue-600 text-xs sm:text-sm font-semibold uppercase tracking-wider">
                           {column.title}
                         </h4>
                         <ul className="space-y-2 pl-3 sm:pl-4">
@@ -407,8 +407,8 @@ const Navbar = () => {
                                 <Link
                                   to={item.name === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : item.name === 'Services' ? `/services${servicesAnchorMap[column.title] || ''}` : itemPath}
                                   className={`block text-sm sm:text-base py-2 transition-colors active:scale-95 ${isHighlighted
-                                      ? 'text-cyan-400 font-medium'
-                                      : 'text-gray-300 hover:text-white'
+                                      ? 'text-blue-600 font-medium'
+                                      : 'text-gray-700 hover:text-black'
                                     }`}
                                   onClick={() => setMobileMenuOpen(false)}
                                 >
@@ -432,7 +432,7 @@ const Navbar = () => {
                   navigate('/about');
                   setMobileMenuOpen(false);
                 }}
-                className="block w-full text-left py-3 text-white font-medium hover:text-cyan-400 transition-colors"
+                className="block w-full text-left py-3 text-black font-medium hover:text-blue-600 transition-colors"
               >
                 About Us
               </button>
@@ -441,7 +441,7 @@ const Navbar = () => {
                   navigate('/?contact=true');
                   setMobileMenuOpen(false);
                 }}
-                className="block w-full text-left py-3 text-white font-medium hover:text-cyan-400 transition-colors"
+                className="block w-full text-left py-3 text-black font-medium hover:text-blue-600 transition-colors"
               >
                 Contact
               </button>

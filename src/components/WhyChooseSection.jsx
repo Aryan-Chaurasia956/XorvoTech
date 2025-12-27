@@ -13,9 +13,7 @@ const WhyChooseSection = () => {
   const clients = [
     { src: "/sgt-university.png", alt: "SGT University" },
     { src: "/pw.png", alt: "Physics Wallah" },
-    { src: "/uniqlo.png", alt: "Uniqlo" },
-    { src: "/my-hero-academia.png", alt: "MHA" },
-    { src: "/cars24.png", alt: "Car24" }
+    { src: "/uniqlo.png", alt: "Uniqlo" }
   ];
 
   return (
@@ -95,11 +93,11 @@ const WhyChooseSection = () => {
             </h2>
             
             <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-lg">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {clients.map((client, index) => (
                   <div
                     key={index}
-                    className="group relative bg-gray-50 border border-gray-200 rounded-xl p-6 hover:bg-white hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105 flex items-center justify-center min-h-[120px]"
+                    className="group relative bg-gray-50 border border-gray-200 rounded-xl p-8 hover:bg-white hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105 flex items-center justify-center h-[140px]"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
@@ -107,7 +105,7 @@ const WhyChooseSection = () => {
                       <LazyImage 
                         src={client.src} 
                         alt={client.alt}
-                        className="max-w-full max-h-[80px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                        className="max-w-full max-h-[100px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                         placeholder="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Crect width='120' height='80' fill='%23f3f4f6'/%3E%3C/svg%3E"
                       />
                     </div>

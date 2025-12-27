@@ -21,11 +21,9 @@ const Footer = () => {
       "Managed Security Awareness",
       "Incident Response"
     ],
-    Company: [
-      "Contact Us"
-    ],
     Partners: [
-      "Become a Partner"
+      "Become a Partner",
+      "Contact Us"
     ],
     Resources: [
       "Blog",
@@ -120,44 +118,46 @@ const Footer = () => {
 
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h3 className="font-bold text-foreground mb-4">{title}</h3>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    {title === "Partners" && link === "Become a Partner" ? (
-                      <Link
-                        to="/?contact=true"
-                        className="text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        {link}
-                      </Link>
-                    ) : title === "Company" && link === "Contact Us" ? (
-                      <Link
-                        to="/?contact=true"
-                        className="text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        {link}
-                      </Link>
-                    ) : title === "Solutions" ? (
-                      <Link
-                        to={solutionFooterMap[link] || "/solutions"}
-                        className="text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        {link}
-                      </Link>
-                    ) : (
-                      <a
-                        href="#"
-                        className="text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        {link}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            links.length > 0 && (
+              <div key={title}>
+                <h3 className="font-bold text-foreground mb-4">{title === "Partners" ? "Partners & Company" : title}</h3>
+                <ul className="space-y-2">
+                  {links.map((link) => (
+                    <li key={link}>
+                      {title === "Partners" && (link === "Become a Partner" || link === "Contact Us") ? (
+                        <Link
+                          to="/?contact=true"
+                          className="text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          {link}
+                        </Link>
+                      ) : title === "Company" && link === "Contact Us" ? (
+                        <Link
+                          to="/?contact=true"
+                          className="text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          {link}
+                        </Link>
+                      ) : title === "Solutions" ? (
+                        <Link
+                          to={solutionFooterMap[link] || "/solutions"}
+                          className="text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          {link}
+                        </Link>
+                      ) : (
+                        <a
+                          href="#"
+                          className="text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          {link}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
           ))}
         </div>
 
