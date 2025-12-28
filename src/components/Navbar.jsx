@@ -32,12 +32,74 @@ const Navbar = () => {
 
   // Map Services columns to their corresponding anchors on /services
   const servicesAnchorMap = {
-    'Cybersecurity Services': '#cybersecurity',
-    'Cloud & Infrastructure': '#cloud-infrastructure',
-    'Managed IT Services': '#managed-it',
-    'Workspace & Collaboration': '#workspace',
-    'Data Protection & Compliance': '#data-protection',
-    'IT Consulting & Deployment': '#consulting',
+    'Cybersecurity Services': '#cybersecurity-hero',
+    'Cloud & Infrastructure': '#enterprise-it-hero',
+    'Managed IT Services': '#managed-it-hero',
+    'Workspace & Collaboration': '#workspace-hero',
+    'Data Protection & Compliance': '#data-protection-hero',
+    'IT Consulting & Deployment': '#it-consulting-hero',
+  };
+
+  // Map individual services to their corresponding card IDs on /services
+  const individualServiceMap = {
+    // Cybersecurity Services
+    'Network Security': '#network-security',
+    'Endpoint Protection': '#endpoint-protection',
+    'Threat Detection & SOC': '#threat-detection-soc',
+    'Vulnerability Management': '#vulnerability-management',
+    'Incident Response & Forensics': '#incident-response-forensics',
+    'Email & Web Security': '#email-web-security',
+    'Security Awareness & Training': '#security-awareness-training',
+    'Compliance & Audit (ISO / GDPR / PCI DSS / HIPAA)': '#compliance-audit',
+    
+    // Cloud & Infrastructure
+    'Cloud Migration': '#cloud-migration',
+    'VPS Hosting': '#vps-hosting',
+    'Infrastructure Design': '#infrastructure-design',
+    'Hybrid & Multi-Cloud Management': '#hybrid-multi-cloud',
+    'Backup & Disaster Recovery': '#backup-disaster-recovery',
+    'Infrastructure Monitoring (NOC)': '#infrastructure-monitoring',
+    'Containers & Kubernetes': '#containers-kubernetes',
+    'Load Balancing & High Availability': '#load-balancing-ha',
+    
+    // Managed IT Services
+    'Monitoring & Maintenance': '#monitoring-maintenance',
+    'Remote Support (Helpdesk & RMM)': '#remote-support',
+    'Asset & Patch Management': '#asset-management',
+    'SLA & Reporting': '#sla-reporting',
+    'IT Strategy & Budget Planning': '#it-strategy',
+    
+    // Workspace & Collaboration
+    'Microsoft 365': '#microsoft-365',
+    'Zoho Workspace': '#zoho-workspace',
+    'Google Workspace': '#google-workspace',
+    'Email Migration': '#email-migration',
+    'Identity & Access (SSO, MFA)': '#identity-access',
+    'SaaS Backup (M365/Google/Zoho)': '#saas-backup',
+    
+    // Data Protection & Compliance
+    'Backup & Recovery': '#backup-recovery',
+    'DLP (Data Loss Prevention)': '#dlp-data-loss-prevention',
+    'Compliance Audits': '#compliance-audits',
+    'Encryption & Key Management': '#encryption-key-management',
+    'DR Planning & Testing': '#dr-planning-testing',
+    
+    // IT Consulting & Deployment
+    'Network Design': '#network-designing',
+    'Application Deployment': '#application-deployment',
+    'CI/CD Automation': '#ci-cd-automation',
+    'Custom Applications': '#custom-applications',
+    'Application Designing (UI/UX)': '#application-designing',
+    'Deployment Automation': '#deployment-automation',
+    'Monitoring & NOC Setup': '#monitoring-noc-setup',
+    'Website Development': '#website-development',
+    'SEO Optimization': '#seo-optimization',
+    'AEO (Answer Engine Optimization)': '#aeo-optimization',
+    'GEO (Local SEO)': '#geo-local-seo',
+    'CRM Implementation': '#crm-implementation',
+    'ERP Implementation': '#erp-implementation',
+    'HRMS Implementation': '#hrms-implementation',
+    'Network Designing': '#network-designing',
   };
 
   // Map Solutions columns to anchors on /solutions
@@ -263,7 +325,7 @@ const Navbar = () => {
                         navigate('/resources');
                       }
                       if (item.name === 'Services') {
-                        navigate('/services');
+                        navigate('/services#cybersecurity-hero');
                       }
                       if (item.name === 'Solutions') {
                         navigate('/solutions');
@@ -339,18 +401,27 @@ const Navbar = () => {
                   .find((item) => item.name === activeDropdown)
                   ?.columns.map((column, idx) => (
                     <div key={idx} className="space-y-5">
-                      <h3 className="text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-4">
+                      <Link 
+                        to={activeDropdown === 'Services' ? `/services${servicesAnchorMap[column.title] || ''}` : 
+                             activeDropdown === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : 
+                             '#'}
+                        onClick={() => setActiveDropdown(null)}
+                        className="text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-4 hover:text-cyan-300 transition-colors duration-200 cursor-pointer"
+                      >
                         {column.title}
-                      </h3>
+                      </Link>
                       <ul className="space-y-3">
                         {column.items.map((subItem, subIdx) => {
                           const isHighlighted = column.highlightLast && subIdx === column.items.length - 1;
                           // Handle both string and object items
                           const itemName = typeof subItem === 'string' ? subItem : subItem.name;
                           const itemPath = typeof subItem === 'string' ? '#' : subItem.path;
-                          const servicesAnchor = servicesAnchorMap[column.title] || '';
-                          const solutionsAnchor = solutionsAnchorMap[column.title] || '';
-                          const finalPath = activeDropdown === 'Solutions' ? `/solutions${solutionsAnchor}` : activeDropdown === 'Services' ? `/services${servicesAnchor}` : itemPath;
+                          const individualServiceAnchor = individualServiceMap[itemName] || '';
+                          
+                          // For Services dropdown, use individual service anchor; for others, use existing logic
+                          const finalPath = activeDropdown === 'Services' ? individualServiceAnchor ? `/services${individualServiceAnchor}` : `/services` :
+                                          activeDropdown === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : 
+                                          itemPath;
 
                           return (
                             <li key={subIdx}>

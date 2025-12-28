@@ -55,7 +55,7 @@ const ServiceGrid = ({ services = [], solutions = [] }) => {
       title: "Cybersecurity &\nVPS Security Solutions",
       subtitle: "Protect. Detect. Respond.",
       description: "Stay ahead of evolving cyber threats with enterprise-grade protection. We secure your network, systems, and data with advanced threat detection, incident response, and continuous monitoring.",
-      image: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 25%, #8b5cf6 50%, #ec4899 75%, #f59e0b 100%)",
+      image: "linear-gradient(135deg, #727CAB 0%, #727CAB 25%, #727CAB 50%, #727CAB 75%, #727CAB 100%)",
       link: "#",
       icon: FaShieldAlt,
       offerings: [
