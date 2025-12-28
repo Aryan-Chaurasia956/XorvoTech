@@ -59,7 +59,7 @@ const SolutionsSection = () => {
         "Deployment of open-source or paid security tools"
       ],
       cta: "Keep your business safe, resilient, and compliant.",
-      color: "#3b82f6",
+      color: "#727CAB",
     },
     {
       icon: Server,
@@ -74,7 +74,7 @@ const SolutionsSection = () => {
         "Uptime-driven performance optimization"
       ],
       cta: "Strengthen your IT foundation for seamless operations.",
-      color: "#a855f7",
+      color: "#727CAB",
     },
     {
       icon: Cloud,
@@ -89,7 +89,7 @@ const SolutionsSection = () => {
         "Expert management for Zoho, Google, & M365"
       ],
       cta: "Simplify your digital transformation journey",
-      color: "#06b6d4",
+      color: "#727CAB",
     },
     {
       icon: Settings,
@@ -104,7 +104,7 @@ const SolutionsSection = () => {
         "Predictable, cost-efficient IT operations"
       ],
       cta: "Achieve maximum uptime and worry-free performance",
-      color: "#22c55e",
+      color: "#727CAB",
     },
     {
       icon: Database,
@@ -119,7 +119,7 @@ const SolutionsSection = () => {
         "Performance tuning & ongoing monitoring"
       ],
       cta: "Get a VPS solution that grows with your business.",
-      color: "#f97316",
+      color: "#727CAB",
     },
     {
       icon: Users,
@@ -134,7 +134,7 @@ const SolutionsSection = () => {
         "Continuous optimization & support"
       ],
       cta: "Build a unified, scalable technology ecosystem.",
-      color: "#6366f1",
+      color: "#727CAB",
     },
   ];
 

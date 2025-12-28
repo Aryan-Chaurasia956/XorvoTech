@@ -96,8 +96,200 @@
   background-image: url('/pexels-ivan-cujic-20495-109479.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
+}
+
+#cloud-native::after {
+  background-image: url('/pexels-alexander-suhorucov-6457560.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#devops::after {
+  background-image: url('/pexels-christian-morillo-1181244.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#hybrid-cloud::after {
+  background-image: url('/pexels-mitchell-rosen-576919.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#cloud-security::after {
+  background-image: url('/pexels-sora-shimazaki-5926382.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Background images for IT Consulting & Deployment service cards - First Face Overlay */
+#application-deployment::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(30, 64, 175, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/pexels-kunitsky-210990.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#custom-applications::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(139, 92, 246, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/mareks-manguzis-7PAzIP7KQKA-unsplash.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#application-designing::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(236, 72, 153, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/pexels-jmueller-9160637.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#deployment-automation::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(34, 197, 94, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/philipp-katzenberger-iIJrUoeRoCQ-unsplash-min.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#monitoring-noc-setup::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(251, 146, 60, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/solution_bg.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#website-development::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(59, 130, 246, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/jakub-zerdzicki-vEmtcGx5nyQ-unsplash.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#seo-optimization::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(168, 85, 247, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/medium-shot-man-wearing-vr-glasses.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#aeo-optimization::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(239, 68, 68, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/modern-equipped-computer-lab.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#geo-local-seo::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(16, 185, 129, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/pexels-kunitsky-210990.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#crm-implementation::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(245, 158, 11, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/jakub-zerdzicki-vEmtcGx5nyQ-unsplash.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#erp-implementation::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(99, 102, 241, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/23324.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#hrms-implementation::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(217, 70, 239, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/hack-capital-uv5_bsypFUM-unsplash.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
+#network-designing::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(6, 182, 212, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/solution_bg.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #vps-hosting::after {
@@ -1005,6 +1197,121 @@
   background-repeat: no-repeat;
 }
 
+
+/* Managed IT Services Cards Background Images */
+.services-cards.noah > div#monitoring-maintenance::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('/src/assets/hero-globe.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#remote-support::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('/src/assets/tech-pattern.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#asset-management::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#sla-reporting::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#it-strategy::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Workspace & Collaboration Cards Background Images */
+.services-cards.noah > div#microsoft-365::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#zoho-workspace::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#google-workspace::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#email-migration::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#identity-access::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#saas-backup::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Data Protection & Compliance Cards Background Images */
+.services-cards.noah > div#backup-recovery::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#dlp::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#compliance-audits::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#encryption-key::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-cards.noah > div#dr-planning::after {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* Managed IT Services card background image */
 .services-cards.noah > div#managed-it::after {

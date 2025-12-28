@@ -70,7 +70,7 @@ const WhyChooseSection = () => {
               {reasons.map((reason, index) => (
                 <div
                   key={index}
-                  className="group relative h-[120px] lg:h-[140px] xl:h-[160px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 ease-out hover:z-10 hover:h-[300px] lg:hover:h-[350px] xl:hover:h-[400px] hover:shadow-2xl"
+                  className="group relative h-[120px] lg:h-[140px] xl:h-[160px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 ease-out hover:z-10 hover:h-[350px] lg:hover:h-[400px] xl:hover:h-[450px] hover:shadow-2xl"
                   onMouseEnter={(e) => {
                     const parent = e.currentTarget.parentElement;
                     const siblings = Array.from(parent.children).filter(child => child !== e.currentTarget);
@@ -106,49 +106,28 @@ const WhyChooseSection = () => {
                   {/* Color gradient overlays that change on hover */}
                   <div className="absolute inset-0 transition-all duration-700" 
                        style={{
-                         background: index === 0 ? 'linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(37,99,235,0.75) 50%, rgba(29,78,216,0.85) 100%)':
-                                     index === 1 ? 'linear-gradient(135deg, rgba(16,185,129,0.85) 0%, rgba(5,150,105,0.75) 50%, rgba(4,120,87,0.85) 100%)':
-                                     index === 2 ? 'linear-gradient(135deg, rgba(139,92,246,0.85) 0%, rgba(124,58,237,0.75) 50%, rgba(109,40,217,0.85) 100%)':
-                                     'linear-gradient(135deg, rgba(251,146,60,0.85) 0%, rgba(245,158,11,0.75) 50%, rgba(217,119,6,0.85) 100%)'
+                         background: index === 0 ? 'linear-gradient(135deg, rgba(114,124,171,0.85) 0%, rgba(114,124,171,0.75) 50%, rgba(114,124,171,0.85) 100%)':
+                                     index === 1 ? 'linear-gradient(135deg, rgba(114,124,171,0.85) 0%, rgba(114,124,171,0.75) 50%, rgba(114,124,171,0.85) 100%)':
+                                     index === 2 ? 'linear-gradient(135deg, rgba(114,124,171,0.85) 0%, rgba(114,124,171,0.75) 50%, rgba(114,124,171,0.85) 100%)':
+                                     'linear-gradient(135deg, rgba(114,124,171,0.85) 0%, rgba(114,124,171,0.75) 50%, rgba(114,124,171,0.85) 100%)'
                        }}
                   />
                   
                   {/* Animated gradient overlay on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                        style={{
-                         background: index === 0 ? 'linear-gradient(135deg, rgba(59,130,246,0.95) 0%, rgba(37,99,235,0.85) 50%, rgba(29,78,216,0.95) 100%)':
-                                     index === 1 ? 'linear-gradient(135deg, rgba(16,185,129,0.95) 0%, rgba(5,150,105,0.85) 50%, rgba(4,120,87,0.95) 100%)':
-                                     index === 2 ? 'linear-gradient(135deg, rgba(139,92,246,0.95) 0%, rgba(124,58,237,0.85) 50%, rgba(109,40,217,0.95) 100%)':
-                                     'linear-gradient(135deg, rgba(251,146,60,0.95) 0%, rgba(245,158,11,0.85) 50%, rgba(217,119,6,0.95) 100%)'
+                         background: index === 0 ? 'linear-gradient(135deg, rgba(114,124,171,0.95) 0%, rgba(114,124,171,0.85) 50%, rgba(114,124,171,0.95) 100%)':
+                                     index === 1 ? 'linear-gradient(135deg, rgba(114,124,171,0.95) 0%, rgba(114,124,171,0.85) 50%, rgba(114,124,171,0.95) 100%)':
+                                     index === 2 ? 'linear-gradient(135deg, rgba(114,124,171,0.95) 0%, rgba(114,124,171,0.85) 50%, rgba(114,124,171,0.95) 100%)':
+                                     'linear-gradient(135deg, rgba(114,124,171,0.95) 0%, rgba(114,124,171,0.85) 50%, rgba(114,124,171,0.95) 100%)'
                        }}
                   />
-                  
-                  {/* Animated particles effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                    <div className="absolute top-10 left-10 w-2 h-2 bg-white/20 rounded-full animate-pulse" />
-                    <div className="absolute top-20 right-8 w-3 h-3 bg-white/15 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-                    <div className="absolute bottom-16 left-12 w-2 h-2 bg-white/25 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-                    <div className="absolute bottom-8 right-16 w-4 h-4 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }} />
-                  </div>
                   
                   {/* Content container */}
                   <div className="relative h-full p-6 flex flex-col justify-center text-white group-hover:p-8 transition-all duration-700 overflow-hidden">
                     {/* Initial state - Compact (only shows when not hovered) */}
-                    <div className="flex flex-col items-center justify-center text-center group-hover:hidden animate-fadeIn">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-3 transition-all duration-500`}
-                           style={{
-                             background: index === 0 ? 'rgba(59,130,246,0.2)':
-                                        index === 1 ? 'rgba(16,185,129,0.2)':
-                                        index === 2 ? 'rgba(139,92,246,0.2)':
-                                        'rgba(251,146,60,0.2)',
-                             border: `1px solid ${index === 0 ? 'rgba(59,130,246,0.3)':
-                                              index === 1 ? 'rgba(16,185,129,0.3)':
-                                              index === 2 ? 'rgba(139,92,246,0.3)':
-                                              'rgba(251,146,60,0.3)'}`
-                           }}>
-                        <CheckCircle2 className="h-6 w-6 text-white" />
-                      </div>
-                      <h3 className="text-lg font-bold leading-tight">
+                    <div className="flex flex-col items-center justify-center text-center group-hover:hidden animate-fadeIn h-full">
+                      <h3 className="text-2xl font-bold leading-tight">
                         {index === 0 ? "IT Integration" :
                          index === 1 ? "Secure Solutions" :
                          index === 2 ? "Expert Services" :
@@ -157,27 +136,25 @@ const WhyChooseSection = () => {
                     </div>
                     
                     {/* Expanded state - Full content (only shows when hovered) */}
-                    <div className="hidden group-hover:block h-full animate-slideUp overflow-y-auto">
+                    <div className="hidden group-hover:block h-full animate-fadeIn">
                       <div className="flex flex-col h-full justify-between">
+                        {/* Title stays visible in expanded state */}
+                        <div className="text-center mb-2">
+                          <h3 className="text-2xl font-bold leading-tight text-center">
+                            {index === 0 ? "IT Integration" :
+                             index === 1 ? "Secure Solutions" :
+                             index === 2 ? "Expert Services" :
+                             "Proven Results"}
+                          </h3>
+                          {/* Decorative line */}
+                          <div className={`w-16 h-1 mx-auto rounded-full opacity-80`}
+                               style={{
+                                 backgroundColor: 'rgb(114, 124, 171)'
+                               }} />
+                        </div>
+                        
                         <div>
-                          <div className="flex items-start gap-4 mb-4">
-                            <div className={`w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
-                                 style={{
-                                   background: index === 0 ? 'rgba(59,130,246,0.25)':
-                                              index === 1 ? 'rgba(16,185,129,0.25)':
-                                              index === 2 ? 'rgba(139,92,246,0.25)':
-                                              'rgba(251,146,60,0.25)',
-                                   border: `1px solid ${index === 0 ? 'rgba(59,130,246,0.4)':
-                                                    index === 1 ? 'rgba(16,185,129,0.4)':
-                                                    index === 2 ? 'rgba(139,92,246,0.4)':
-                                                    'rgba(251,146,60,0.4)'}`
-                                 }}>
-                              <CheckCircle2 className="h-6 w-6 text-white" />
-                            </div>
-                            <h3 className="text-xl font-bold leading-tight">{reason}</h3>
-                          </div>
-                          
-                          <p className="text-sm text-white/90 leading-relaxed mb-4">
+                          <p className="text-base text-white/90 leading-relaxed text-left">
                             {index === 0 && "Complete IT infrastructure management with enterprise-grade security. We handle everything from network setup to 24/7 monitoring and maintenance."}
                             {index === 1 && "Scalable cloud solutions that grow with your business. Future-ready architecture ensuring seamless expansion and technological advancement."}
                             {index === 2 && "Expert cybersecurity protection and advanced networking solutions. Certified professionals safeguard your digital assets with cutting-edge technology."}
@@ -186,13 +163,10 @@ const WhyChooseSection = () => {
                         </div>
                         
                         <div className="space-y-3">
-                          <div className="flex items-center gap-3 text-sm text-white/80">
-                            <div className={`w-2 h-2 rounded-full`}
+                          <div className="flex items-start gap-3 text-base text-white/80 text-left">
+                            <div className={`w-2 h-2 rounded-full flex-shrink-0 mt-2`}
                                  style={{
-                                   backgroundColor: index === 0 ? '#3b82f6':
-                                                      index === 1 ? '#10b981':
-                                                      index === 2 ? '#8b5cf6':
-                                                      '#fb923c'
+                                   backgroundColor: 'white'
                                  }} />
                             <span>
                               {index === 0 && "24/7 System Monitoring"}
@@ -201,13 +175,10 @@ const WhyChooseSection = () => {
                               {index === 3 && "Performance Optimization"}
                             </span>
                           </div>
-                          <div className="flex items-center gap-3 text-sm text-white/80">
-                            <div className={`w-2 h-2 rounded-full`}
+                          <div className="flex items-start gap-3 text-base text-white/80 text-left">
+                            <div className={`w-2 h-2 rounded-full flex-shrink-0 mt-2`}
                                  style={{
-                                   backgroundColor: index === 0 ? '#3b82f6':
-                                                      index === 1 ? '#10b981':
-                                                      index === 2 ? '#8b5cf6':
-                                                      '#fb923c'
+                                   backgroundColor: 'white'
                                  }} />
                             <span>
                               {index === 0 && "Enterprise Security"}
@@ -216,13 +187,10 @@ const WhyChooseSection = () => {
                               {index === 3 && "Cost Efficiency"}
                             </span>
                           </div>
-                          <div className="flex items-center gap-3 text-sm text-white/80">
-                            <div className={`w-2 h-2 rounded-full`}
+                          <div className="flex items-start gap-3 text-base text-white/80 text-left">
+                            <div className={`w-2 h-2 rounded-full flex-shrink-0 mt-2`}
                                  style={{
-                                   backgroundColor: index === 0 ? '#3b82f6':
-                                                      index === 1 ? '#10b981':
-                                                      index === 2 ? '#8b5cf6':
-                                                      '#fb923c'
+                                   backgroundColor: 'white'
                                  }} />
                             <span>
                               {index === 0 && "Seamless Integration"}
@@ -231,25 +199,7 @@ const WhyChooseSection = () => {
                               {index === 3 && "Guaranteed Uptime"}
                             </span>
                           </div>
-                          
-                          </div>
-                      </div>
-                    </div>
-                    
-                    {/* Enhanced hover indicator */}
-                    <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-2 group-hover:translate-x-0">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110`}
-                           style={{
-                             background: index === 0 ? 'rgba(59,130,246,0.3)':
-                                        index === 1 ? 'rgba(16,185,129,0.3)':
-                                        index === 2 ? 'rgba(139,92,246,0.3)':
-                                        'rgba(251,146,60,0.3)',
-                             border: `1px solid ${index === 0 ? 'rgba(59,130,246,0.5)':
-                                              index === 1 ? 'rgba(16,185,129,0.5)':
-                                              index === 2 ? 'rgba(139,92,246,0.5)':
-                                              'rgba(251,146,60,0.5)'}`
-                           }}>
-                        <div className="w-2 h-2 rounded-full bg-white" />
+                        </div>  
                       </div>
                     </div>
                   </div>
