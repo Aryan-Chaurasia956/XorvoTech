@@ -21,7 +21,7 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    // Progress bar animation - smoother with requestAnimationFrame
+    // Progress bar animation - synchronized with carousel
     let animationFrameId;
     let startTime = Date.now();
     const duration = 4000; // 4 seconds
@@ -33,6 +33,15 @@ const HeroSection = () => {
 
       if (newProgress < 100) {
         animationFrameId = requestAnimationFrame(animateProgress);
+      } else {
+        // When progress reaches 100%, advance carousel and restart
+        setCurrentImageIndex((prevIndex) =>
+          (prevIndex + 1) % carouselImages.length
+        );
+        // Reset progress and restart animation
+        setProgress(0);
+        startTime = Date.now();
+        animationFrameId = requestAnimationFrame(animateProgress);
       }
     };
 
@@ -40,18 +49,10 @@ const HeroSection = () => {
     setProgress(0);
     animationFrameId = requestAnimationFrame(animateProgress);
 
-    // Auto-advance carousel every 4 seconds
-    const carouselInterval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % carouselImages.length
-      );
-    }, 4000);
-
     return () => {
       cancelAnimationFrame(animationFrameId);
-      clearInterval(carouselInterval);
     };
-  }, [currentImageIndex, carouselImages.length]);
+  }, [carouselImages.length]);
 
   return (
     <section className="relative min-h-screen sm:min-h-[110vh] lg:min-h-[120vh] flex flex-col items-center justify-center overflow-hidden bg-black text-white">
