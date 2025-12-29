@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Linkedin, X, Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -129,7 +129,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
               >
-                <Twitter className="h-5 w-5" />
+                <X className="h-5 w-5" />
               </a>
             </div>
           </div>
