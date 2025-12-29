@@ -367,14 +367,22 @@ const Solution = () => {
 
         {/* Closing Section (Final CTA / Confidence Message) */}
       </div>
-        <div id='integration-closing' className='bole scroll-anchor'>
-          <div className='text-2xl'>Integration is where real digital transformation happens.</div>
-          <div>Xorvo Technologies brings together systems, security, and intelligence into one unified ecosystem — delivering performance without compromise and protection without limits.</div>
-          <div className='bat flex gap-2 justify-center'>
-            <Link to="/?contact=true"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Integration Consultation</button></Link>
-            <Link to="/services"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore All Services</button></Link>
-          </div>
+      <div className='intro-card intro-stack p-30 relative' style={{
+        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/60 to-slate-900/80"></div>
+        
+        {/* Content */}
+        <div className='krishna relative z-10 text-white'>Integration is where real digital transformation happens. Xorvo Technologies brings together systems, security, and intelligence into one unified ecosystem — delivering performance without compromise and protection without limits.</div>
+        <div className='cta-row relative z-10'>
+          <Link to="/?contact=true"><button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Integration Consultation</button></Link>
+          <Link to="/services"><button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore All Services</button></Link>
         </div>
+      </div>
 
  
     </div>

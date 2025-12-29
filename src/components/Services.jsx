@@ -129,6 +129,12 @@ const Services = () => {
     <div className="bg-gradient-to-br from-cyan-50 via-blue-50 to-white">
       {/* Integration & Engineering Solutions - Full Screen Hero */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden text-white services-hero">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('pexels-divinetechygirl-1181354.jpg')"}}></div>
+        
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-blue-900/60 to-gray-900/80"></div>
+        
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
           <div className="max-w-5xl mx-auto text-center space-y-8">
@@ -552,7 +558,7 @@ const Services = () => {
 
       {/* Closing CTA */}
       <div className='intro-card intro-stack p-30 relative' style={{
-        backgroundImage: "url('/pexels-kaboompics-com-6317.jpg')",
+        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -748,7 +754,7 @@ const Services = () => {
 
       {/* Managed IT Services CTA */}
       <div className='intro-card intro-stack p-30 relative' style={{
-        backgroundImage: "url('/pexels-kaboompics-com-6317.jpg')",
+        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -931,7 +937,7 @@ const Services = () => {
 
       {/* Workspace & Collaboration CTA */}
       <div className='intro-card intro-stack p-30 relative' style={{
-        backgroundImage: "url('/pexels-kaboompics-com-6317.jpg')",
+        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -1136,7 +1142,7 @@ const Services = () => {
 
       {/* Data Protection & Compliance CTA */}
       <div className='intro-card intro-stack p-30 relative' style={{
-        backgroundImage: "url('/pexels-kaboompics-com-6317.jpg')",
+        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -1319,7 +1325,7 @@ const Services = () => {
 
       {/* IT Consulting & Deployment CTA */}
       <div className='intro-card intro-stack p-30 relative' style={{
-        backgroundImage: "url('/pexels-kaboompics-com-6317.jpg')",
+        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'

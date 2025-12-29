@@ -65,7 +65,7 @@ const Resource = () => {
             {/* CTA Button */}
             <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
               <Link to="/?contact=true">
-                <button type="button" className="bg-white text-blue-900 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
+                <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
                   Subscribe for Updates
                 </button>
               </Link>
@@ -102,9 +102,7 @@ const Resource = () => {
             <div>Each article provides clear context and actionable guidance — written for CIOs, CISOs, and IT strategists.</div>
           </div>
           <div className='center-row'>
-            <Link to="/resources/insights">
-              <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Read Insights</button>
-            </Link>
+            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Read Insights</button>
           </div>
         </div>
 
@@ -122,9 +120,7 @@ const Resource = () => {
             <div>Each story demonstrates measurable business outcomes achieved through technology excellence.</div>
           </div>
           <div className='center-row'>
-            <Link to="/resources/case-studies">
-              <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Case Studies</button>
-            </Link>
+            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Case Studies</button>
           </div>
         </div>
 
@@ -142,9 +138,7 @@ const Resource = () => {
             </ul>
           </div>
           <div className='center-row'>
-            <Link to="/resources/whitepapers">
-              <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Download Technical Briefs</button>
-            </Link>
+            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Download Technical Briefs</button>
           </div>
         </div>
 
@@ -162,9 +156,7 @@ const Resource = () => {
             </ul>
           </div>
           <div className='center-row'>
-            <Link to="/resources/security-alerts">
-              <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Security Alerts</button>
-            </Link>
+            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Security Alerts</button>
           </div>
         </div>
 
@@ -177,25 +169,20 @@ const Resource = () => {
             <div>This ensures every reader — from CIO to network architect — gains credible and immediately applicable information.</div>
           </div>
           <div className='center-row'>
-            <Link to="/contact">
-              <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Contact Editorial Team</button>
-            </Link>
+            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Contact Editorial Team</button>
           </div>
         </div>
       </div>
 
       {/* Closing Section (Final CTA) */}
-      <div className='intro-card intro-stack p-30 relative overflow-hidden'>
-        {/* Background Image */}
-        <img
-          src="/geometric-1732847.jpg"
-          alt="Geometric background"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
-          decoding="async"
-        />
+      <div className='intro-card intro-stack p-30 relative' style={{
+        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/60 to-slate-900/80" />
         
         <div className='krishna relative z-10 text-white'>
           Stay informed, stay prepared, and stay ahead with Xorvo Technologies.
@@ -204,10 +191,10 @@ const Resource = () => {
         </div>
         <div className='center-row gap-4 relative z-10'>
           <Link to="/solutions">
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Solutions</button>
+            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Solutions</button>
           </Link>
           <Link to="/?contact=true">
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Contact Us</button>
+            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Contact Us</button>
           </Link>
         </div>
       </div>

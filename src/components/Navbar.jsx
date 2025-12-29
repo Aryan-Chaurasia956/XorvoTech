@@ -98,6 +98,12 @@ const Navbar = () => {
     'ERP Implementation': '#erp-implementation',
     'HRMS Implementation': '#hrms-implementation',
     'Network Designing': '#network-designing',
+    
+    // Resources
+    'Blog': '#insights-industry-updates',
+    'Case Studies': '#case-studies',
+    'Guides & Whitepapers': '#technical-papers',
+    'Security Alerts': '#security-updates',
   };
 
   // Map Solutions columns to anchors on /solutions
@@ -400,6 +406,7 @@ const Navbar = () => {
                       <Link 
                         to={activeDropdown === 'Services' ? `/services${servicesAnchorMap[column.title] || ''}` : 
                              activeDropdown === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : 
+                             activeDropdown === 'Resources' ? '/resources' : 
                              '#'}
                         onClick={() => setActiveDropdown(null)}
                         className="text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-4 hover:text-cyan-300 transition-colors duration-200 cursor-pointer"
@@ -414,9 +421,10 @@ const Navbar = () => {
                           const itemPath = typeof subItem === 'string' ? '#' : subItem.path;
                           const individualServiceAnchor = individualServiceMap[itemName] || '';
                           
-                          // For Services dropdown, use individual service anchor; for others, use existing logic
+                          // For Services dropdown, use individual service anchor; for Solutions, use solutions anchor; for Resources, use resources anchor
                           const finalPath = activeDropdown === 'Services' ? individualServiceAnchor ? `/services${individualServiceAnchor}` : `/services` :
                                           activeDropdown === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : 
+                                          activeDropdown === 'Resources' ? `/resources${individualServiceMap[itemName] || ''}` :
                                           itemPath;
 
                           return (
@@ -472,7 +480,10 @@ const Navbar = () => {
                             return (
                               <li key={subIdx}>
                                 <Link
-                                  to={item.name === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : item.name === 'Services' ? `/services${servicesAnchorMap[column.title] || ''}` : itemPath}
+                                  to={item.name === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : 
+                                       item.name === 'Services' ? `/services${servicesAnchorMap[column.title] || ''}` : 
+                                       item.name === 'Resources' ? `/resources${individualServiceMap[itemName] || ''}` : 
+                                       itemPath}
                                   className={`block text-sm sm:text-base py-2 transition-colors active:scale-95 ${isHighlighted
                                       ? 'text-blue-600 font-medium'
                                       : 'text-gray-700 hover:text-black'
