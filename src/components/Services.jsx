@@ -743,46 +743,6 @@ const Services = () => {
             </Link>
           </div>
         </div>
-
-        {/* Containers & Kubernetes */}
-        <div id='containers-kubernetes' className='felix scroll-anchor' data-heading='Containers & Kubernetes'>
-          <div className='text-2xl'>Containers & Kubernetes</div>
-          <div>Modernize your applications with containerization and Kubernetes orchestration. Our container services enable faster deployment, better resource utilization, and improved application portability across environments.</div>
-          <div>We provide end-to-end container solutions including Docker containerization, Kubernetes cluster setup and management, CI/CD pipeline integration, and microservices architecture design. Our experts ensure secure and scalable container deployments.</div>
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Accelerates application development and deployment cycles</li>
-            <li>• Improves resource utilization and reduces infrastructure costs</li>
-            <li>• Enables consistent environments across development and production</li>
-            <li>• Supports microservices architecture and cloud-native applications</li>
-            <li>• Provides better scalability and fault tolerance for applications</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Load Balancing & High Availability */}
-        <div id='load-balancing-ha' className='akash scroll-anchor' data-heading='Load Balancing & High Availability'>
-          <div className='text-2xl'>Load Balancing & High Availability</div>
-          <div>Ensure maximum uptime and performance with advanced load balancing and high availability solutions. Our services distribute traffic efficiently and provide redundancy to keep your applications always available.</div>
-          <div>We implement comprehensive load balancing solutions including application load balancers, global server load balancing, and failover configurations. Our HA architectures ensure zero downtime maintenance and automatic failover during outages.</div>
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Prevents single points of failure and ensures continuous availability</li>
-            <li>• Optimizes application performance through intelligent traffic distribution</li>
-            <li>• Supports seamless scaling during traffic spikes</li>
-            <li>• Enables zero-downtime maintenance and updates</li>
-            <li>• Protects against DDoS attacks and traffic surges</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
       </div>
       )}
 

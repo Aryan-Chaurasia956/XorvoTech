@@ -158,7 +158,6 @@ const Solution = () => {
             <li>• Network Designing – Advanced LAN/WAN topologies, VPNs, and hybrid connectivity.</li>
             <li>• Infrastructure Deployment – Data center planning, hardware provisioning, and topology setup.</li>
             <li>• Server Virtualization – Efficient compute resource management and optimization.</li>
-            <li>• Load Balancing & High Availability – Ensuring uptime through redundancy and failover architecture.</li>
           </ul>
           <div className='flex justify-center'>
             <Link to="/services/cloud-infrastructure"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Infrastructure Services</button></Link>
@@ -187,7 +186,6 @@ const Solution = () => {
           <ul>
             <li>• Cloud Migration – Move workloads to AWS, Azure, or GCP with precision and zero downtime.</li>
             <li>• Hybrid Cloud Management – Unified visibility and control for multi-cloud setups.</li>
-            <li>• Containerization (Docker & Kubernetes) – Application scalability with microservices architecture.</li>
             <li>• Backup & Disaster Recovery – Multi-region data resilience and policy-based recovery automation.</li>
           </ul>
           <div className='flex justify-center'>
@@ -351,7 +349,6 @@ const Solution = () => {
             <li>• Application Layer Integration with Databases and APIs</li>
             <li>• Secure Data Exchange Across Systems</li>
             <li>• Scalable Middleware Development</li>
-            <li>• Containerized Deployments (Docker, Kubernetes)</li>
             <li>• Performance Engineering and Optimization</li>
           </ul>
           <div className='center-row'>

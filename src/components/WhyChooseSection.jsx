@@ -1,4 +1,5 @@
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import SplitText from './SplitText';
 import LazyImage from './LazyImage';
 
@@ -209,12 +210,12 @@ const WhyChooseSection = () => {
             
             {/* CTA Section */}
             <div className="text-center animate-fadeInUp">
-              <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-accent via-accent/90 to-accent/80 text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:from-accent hover:to-accent/90 backdrop-blur-sm border border-white/20">
+              <Link to="/?contact=true&partner=true" className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-accent via-accent/90 to-accent/80 text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:from-accent hover:to-accent/90 backdrop-blur-sm border border-white/20 cursor-pointer">
                 <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
                   <ArrowRight className="h-3 w-3 text-white" />
                 </div>
                 <span>Partner with Xorvo Technologies. Power your business with smarter IT.</span>
-              </div>
+              </Link>
             </div>
           </div>
           </div>

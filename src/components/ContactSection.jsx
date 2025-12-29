@@ -1,11 +1,12 @@
-import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Linkedin, Instagram, Facebook, Twitter } from "lucide-react";
 import ReCaptcha from "./ReCaptcha";
 
 const ContactSection = () => {
   const recaptchaRef = useRef(null);
+  const location = useLocation();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -23,18 +24,29 @@ const ContactSection = () => {
     recaptchaToken: "",
   });
 
+  // Check URL parameters for partner selection
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    if (searchParams.get('partner') === 'true') {
+      setFormData(prev => ({
+        ...prev,
+        contactType: "partner"
+      }));
+    }
+  }, [location.search]);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
   const [errors, setErrors] = useState({});
 
   const challenges = [
-    "Cloud Security",
-    "Incident Response",
-    "Managed Detection and Response",
-    "Risk and Vulnerability Management",
-    "Security Awareness Training",
-    "Regulatory Compliance",
-    "Endpoint Security",
+    "Cybersecurity Services",
+    "Cloud & Infrastructure",
+    "Managed IT Services",
+    "Workspace & Collaboration",
+    "Data Protection & Compliance",
+    "IT Consulting & Deployment",
+    "Others"
   ];
 
   const countryCodes = [

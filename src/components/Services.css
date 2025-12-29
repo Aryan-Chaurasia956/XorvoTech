@@ -175,6 +175,19 @@
   background-blend-mode: overlay, normal;
 }
 
+#ci-cd-automation::after {
+  content: attr(data-heading);
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(59, 130, 246, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  ), url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
+}
+
 #monitoring-noc-setup::after {
   content: attr(data-heading);
   background-image: linear-gradient(
@@ -332,22 +345,6 @@
   color: white !important;
 }
 
-#containers-kubernetes::after {
-  background-image: url('/infrastructure-design-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
-}
-
-#load-balancing-ha::after {
-  background-image: url('/jason-leung-iKfVCtcPgqI-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
-}
-
 /* Compliance & Audit card - First Face Overlay */
 #compliance-audit::after {
   background-image: url('/pexels-kunitsky-210990.jpg');
@@ -364,8 +361,6 @@
 #hybrid-multi-cloud::before,
 #backup-disaster-recovery::before,
 #infrastructure-monitoring::before,
-#containers-kubernetes::before,
-#load-balancing-ha::before,
 #compliance-audit::before {
   content: '';
   position: absolute;
@@ -391,8 +386,6 @@
 #hybrid-multi-cloud::after,
 #backup-disaster-recovery::after,
 #infrastructure-monitoring::after,
-#containers-kubernetes::after,
-#load-balancing-ha::after,
 #compliance-audit::after {
   z-index: 2;
 }

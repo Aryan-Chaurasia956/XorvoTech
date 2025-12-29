@@ -12,6 +12,16 @@ const Footer = () => {
     "Managed Security Awareness": "/solutions#network-security",
     "Incident Response": "/solutions#unified-security-performance-ops",
   };
+
+  // Map Services footer items to anchors on the Services page
+  const servicesFooterMap = {
+    "Cybersecurity Services": "/services#cybersecurity-hero",
+    "Cloud & Infrastructure": "/services#enterprise-it-hero",
+    "Managed IT Services": "/services#managed-it-hero",
+    "Workspace & Collaboration": "/services#workspace-hero",
+    "Data Protection & Compliance": "/services#data-protection-hero",
+    "IT Consulting & Deployment": "/services#it-consulting-hero"
+  };
   const footerLinks = {
     Solutions: [
       "Managed Detection and Response",
@@ -20,6 +30,14 @@ const Footer = () => {
       "Cloud Security Posture Management",
       "Managed Security Awareness",
       "Incident Response"
+    ],
+    Services: [
+      "Cybersecurity Services",
+      "Cloud & Infrastructure",
+      "Managed IT Services",
+      "Workspace & Collaboration",
+      "Data Protection & Compliance",
+      "IT Consulting & Deployment"
     ],
     Partners: [
       "Become a Partner",
@@ -126,7 +144,7 @@ const Footer = () => {
                     <li key={link}>
                       {title === "Partners" && (link === "Become a Partner" || link === "Contact Us") ? (
                         <Link
-                          to="/?contact=true"
+                          to={link === "Become a Partner" ? "/?contact=true&partner=true" : "/?contact=true"}
                           className="text-muted-foreground hover:text-accent transition-colors"
                         >
                           {link}
@@ -141,6 +159,13 @@ const Footer = () => {
                       ) : title === "Solutions" ? (
                         <Link
                           to={solutionFooterMap[link] || "/solutions"}
+                          className="text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          {link}
+                        </Link>
+                      ) : title === "Services" ? (
+                        <Link
+                          to={servicesFooterMap[link] || "/services"}
                           className="text-muted-foreground hover:text-accent transition-colors"
                         >
                           {link}

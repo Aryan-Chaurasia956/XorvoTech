@@ -59,8 +59,6 @@ const Navbar = () => {
     'Hybrid & Multi-Cloud Management': '#hybrid-multi-cloud',
     'Backup & Disaster Recovery': '#backup-disaster-recovery',
     'Infrastructure Monitoring (NOC)': '#infrastructure-monitoring',
-    'Containers & Kubernetes': '#containers-kubernetes',
-    'Load Balancing & High Availability': '#load-balancing-ha',
     
     // Managed IT Services
     'Monitoring & Maintenance': '#monitoring-maintenance',
@@ -205,8 +203,6 @@ const Navbar = () => {
             "Hybrid & Multi-Cloud Management",
             "Backup & Disaster Recovery",
             "Infrastructure Monitoring (NOC)",
-            "Containers & Kubernetes",
-            "Load Balancing & High Availability",
           ],
         },
         {
