@@ -160,7 +160,7 @@ const Solution = () => {
             <li>• Server Virtualization – Efficient compute resource management and optimization.</li>
           </ul>
           <div className='flex justify-center'>
-            <Link to="/services/cloud-infrastructure"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Infrastructure Services</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Infrastructure Services</button>
           </div>
         </div>
 
@@ -175,7 +175,7 @@ const Solution = () => {
             <li>• Performance Analytics – Advanced metrics for capacity planning and infrastructure optimization.</li>
           </ul>
           <div className='flex justify-center'>
-            <Link to="/services/consulting/monitoring-noc-setup"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn About Monitoring Solutions</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn About Monitoring Solutions</button>
           </div>
         </div>
 
@@ -189,7 +189,7 @@ const Solution = () => {
             <li>• Backup & Disaster Recovery – Multi-region data resilience and policy-based recovery automation.</li>
           </ul>
           <div className='flex justify-center'>
-            <Link to="/services/cloud-infrastructure"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Optimize My Cloud</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Optimize My Cloud</button>
           </div>
         </div>
 
@@ -204,7 +204,7 @@ const Solution = () => {
           </ul>
           <div className='flex flex-col gap-2 items-center'>
             <p>All three are combined into one managed optimization program for consistent growth across regions and platforms.</p>
-            <Link to="/services/consulting/seo"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Improve Digital Presence</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Improve Digital Presence</button>
           </div>
         </div>
 
@@ -219,7 +219,7 @@ const Solution = () => {
             <li>• API & System Integration – Secure connectivity between platforms and data sources.</li>
           </ul>
           <div className='flex justify-center'>
-            <Link to="/services/consulting/app-deployment"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Application Services</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Application Services</button>
           </div>
         </div>
 
@@ -234,7 +234,7 @@ const Solution = () => {
             <li>• Compliance Alignment – Network controls mapped to ISO, GDPR, and NIST frameworks.</li>
           </ul>
           <div className='flex justify-center'>
-            <Link to="/services/cybersecurity"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Network Assessment</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Network Assessment</button>
           </div>
         </div>
 
@@ -243,7 +243,7 @@ const Solution = () => {
           <div className='text-2xl'>Unified Deployment Ecosystem</div>
           <div>We ensure every deployment — whether an application, server, or security stack — is part of a unified, automated environment. From CI/CD pipelines to integrated monitoring, Xorvo’s engineering approach ensures consistent performance and simplified management.</div>
           <div className='flex justify-center'>
-            <Link to="/?contact=true"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Talk to a Deployment Engineer</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Talk to a Deployment Engineer</button>
           </div>
         </div>
 
@@ -257,7 +257,7 @@ const Solution = () => {
           <div className='krishna'>(Overview)</div>
           <div>Modern enterprises demand more than individual tools — they require complete ecosystems that integrate seamlessly across security, cloud, and application layers. Xorvo Technologies delivers unified engineering and integration frameworks that help organizations build cohesive, automated, and scalable IT environments.</div>
           <div className='flex justify-center'>
-            <Link to="/?contact=true"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Talk to an Integration Expert</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Talk to an Integration Expert</button>
           </div>
         </div>
 
@@ -273,7 +273,7 @@ const Solution = () => {
             <li>• Automation via CI/CD and ITSM platforms</li>
           </ul>
           <div className='center-row'>
-            <Link to="/services/consulting/app-deployment"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Integration Services</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Integration Services</button>
           </div>
         </div>
 
@@ -289,7 +289,7 @@ const Solution = () => {
             <li>• Unified Monitoring and Performance Benchmarking</li>
           </ul>
           <div className='center-row'>
-            <Link to="/services/consulting/network-design"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Architecture Review</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Architecture Review</button>
           </div>
         </div>
 
@@ -305,7 +305,7 @@ const Solution = () => {
             <li>• Security Compliance Across Cloud Environments</li>
           </ul>
           <div className='center-row'>
-            <Link to="/services/cloud-infrastructure"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More About Cloud Integration</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More About Cloud Integration</button>
           </div>
         </div>
 
@@ -321,7 +321,7 @@ const Solution = () => {
             <li>• Centralized Observability and Monitoring</li>
           </ul>
           <div className='center-row'>
-            <Link to="/services/consulting/ci-cd-automation"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Automate My Environment</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Automate My Environment</button>
           </div>
         </div>
 
@@ -337,7 +337,7 @@ const Solution = () => {
             <li>• SLA-driven Operations Frameworks</li>
           </ul>
           <div className='center-row'>
-            <Link to="/services/cybersecurity"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Integrated Ops Demo</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Integrated Ops Demo</button>
           </div>
         </div>
 
@@ -352,7 +352,7 @@ const Solution = () => {
             <li>• Performance Engineering and Optimization</li>
           </ul>
           <div className='center-row'>
-            <Link to="/services/consulting/custom-applications"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Application Engineering</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Application Engineering</button>
           </div>
         </div>
 
@@ -361,7 +361,7 @@ const Solution = () => {
           <div className='text-2xl'>Collaborative Engineering (Cross-Platform Alignment)</div>
           <div>Our team works closely with technology leaders — Fortinet, Cisco, Check Point, Microsoft, AWS, and ServiceNow — to ensure your stack remains integrated and future-proof. We align engineering practices across platforms, ensuring compatibility, scalability, and ongoing optimization.</div>
           <div className='center-row'>
-            <Link to="/partners"><button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Partner Ecosystem</button></Link>
+            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Partner Ecosystem</button>
           </div>
         </div>
 
