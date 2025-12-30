@@ -189,7 +189,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © All Rights Reserved 2026 Xorvo Technologies
+            © 2026 Xorvo Technologies Pvt Ltd All Rights Reserved
           </p>
           <div className="flex gap-6 text-sm">
             <Link
