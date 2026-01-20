@@ -107,21 +107,14 @@ const HeroSection = () => {
             >
               Smarter Technology
             </span> */}
-            <BoldText text='Smarter Technology' isVisible={isVisible}/>
-            {/* <span
-              className={`block text-white mb-4 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-            >
-              Stronger Security
-            </span> */}
-            <BoldText text='Stronger Security' isVisible={isVisible}/>
+            <BoldText text='Managed IT Services' isVisible={isVisible}/>
+            <BoldText text='& Cybersecurity for' isVisible={isVisible}/>
             <span
               className={`block text-white transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
             >
-              {/* TODO: remove extra span */}
               <span className="relative inline-block">
-                <span className="text">Better Business</span>
+                <span className="text">Business Infrastructure</span>
               </span>
             </span>
           </h1>
@@ -131,7 +124,7 @@ const HeroSection = () => {
             className={`text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-2xl transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
           >
-            Complete IT and security solutions designed for your success
+            System Integrator delivering Cloud, Endpoint Security (EPS), Workspace Solutions, VPS and Enterprise IT Services
           </p>
 
           {/* Progress Bar */}

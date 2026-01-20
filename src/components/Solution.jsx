@@ -53,11 +53,8 @@ const Solution = () => {
           <div className="max-w-5xl mx-auto text-center space-y-8">
             {/* Headline with animation */}
             <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <span className="block text-white mb-4">
-                XORVO TECHNOLOGIES
-              </span>
               <span className="block text-white">
-                SOLUTIONS
+                Business IT Solutions
               </span>
             </h1>
 

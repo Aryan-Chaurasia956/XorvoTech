@@ -44,9 +44,9 @@ const AboutSection = () => {
             </div>
 
             {/* Subtitle */}
-             <h3 className="text-xl md:text-2xl font-semibold text-white/90 mb-6 leading-relaxed">
-               We help organizations build secure, connected, and high-performing digital environments.
-             </h3>
+             <h2 className="text-xl md:text-2xl font-semibold text-white/90 mb-6 leading-relaxed">
+               Managed IT Services Company for IT Infrastructure, NOC & Help Desk Support
+             </h2>
 
              {/* Description */}
              <div className="text-white/80 text-base md:text-lg leading-relaxed mb-8 space-y-4">

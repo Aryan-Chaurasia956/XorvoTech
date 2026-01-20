@@ -5,6 +5,7 @@ import PartnerSlider from "@/components/PartnerSlider";
 import AboutSection from "@/components/AboutSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import JsonLdSchema from "@/components/JsonLdSchema";
 
 // Lazy load below-the-fold components for better performance 
 const SolutionsSection = lazy(() => import("@/components/SolutionsSection"));
@@ -39,6 +40,7 @@ const Index = () => {
   }, [location.search]);
   return (
     <div className="min-h-screen bg-background">
+      <JsonLdSchema />
       <HeroSection />
       <PartnerSlider />
       <AboutSection />
