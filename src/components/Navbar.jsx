@@ -327,7 +327,7 @@ const Navbar = () => {
                         navigate('/resources');
                       }
                       if (item.name === 'Services') {
-                        navigate('/services#cybersecurity-hero');
+                        navigate('/services');
                       }
                       if (item.name === 'Solutions') {
                         navigate('/solutions');

@@ -141,10 +141,10 @@ const Services = () => {
             {/* Headline with animation */}
             <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <span className="block text-white mb-4">
-                INTEGRATION & ENGINEERING
+                End-to-End IT Services
               </span>
               <span className="block text-white">
-                SOLUTIONS
+                for Modern Businesses
               </span>
             </h1>
 
@@ -180,7 +180,7 @@ const Services = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4">Our Service Categories</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4">Our Services</h2>
             <p className="text-lg text-gray-200 max-w-3xl mx-auto">Explore our comprehensive range of services designed to transform your business operations</p>
           </div>
           
@@ -336,14 +336,14 @@ const Services = () => {
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
           <div className="max-w-5xl mx-auto text-center space-y-8">
             {/* Headline with animation */}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${isCybersecurityVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${isCybersecurityVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <span className="block text-white mb-4">
                 CYBERSECURITY
               </span>
               <span className="block text-white">
                 SERVICES
               </span>
-            </h1>
+            </h2>
 
             {/* Subtitle */}
             <p className={`text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto transition-all duration-700 delay-300 ${isCybersecurityVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -584,14 +584,14 @@ const Services = () => {
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
           <div className="max-w-5xl mx-auto text-center space-y-8">
             {/* Headline with animation */}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${isEnterpriseVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${isEnterpriseVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <span className="block text-white mb-4">
                 CLOUD &
               </span>
               <span className="block text-white">
                 INFRASTRUCTURE
               </span>
-            </h1>
+            </h2>
 
             {/* Subtitle */}
             <p className={`text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto transition-all duration-700 delay-300 ${isEnterpriseVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -782,14 +782,14 @@ const Services = () => {
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
           <div className="max-w-5xl mx-auto text-center space-y-8">
             {/* Headline with animation */}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
               <span className="block text-white mb-4">
                 MANAGED IT
               </span>
               <span className="block text-white">
                 SERVICES
               </span>
-            </h1>
+            </h2>
 
             {/* Subtitle */}
             <p className={`text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto transition-all duration-700 delay-300 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -965,14 +965,14 @@ const Services = () => {
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
           <div className="max-w-5xl mx-auto text-center space-y-8">
             {/* Headline with animation */}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
               <span className="block text-white mb-4">
                 WORKSPACE &
               </span>
               <span className="block text-white">
                 COLLABORATION
               </span>
-            </h1>
+            </h2>
 
             {/* Subtitle */}
             <p className={`text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto transition-all duration-700 delay-300 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -1170,14 +1170,14 @@ const Services = () => {
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
           <div className="max-w-5xl mx-auto text-center space-y-8">
             {/* Headline with animation */}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
               <span className="block text-white mb-4">
                 DATA PROTECTION &
               </span>
               <span className="block text-white">
                 COMPLIANCE
               </span>
-            </h1>
+            </h2>
 
             {/* Subtitle */}
             <p className={`text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto transition-all duration-700 delay-300 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -1353,14 +1353,14 @@ const Services = () => {
         <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
           <div className="max-w-5xl mx-auto text-center space-y-8">
             {/* Headline with animation */}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
               <span className="block text-white mb-4">
                 IT CONSULTING &
               </span>
               <span className="block text-white">
                 DEPLOYMENT
               </span>
-            </h1>
+            </h2>
 
             {/* Subtitle */}
             <p className={`text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto transition-all duration-700 delay-300 ${true ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
