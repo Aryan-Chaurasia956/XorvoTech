@@ -67,140 +67,79 @@ const WhyChooseSection = () => {
               />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 relative">
+              {/* Background decorative shapes */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-10 left-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl"></div>
+                <div className="absolute top-40 right-20 w-48 h-48 bg-gradient-to-br from-accent/10 to-transparent rounded-3xl blur-3xl transform rotate-12"></div>
+                <div className="absolute bottom-20 left-1/4 w-64 h-40 bg-accent/3 rounded-full blur-2xl"></div>
+                <div className="absolute top-1/3 right-1/3 w-40 h-40 bg-gradient-to-tr from-accent/5 to-transparent rounded-2xl blur-xl transform -rotate-45"></div>
+              </div>
+              
               {reasons.map((reason, index) => (
                 <div
                   key={index}
-                  className="group relative h-[120px] lg:h-[140px] xl:h-[160px] rounded-2xl overflow-hidden cursor-pointer transition-all duration-700 ease-out hover:z-10 hover:h-[350px] lg:hover:h-[400px] xl:hover:h-[450px] hover:shadow-2xl"
-                  onMouseEnter={(e) => {
-                    const parent = e.currentTarget.parentElement;
-                    const siblings = Array.from(parent.children).filter(child => child !== e.currentTarget);
-                    siblings.forEach(sibling => {
-                      sibling.style.transform = 'scale(0.92)';
-                      sibling.style.opacity = '0.6';
-                      sibling.style.filter = 'blur(1px)';
-                    });
-                  }}
-                  onMouseLeave={(e) => {
-                    const parent = e.currentTarget.parentElement;
-                    const siblings = Array.from(parent.children).filter(child => child !== e.currentTarget);
-                    siblings.forEach(sibling => {
-                      sibling.style.transform = 'scale(1)';
-                      sibling.style.opacity = '1';
-                      sibling.style.filter = 'blur(0px)';
-                    });
-                  }}
+                  className="group relative bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-accent/20 transition-all duration-300 hover:-translate-y-1 z-10"
                 >
-                  {/* Dynamic background images with color overlays */}
+                  {/* Photo background */}
                   <div 
-                    className="absolute inset-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                    className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-300 rounded-3xl overflow-hidden"
                     style={{
                       backgroundImage: index === 0 ? "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop')" :
-                                    index === 1 ? "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop')" :
-                                    index === 2 ? "url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop')" :
-                                    "url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop')",
+                                     index === 1 ? "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop')" :
+                                     index === 2 ? "url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop')" :
+                                     "url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop')",
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     }}
                   />
                   
-                  {/* Color gradient overlays that change on hover */}
-                  <div className="absolute inset-0 transition-all duration-700" 
-                       style={{
-                         background: index === 0 ? 'linear-gradient(135deg, rgba(114,124,171,0.85) 0%, rgba(114,124,171,0.75) 50%, rgba(114,124,171,0.85) 100%)':
-                                     index === 1 ? 'linear-gradient(135deg, rgba(114,124,171,0.85) 0%, rgba(114,124,171,0.75) 50%, rgba(114,124,171,0.85) 100%)':
-                                     index === 2 ? 'linear-gradient(135deg, rgba(114,124,171,0.85) 0%, rgba(114,124,171,0.75) 50%, rgba(114,124,171,0.85) 100%)':
-                                     'linear-gradient(135deg, rgba(114,124,171,0.85) 0%, rgba(114,124,171,0.75) 50%, rgba(114,124,171,0.85) 100%)'
-                       }}
-                  />
-                  
-                  {/* Animated gradient overlay on hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                       style={{
-                         background: index === 0 ? 'linear-gradient(135deg, rgba(114,124,171,0.95) 0%, rgba(114,124,171,0.85) 50%, rgba(114,124,171,0.95) 100%)':
-                                     index === 1 ? 'linear-gradient(135deg, rgba(114,124,171,0.95) 0%, rgba(114,124,171,0.85) 50%, rgba(114,124,171,0.95) 100%)':
-                                     index === 2 ? 'linear-gradient(135deg, rgba(114,124,171,0.95) 0%, rgba(114,124,171,0.85) 50%, rgba(114,124,171,0.95) 100%)':
-                                     'linear-gradient(135deg, rgba(114,124,171,0.95) 0%, rgba(114,124,171,0.85) 50%, rgba(114,124,171,0.95) 100%)'
-                       }}
-                  />
-                  
-                  {/* Content container */}
-                  <div className="relative h-full p-6 flex flex-col justify-center text-white group-hover:p-8 transition-all duration-700 overflow-hidden">
-                    {/* Initial state - Compact (only shows when not hovered) */}
-                    <div className="flex flex-col items-center justify-center text-center group-hover:hidden animate-fadeIn h-full">
-                      <h3 className="text-2xl font-bold leading-tight">
-                        {index === 0 ? "IT Integration" :
-                         index === 1 ? "Secure Solutions" :
-                         index === 2 ? "Expert Services" :
-                         "Proven Results"}
-                      </h3>
-                    </div>
+                  {/* Content overlay */}
+                  <div className="relative z-10 bg-white/90 backdrop-blur-sm rounded-3xl p-4">
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300" style={{ color: '#5C679E' }}>
+                      {index === 0 ? "IT Integration" :
+                       index === 1 ? "Secure Solutions" :
+                       index === 2 ? "Expert Services" :
+                       "Proven Results"}
+                    </h3>
                     
-                    {/* Expanded state - Full content (only shows when hovered) */}
-                    <div className="hidden group-hover:block h-full animate-fadeIn">
-                      <div className="flex flex-col h-full justify-between">
-                        {/* Title stays visible in expanded state */}
-                        <div className="text-center mb-2">
-                          <h3 className="text-2xl font-bold leading-tight text-center">
-                            {index === 0 ? "IT Integration" :
-                             index === 1 ? "Secure Solutions" :
-                             index === 2 ? "Expert Services" :
-                             "Proven Results"}
-                          </h3>
-                          {/* Decorative line */}
-                          <div className={`w-16 h-1 mx-auto rounded-full opacity-80`}
-                               style={{
-                                 backgroundColor: 'rgb(114, 124, 171)'
-                               }} />
-                        </div>
-                        
-                        <div>
-                          <p className="text-base text-white/90 leading-relaxed text-left">
-                            {index === 0 && "Complete IT infrastructure management with enterprise-grade security. We handle everything from network setup to 24/7 monitoring and maintenance."}
-                            {index === 1 && "Scalable cloud solutions that grow with your business. Future-ready architecture ensuring seamless expansion and technological advancement."}
-                            {index === 2 && "Expert cybersecurity protection and advanced networking solutions. Certified professionals safeguard your digital assets with cutting-edge technology."}
-                            {index === 3 && "Proven delivery excellence with maximum ROI guarantee. Minimal downtime, optimized performance, and measurable business results."}
-                          </p>
-                        </div>
-                        
-                        <div className="space-y-3">
-                          <div className="flex items-start gap-3 text-base text-white/80 text-left">
-                            <div className={`w-2 h-2 rounded-full flex-shrink-0 mt-2`}
-                                 style={{
-                                   backgroundColor: 'white'
-                                 }} />
-                            <span>
-                              {index === 0 && "24/7 System Monitoring"}
-                              {index === 1 && "Auto-Scaling Infrastructure"}
-                              {index === 2 && "Advanced Threat Protection"}
-                              {index === 3 && "Performance Optimization"}
-                            </span>
-                          </div>
-                          <div className="flex items-start gap-3 text-base text-white/80 text-left">
-                            <div className={`w-2 h-2 rounded-full flex-shrink-0 mt-2`}
-                                 style={{
-                                   backgroundColor: 'white'
-                                 }} />
-                            <span>
-                              {index === 0 && "Enterprise Security"}
-                              {index === 1 && "Cloud Migration Support"}
-                              {index === 2 && "Compliance Management"}
-                              {index === 3 && "Cost Efficiency"}
-                            </span>
-                          </div>
-                          <div className="flex items-start gap-3 text-base text-white/80 text-left">
-                            <div className={`w-2 h-2 rounded-full flex-shrink-0 mt-2`}
-                                 style={{
-                                   backgroundColor: 'white'
-                                 }} />
-                            <span>
-                              {index === 0 && "Seamless Integration"}
-                              {index === 1 && "Zero Downtime Deployment"}
-                              {index === 2 && "Real-time Analytics"}
-                              {index === 3 && "Guaranteed Uptime"}
-                            </span>
-                          </div>
-                        </div>  
+                    {/* Description */}
+                    <p className="text-gray-600 leading-relaxed mb-4 text-sm">
+                      {index === 0 && "Complete IT infrastructure management with enterprise-grade security. We handle everything from network setup to 24/7 monitoring and maintenance."}
+                      {index === 1 && "Scalable cloud solutions that grow with your business. Future-ready architecture ensuring seamless expansion and technological advancement."}
+                      {index === 2 && "Expert cybersecurity protection and advanced networking solutions. Certified professionals safeguard your digital assets with cutting-edge technology."}
+                      {index === 3 && "Proven delivery excellence with maximum ROI guarantee. Minimal downtime, optimized performance, and measurable business results."}
+                    </p>
+                    
+                    {/* Features */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3 text-sm text-gray-500">
+                        <div className="w-2 h-2 rounded-full bg-accent/60"></div>
+                        <span className="font-medium">
+                          {index === 0 && "24/7 System Monitoring"}
+                          {index === 1 && "Auto-Scaling Infrastructure"}
+                          {index === 2 && "Advanced Threat Protection"}
+                          {index === 3 && "Performance Optimization"}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-500">
+                        <div className="w-2 h-2 rounded-full bg-accent/60"></div>
+                        <span className="font-medium">
+                          {index === 0 && "Enterprise Security"}
+                          {index === 1 && "Cloud Migration Support"}
+                          {index === 2 && "Compliance Management"}
+                          {index === 3 && "Cost Efficiency"}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-500">
+                        <div className="w-2 h-2 rounded-full bg-accent/60"></div>
+                        <span className="font-medium">
+                          {index === 0 && "Seamless Integration"}
+                          {index === 1 && "Zero Downtime Deployment"}
+                          {index === 2 && "Real-time Analytics"}
+                          {index === 3 && "Guaranteed Uptime"}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -263,37 +202,7 @@ const WhyChooseSection = () => {
           }
         `}</style>
 
-        {/* Our Clients Section - Full Width */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-          <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 text-center" style={{ fontFamily: "'Rostex', 'Arial Black', sans-serif" }}>
-              OUR <span className="text-accent">CLIENTS</span>
-            </h2>
-            
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-lg">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {clients.map((client, index) => (
-                  <div
-                    key={index}
-                    className="group relative bg-gray-50 border border-gray-200 rounded-xl p-8 hover:bg-white hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105 flex items-center justify-center h-[140px]"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      <LazyImage 
-                        src={client.src} 
-                        alt={client.alt}
-                        className="max-w-full max-h-[100px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                        placeholder="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Crect width='120' height='80' fill='%23f3f4f6'/%3E%3C/svg%3E"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
+        
         {/* Client Reviews Section - Full Width */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16">
           <div>
