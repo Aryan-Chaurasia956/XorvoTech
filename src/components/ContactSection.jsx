@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Linkedin, Instagram, Facebook, X } from "lucide-react";
+import { Phone, Mail, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
 import ReCaptcha from "./ReCaptcha";
 
 const ContactSection = () => {
@@ -411,7 +411,11 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
                   >
-                    <X className="h-6 w-6" />
+                    <img
+                      src="/twitter-logo.png"
+                      alt="Xorvo Twitter"
+                      className="h-6 w-6 object-contain"
+                    />
                   </a>
                 </div>
               </div>

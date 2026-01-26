@@ -1,4 +1,4 @@
-import { Linkedin, X, Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Linkedin, Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -129,7 +129,11 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
               >
-                <X className="h-5 w-5" />
+                <img
+                  src="/twitter-logo.png"
+                  alt="Xorvo Twitter"
+                  className="h-5 w-5 object-contain"
+                />
               </a>
             </div>
           </div>
