@@ -41,10 +41,10 @@ const ServicesOverview = () => {
             {/* Headline with animation */}
             <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ fontFamily: "'Roboto', 'Arial', sans-serif" }}>
               <span className="block text-white mb-4">
-                End-to-End IT Services
+                Comprehensive IT Solutions
               </span>
               <span className="block text-white">
-                for Modern Businesses
+                Powering Digital Transformation
               </span>
             </h1>
 
