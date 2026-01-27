@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import BubbleMenuOverlay from "./BubbleMenuOverlay";
 
 
 const Navbar = () => {
@@ -451,8 +452,18 @@ const Navbar = () => {
 
       {/* Mobile Menu - Shows on Mobile & Tablet */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-border animate-in slide-in-from-top duration-300">
-          <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <>
+          {/* Bubble Menu Overlay for Mobile */}
+          <div className="lg:hidden md:hidden">
+            <BubbleMenuOverlay
+              isOpen={mobileMenuOpen}
+              onClose={() => setMobileMenuOpen(false)}
+            />
+          </div>
+          
+          {/* Traditional Mobile Menu for Tablet */}
+          <div className="hidden lg:hidden md:block bg-white border-t border-border animate-in slide-in-from-top duration-300">
+            <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-4rem)] overflow-y-auto">
             {navItems.map((item) => (
               <div key={item.name} className="border-b border-border/50 last:border-0">
                 <button
@@ -540,6 +551,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        </>
       )}
     </nav>
   );
