@@ -164,56 +164,56 @@ const SERVICES_SUBMENU = [
 const CYBERSECURITY_ITEMS = [
   {
     label: 'Network Security',
-    href: '/services#network-security',
+    href: '/cybersecurity-services#network-security',
     ariaLabel: 'Network Security',
     rotation: -8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
     label: 'Endpoint Protection',
-    href: '/services#endpoint-protection',
+    href: '/cybersecurity-services#endpoint-protection',
     ariaLabel: 'Endpoint Protection',
     rotation: 8,
     hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
   },
   {
     label: 'Threat Detection & SOC',
-    href: '/services#threat-detection-soc',
+    href: '/cybersecurity-services#threat-detection-soc',
     ariaLabel: 'Threat Detection & SOC',
     rotation: 8,
     hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
   },
   {
     label: 'Vulnerability Management',
-    href: '/services#vulnerability-management',
+    href: '/cybersecurity-services#vulnerability-management',
     ariaLabel: 'Vulnerability Management',
     rotation: -8,
     hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
   },
   {
     label: 'Incident Response & Forensics',
-    href: '/services#incident-response-forensics',
+    href: '/cybersecurity-services#incident-response-forensics',
     ariaLabel: 'Incident Response & Forensics',
     rotation: 8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
   },
   {
     label: 'Email & Web Security',
-    href: '/services#email-web-security',
+    href: '/cybersecurity-services#email-web-security',
     ariaLabel: 'Email & Web Security',
     rotation: -8,
     hoverStyles: { bgColor: '#06b6d4', textColor: '#ffffff' }
   },
   {
     label: 'Security Awareness & Training',
-    href: '/services#security-awareness-training',
+    href: '/cybersecurity-services#security-awareness-training',
     ariaLabel: 'Security Awareness & Training',
     rotation: 8,
     hoverStyles: { bgColor: '#ec4899', textColor: '#ffffff' }
   },
   {
     label: 'Compliance & Audit',
-    href: '/services#compliance-audit',
+    href: '/cybersecurity-services#compliance-audit',
     ariaLabel: 'Compliance & Audit (ISO / GDPR / PCI DSS / HIPAA)',
     rotation: -8,
     hoverStyles: { bgColor: '#6366f1', textColor: '#ffffff' }
@@ -223,42 +223,42 @@ const CYBERSECURITY_ITEMS = [
 const CLOUD_INFRASTRUCTURE_ITEMS = [
   {
     label: 'Cloud Migration',
-    href: '/services#cloud-migration',
+    href: '/cloud-infrastructure-services#cloud-migration',
     ariaLabel: 'Cloud Migration',
     rotation: -8,
     hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
   },
   {
     label: 'VPS Hosting',
-    href: '/services#vps-hosting',
+    href: '/cloud-infrastructure-services#vps-hosting',
     ariaLabel: 'VPS Hosting',
     rotation: 8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
   },
   {
     label: 'Infrastructure Design',
-    href: '/services#infrastructure-design',
+    href: '/cloud-infrastructure-services#infrastructure-design',
     ariaLabel: 'Infrastructure Design',
     rotation: 8,
     hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
   },
   {
     label: 'Hybrid & Multi-Cloud',
-    href: '/services#hybrid-multi-cloud',
+    href: '/cloud-infrastructure-services#hybrid-multi-cloud',
     ariaLabel: 'Hybrid & Multi-Cloud Management',
     rotation: -8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
     label: 'Backup & Disaster Recovery',
-    href: '/services#backup-disaster-recovery',
+    href: '/cloud-infrastructure-services#backup-disaster-recovery',
     ariaLabel: 'Backup & Disaster Recovery',
     rotation: 8,
     hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
   },
   {
     label: 'Infrastructure Monitoring',
-    href: '/services#infrastructure-monitoring',
+    href: '/cloud-infrastructure-services#infrastructure-monitoring',
     ariaLabel: 'Infrastructure Monitoring (NOC)',
     rotation: -8,
     hoverStyles: { bgColor: '#06b6d4', textColor: '#ffffff' }
@@ -268,35 +268,35 @@ const CLOUD_INFRASTRUCTURE_ITEMS = [
 const MANAGED_IT_ITEMS = [
   {
     label: 'Monitoring & Maintenance',
-    href: '/services#monitoring-maintenance',
+    href: '/managed-it-services#monitoring-maintenance',
     ariaLabel: 'Monitoring & Maintenance',
     rotation: -8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
   },
   {
     label: 'Remote Support',
-    href: '/services#remote-support',
+    href: '/managed-it-services#remote-support',
     ariaLabel: 'Remote Support (Helpdesk & RMM)',
     rotation: 8,
     hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
   },
   {
     label: 'Asset & Patch Management',
-    href: '/services#asset-management',
+    href: '/managed-it-services#asset-management',
     ariaLabel: 'Asset & Patch Management',
     rotation: 8,
     hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
   },
   {
     label: 'SLA & Reporting',
-    href: '/services#sla-reporting',
+    href: '/managed-it-services#sla-reporting',
     ariaLabel: 'SLA & Reporting',
     rotation: -8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
     label: 'IT Strategy & Budget Planning',
-    href: '/services#it-strategy',
+    href: '/managed-it-services#it-strategy',
     ariaLabel: 'IT Strategy & Budget Planning',
     rotation: 8,
     hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
@@ -306,42 +306,42 @@ const MANAGED_IT_ITEMS = [
 const WORKSPACE_COLLABORATION_ITEMS = [
   {
     label: 'Microsoft 365',
-    href: '/services#microsoft-365',
+    href: '/workspace-collaboration-services#microsoft-365',
     ariaLabel: 'Microsoft 365',
     rotation: -8,
     hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
   },
   {
     label: 'Zoho Workspace',
-    href: '/services#zoho-workspace',
+    href: '/workspace-collaboration-services#zoho-workspace',
     ariaLabel: 'Zoho Workspace',
     rotation: 8,
     hoverStyles: { bgColor: '#06b6d4', textColor: '#ffffff' }
   },
   {
     label: 'Google Workspace',
-    href: '/services#google-workspace',
+    href: '/workspace-collaboration-services#google-workspace',
     ariaLabel: 'Google Workspace',
     rotation: 8,
     hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
   },
   {
     label: 'Email Migration',
-    href: '/services#email-migration',
+    href: '/workspace-collaboration-services#email-migration',
     ariaLabel: 'Email Migration',
     rotation: -8,
     hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
   },
   {
     label: 'Identity & Access',
-    href: '/services#identity-access',
+    href: '/workspace-collaboration-services#identity-access',
     ariaLabel: 'Identity & Access (SSO, MFA)',
     rotation: 8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
   },
   {
     label: 'SaaS Backup',
-    href: '/services#saas-backup',
+    href: '/workspace-collaboration-services#saas-backup',
     ariaLabel: 'SaaS Backup (M365/Google/Zoho)',
     rotation: -8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
@@ -351,35 +351,35 @@ const WORKSPACE_COLLABORATION_ITEMS = [
 const DATA_PROTECTION_ITEMS = [
   {
     label: 'Backup & Recovery',
-    href: '/services#backup-recovery',
+    href: '/data-protection-compliance-services#backup-recovery',
     ariaLabel: 'Backup & Recovery',
     rotation: -8,
     hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
   },
   {
     label: 'DLP Data Loss Prevention',
-    href: '/services#dlp-data-loss-prevention',
+    href: '/data-protection-compliance-services#dlp-data-loss-prevention',
     ariaLabel: 'DLP (Data Loss Prevention)',
     rotation: 8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
     label: 'Compliance Audits',
-    href: '/services#compliance-audits',
+    href: '/data-protection-compliance-services#compliance-audits',
     ariaLabel: 'Compliance Audits',
     rotation: 8,
     hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
   },
   {
     label: 'Encryption & Key Management',
-    href: '/services#encryption-key-management',
+    href: '/data-protection-compliance-services#encryption-key-management',
     ariaLabel: 'Encryption & Key Management',
     rotation: -8,
     hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
   },
   {
     label: 'DR Planning & Testing',
-    href: '/services#dr-planning-testing',
+    href: '/data-protection-compliance-services#dr-planning-testing',
     ariaLabel: 'DR Planning & Testing',
     rotation: 8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
@@ -389,105 +389,105 @@ const DATA_PROTECTION_ITEMS = [
 const IT_CONSULTING_ITEMS = [
   {
     label: 'Network Design',
-    href: '/services#network-design',
+    href: '/it-consulting-deployment-services#network-design',
     ariaLabel: 'Network Design',
     rotation: -8,
     hoverStyles: { bgColor: '#06b6d4', textColor: '#ffffff' }
   },
   {
     label: 'Application Deployment',
-    href: '/services#application-deployment',
+    href: '/it-consulting-deployment-services#application-deployment',
     ariaLabel: 'Application Deployment',
     rotation: 8,
     hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
   },
   {
     label: 'CI/CD Automation',
-    href: '/services#ci-cd-automation',
+    href: '/it-consulting-deployment-services#ci-cd-automation',
     ariaLabel: 'CI/CD Automation',
     rotation: 8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
   },
   {
     label: 'Custom Applications',
-    href: '/services#custom-applications',
+    href: '/it-consulting-deployment-services#custom-applications',
     ariaLabel: 'Custom Applications',
     rotation: -8,
     hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
   },
   {
     label: 'Application Designing',
-    href: '/services#application-designing',
+    href: '/it-consulting-deployment-services#application-designing',
     ariaLabel: 'Application Designing (UI/UX)',
     rotation: 8,
     hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
   },
   {
     label: 'Deployment Automation',
-    href: '/services#deployment-automation',
+    href: '/it-consulting-deployment-services#deployment-automation',
     ariaLabel: 'Deployment Automation',
     rotation: -8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
     label: 'Monitoring & NOC Setup',
-    href: '/services#monitoring-noc-setup',
+    href: '/it-consulting-deployment-services#monitoring-noc-setup',
     ariaLabel: 'Monitoring & NOC Setup',
     rotation: 8,
     hoverStyles: { bgColor: '#ec4899', textColor: '#ffffff' }
   },
   {
     label: 'Website Development',
-    href: '/services#website-development',
+    href: '/it-consulting-deployment-services#website-development',
     ariaLabel: 'Website Development',
     rotation: -8,
     hoverStyles: { bgColor: '#6366f1', textColor: '#ffffff' }
   },
   {
     label: 'SEO Optimization',
-    href: '/services#seo-optimization',
+    href: '/it-consulting-deployment-services#seo-optimization',
     ariaLabel: 'SEO Optimization',
     rotation: 8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
   },
   {
     label: 'AEO Optimization',
-    href: '/services#aeo-optimization',
+    href: '/it-consulting-deployment-services#aeo-optimization',
     ariaLabel: 'AEO (Answer Engine Optimization)',
     rotation: -8,
     hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
   },
   {
     label: 'GEO Local SEO',
-    href: '/services#geo-local-seo',
+    href: '/it-consulting-deployment-services#geo-local-seo',
     ariaLabel: 'GEO (Local SEO)',
     rotation: 8,
     hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
   },
   {
     label: 'CRM Implementation',
-    href: '/services#crm-implementation',
+    href: '/it-consulting-deployment-services#crm-implementation',
     ariaLabel: 'CRM Implementation',
     rotation: -8,
     hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
   },
   {
     label: 'ERP Implementation',
-    href: '/services#erp-implementation',
+    href: '/it-consulting-deployment-services#erp-implementation',
     ariaLabel: 'ERP Implementation',
     rotation: 8,
     hoverStyles: { bgColor: '#06b6d4', textColor: '#ffffff' }
   },
   {
     label: 'HRMS Implementation',
-    href: '/services#hrms-implementation',
+    href: '/it-consulting-deployment-services#hrms-implementation',
     ariaLabel: 'HRMS Implementation',
     rotation: -8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
     label: 'Network Designing',
-    href: '/services#network-designing',
+    href: '/it-consulting-deployment-services#network-designing',
     ariaLabel: 'Network Designing',
     rotation: 8,
     hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
@@ -881,18 +881,17 @@ export default function BubbleMenuOverlay({ isOpen, onClose }) {
                   }}
                   onClick={() => {
                     onClose();
-                    const serviceAnchor = thirdLevelType === 'cybersecurity' ? '#cybersecurity-hero' :
-                                          thirdLevelType === 'cloud' ? '#cloud-migration' :
-                                          thirdLevelType === 'managed' ? '#managed-it-hero' :
-                                          thirdLevelType === 'workspace' ? '#workspace-hero' :
-                                          thirdLevelType === 'data' ? '#data-protection-hero' :
-                                          thirdLevelType === 'consulting' ? '#it-consulting-hero' :
-                                          thirdLevelType === 'business' ? '#business-solutions' :
-                                          thirdLevelType === 'development' ? '#development-hosting' :
-                                          thirdLevelType === 'digital' ? '#digital-marketing-infrastructure' : 
-                                          (thirdLevelType === 'business' || thirdLevelType === 'development' || thirdLevelType === 'digital' ? '#solutions' : '#services');
-                    const basePath = (thirdLevelType === 'business' || thirdLevelType === 'development' || thirdLevelType === 'digital') ? '/solutions' : '/services';
-                    navigate(`${basePath}${serviceAnchor}`);
+                    const servicePage = thirdLevelType === 'cybersecurity' ? '/cybersecurity-services' :
+                                      thirdLevelType === 'cloud' ? '/cloud-infrastructure-services' :
+                                      thirdLevelType === 'managed' ? '/managed-it-services' :
+                                      thirdLevelType === 'workspace' ? '/workspace-collaboration-services' :
+                                      thirdLevelType === 'data' ? '/data-protection-compliance-services' :
+                                      thirdLevelType === 'consulting' ? '/it-consulting-deployment-services' :
+                                      thirdLevelType === 'business' ? '/solutions#business-solutions' :
+                                      thirdLevelType === 'development' ? '/solutions#development-hosting' :
+                                      thirdLevelType === 'digital' ? '/solutions#digital-marketing-infrastructure' : 
+                                      '/services';
+                    navigate(servicePage);
                   }}
                 >
                   <span
@@ -1071,7 +1070,7 @@ export default function BubbleMenuOverlay({ isOpen, onClose }) {
                   }}
                   onClick={() => {
                     onClose();
-                    navigate('/services');
+                    navigate('/services-overview');
                   }}
                 >
                   <span
