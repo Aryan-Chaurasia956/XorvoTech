@@ -7,7 +7,6 @@ import { Suspense, lazy } from "react";
 import Index from "./pages/Index";
 const About = lazy(() => import("./pages/About"));
 import Solution from "@/components/Solution";
-import Services from "@/components/Services";
 import ServicesOverview from "@/components/ServicesOverview";
 import CybersecurityServices from "@/components/CybersecurityServices";
 import CloudInfrastructureServices from "@/components/CloudInfrastructureServices";
@@ -41,7 +40,6 @@ const App = () => (
             }
           />
           <Route path="/solutions" element={<Solution />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/services-overview" element={<ServicesOverview />} />
           <Route path="/cybersecurity-services" element={<CybersecurityServices />} />
           <Route path="/cloud-infrastructure-services" element={<CloudInfrastructureServices />} />

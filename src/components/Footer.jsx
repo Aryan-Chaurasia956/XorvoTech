@@ -13,14 +13,14 @@ const Footer = () => {
     "Incident Response": "/solutions#unified-security-performance-ops",
   };
 
-  // Map Services footer items to anchors on the Services page
+  // Map Services footer items to dedicated service pages
   const servicesFooterMap = {
-    "Cybersecurity Services": "/services#cybersecurity-hero",
-    "Cloud & Infrastructure": "/services#enterprise-it-hero",
-    "Managed IT Services": "/services#managed-it-hero",
-    "Workspace & Collaboration": "/services#workspace-hero",
-    "Data Protection & Compliance": "/services#data-protection-hero",
-    "IT Consulting & Deployment": "/services#it-consulting-hero"
+    "Cybersecurity Services": "/cybersecurity-services",
+    "Cloud & Infrastructure": "/cloud-infrastructure-services",
+    "Managed IT Services": "/managed-it-services",
+    "Workspace & Collaboration": "/workspace-collaboration-services",
+    "Data Protection & Compliance": "/data-protection-compliance-services",
+    "IT Consulting & Deployment": "/it-consulting-deployment-services"
   };
   const footerLinks = {
     Solutions: [
@@ -169,7 +169,7 @@ const Footer = () => {
                         </Link>
                       ) : title === "Services" ? (
                         <Link
-                          to={servicesFooterMap[link] || "/services"}
+                          to={servicesFooterMap[link] || "/services-overview"}
                           className="text-muted-foreground hover:text-accent transition-colors"
                         >
                           {link}
