@@ -7,7 +7,6 @@ const Services = () => {
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
   const [isEnterpriseVisible, setIsEnterpriseVisible] = useState(false);
-  const [isCybersecurityVisible, setIsCybersecurityVisible] = useState(false);
   const [shouldLoadEnterprise, setShouldLoadEnterprise] = useState(false);
   const [shouldLoadCybersecurity, setShouldLoadCybersecurity] = useState(false);
 
@@ -73,22 +72,15 @@ const Services = () => {
           if (entry.isIntersecting && entry.target.id === 'enterprise-it-hero') {
             setIsEnterpriseVisible(true);
           }
-          if (entry.isIntersecting && entry.target.id === 'cybersecurity-hero') {
-            setIsCybersecurityVisible(true);
-          }
         });
       },
       { threshold: 0.1 }
     );
 
     const enterpriseTrigger = document.getElementById('enterprise-it-trigger');
-    const cybersecurityTrigger = document.getElementById('cybersecurity-trigger');
 
     if (enterpriseTrigger) {
       lazyLoadObserver.observe(enterpriseTrigger);
-    }
-    if (cybersecurityTrigger) {
-      lazyLoadObserver.observe(cybersecurityTrigger);
     }
 
     // Set up animation observer after a short delay to ensure DOM is ready
@@ -96,10 +88,6 @@ const Services = () => {
       const enterpriseSection = document.getElementById('enterprise-it-hero');
       if (enterpriseSection) {
         animationObserver.observe(enterpriseSection);
-      }
-      const cybersecuritySection = document.getElementById('cybersecurity-hero');
-      if (cybersecuritySection) {
-        animationObserver.observe(cybersecuritySection);
       }
     };
     
@@ -112,17 +100,12 @@ const Services = () => {
       if (enterpriseTrigger) {
         lazyLoadObserver.unobserve(enterpriseTrigger);
       }
-      if (cybersecurityTrigger) {
-        lazyLoadObserver.unobserve(cybersecurityTrigger);
-      }
       const enterpriseSection = document.getElementById('enterprise-it-hero');
       if (enterpriseSection) {
         animationObserver.unobserve(enterpriseSection);
       }
-      const cybersecuritySection = document.getElementById('cybersecurity-hero');
-      if (cybersecuritySection) {
-        animationObserver.unobserve(cybersecuritySection);
-      }
+      animationObserver.disconnect();
+      lazyLoadObserver.disconnect();
     };
   }, [shouldLoadEnterprise]);
   return (
@@ -168,411 +151,7 @@ const Services = () => {
 
       <div className="divider"></div>
 
-      {/* Service Categories - Enhanced Horizontal Cards */}
-      <section id="service-categories" className="py-20 px-4 md:px-8 lg:px-12 relative overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/growtika-3C0SWyusdS8-unsplash.jpg')"}}></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-gray-900/90"></div>
-        
-        {/* Gradient Mesh Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-purple-900/20"></div>
-        <div className="absolute inset-0 bg-gradient-to-bl from-cyan-900/15 via-transparent to-indigo-900/15"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-lg text-gray-200 max-w-3xl mx-auto">Explore our comprehensive range of services designed to transform your business operations</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
-            
-            {/* Cybersecurity Services */}
-            <Link to="#cybersecurity-hero" className="service-category-card group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-700 opacity-90"></div>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: "url('/solutions/dan-nelson-AvSFPw5Tp68-unsplash.jpg')"}}></div>
-              <div className="relative z-10 p-6 h-full flex flex-col justify-between min-h-[200px]">
-                <div>
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Cybersecurity Services</h3>
-                  <p className="text-sm text-white/90">Advanced protection for your digital assets</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-xs text-white/70">Learn More</span>
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </div>
-              </div>
-            </Link>
-
-            {/* Cloud & Infrastructure */}
-            <Link to="#enterprise-it-hero" className="service-category-card group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-600 to-blue-700 opacity-90"></div>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: "url('/solutions/sigmund-Fa9b57hffnM-unsplash.jpg')"}}></div>
-              <div className="relative z-10 p-6 h-full flex flex-col justify-between min-h-[200px]">
-                <div>
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Cloud & Infrastructure</h3>
-                  <p className="text-sm text-white/90">Scalable cloud solutions & management</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-xs text-white/70">Learn More</span>
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </div>
-              </div>
-            </Link>
-
-            {/* Managed IT Services */}
-            <Link to="#managed-it-hero" className="service-category-card group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 to-teal-700 opacity-90"></div>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: "url('/solutions/sigmund-AxAPuIRWHGk-unsplash.jpg')"}}></div>
-              <div className="relative z-10 p-6 h-full flex flex-col justify-between min-h-[200px]">
-                <div>
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Managed IT Services</h3>
-                  <p className="text-sm text-white/90">Complete IT management & support</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-xs text-white/70">Learn More</span>
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </div>
-              </div>
-            </Link>
-
-            {/* Workspace & Collaboration */}
-            <Link to="#workspace-hero" className="service-category-card group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-700 opacity-90"></div>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: "url('/solutions/alesia-kazantceva-XLm6-fPwK5Q-unsplash.jpg')"}}></div>
-              <div className="relative z-10 p-6 h-full flex flex-col justify-between min-h-[200px]">
-                <div>
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Workspace & Collaboration</h3>
-                  <p className="text-sm text-white/90">Modern tools for team productivity</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-xs text-white/70">Learn More</span>
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </div>
-              </div>
-            </Link>
-
-            {/* Data Protection & Compliance */}
-            <Link to="#data-protection-hero" className="service-category-card group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-700 opacity-90"></div>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: "url('/solutions/claudio-schwarz-fyeOxvYvIyY-unsplash.jpg')"}}></div>
-              <div className="relative z-10 p-6 h-full flex flex-col justify-between min-h-[200px]">
-                <div>
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Data Protection & Compliance</h3>
-                  <p className="text-sm text-white/90">Security & regulatory compliance</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-xs text-white/70">Learn More</span>
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </div>
-              </div>
-            </Link>
-
-            {/* IT Consulting & Deployment */}
-            <Link to="#it-consulting-hero" className="service-category-card group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-purple-700 opacity-90"></div>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: "url('/solutions/christina-wocintechchat-com-p0qKsW3uqA4-unsplash.jpg')"}}></div>
-              <div className="relative z-10 p-6 h-full flex flex-col justify-between min-h-[200px]">
-                <div>
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">IT Consulting & Deployment</h3>
-                  <p className="text-sm text-white/90">Expert guidance & deployment</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-xs text-white/70">Learn More</span>
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </div>
-              </div>
-            </Link>
-
-          </div>
-        </div>
-      </section>
-
       <div className="divider"></div>
-
-      {/* Cybersecurity Services - Full Screen Hero */}
-      <section id="cybersecurity-hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden text-white services-hero">
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
-          <div className="max-w-5xl mx-auto text-center space-y-8">
-            {/* Headline with animation */}
-            <h2 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 delay-100 ${isCybersecurityVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <span className="block text-white mb-4">
-                CYBERSECURITY
-              </span>
-              <span className="block text-white">
-                SERVICES
-              </span>
-            </h2>
-
-            {/* Subtitle */}
-            <p className={`text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto transition-all duration-700 delay-300 ${isCybersecurityVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Protect your enterprise from modern threats with our end-to-end cybersecurity solutions. We combine real-time monitoring, advanced analytics, and proactive defense to safeguard every layer of your network and data infrastructure.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 transition-all duration-700 delay-500 ${isCybersecurityVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-              <Link to="/?contact=true">
-                <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
-                  Talk to a Security Expert
-                </button>
-              </Link>
-              <Link to="#cybersecurity-cards">
-                <button type="button" className="border-2 border-white text-white hover:bg-white hover:text-[#727CAB] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
-                  View Cybersecurity Services
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-700 delay-700 ${isCybersecurityVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="animate-bounce">
-            <svg className="w-6 h-6 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </div>
-        </div>
-      </section>
-
-      <div className="divider"></div>
-
-      <div className='noah services-cards'>
-        {/* Network Security */}
-        <div id='network-security' className='john scroll-anchor' data-heading='Network Security'>
-          <div className='text-2xl'>Network Security</div>
-          <div>A secure network is the foundation of every digital business. Xorvo Technologies delivers robust network security solutions that protect your infrastructure from unauthorized access, cyber intrusions, and advanced persistent threats.</div>
-          
-          <div>We design and implement secure network architectures using next-generation firewalls, intrusion detection and prevention systems (IDS/IPS), network segmentation, VPNs, and zero-trust principles. Our continuous monitoring and policy enforcement ensure safe data flow across on-premises, cloud, and hybrid environments.</div>
-          
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Prevents unauthorized access to critical business systems</li>
-            <li>• Protects sensitive data moving across internal and external networks</li>
-            <li>• Reduces the risk of ransomware and network-based attacks</li>
-            <li>• Ensures high availability and uninterrupted business operations</li>
-            <li>• Strengthens overall IT infrastructure resilience</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Endpoint Protection */}
-        <div id='endpoint-protection' className='felix scroll-anchor' data-heading='Endpoint Protection'>
-          <div className='text-2xl'>Endpoint Protection</div>
-          <div>Endpoints are often the primary entry point for cyberattacks. Xorvo Technologies provides advanced endpoint protection to secure laptops, desktops, servers, and mobile devices across your organization.</div>
-          
-          <div>We deploy next-generation antivirus, endpoint detection and response (EDR), real-time threat monitoring, and automated containment to protect against malware, ransomware, and zero-day attacks. Our centralized management ensures complete visibility and control across office, remote, and hybrid environments.</div>
-          
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Stops malware, ransomware, and zero-day threats at the device level</li>
-            <li>• Secures employee devices in remote and hybrid work environments</li>
-            <li>• Prevents compromised endpoints from spreading attacks internally</li>
-            <li>• Protects business data stored on user devices</li>
-            <li>• Improves visibility and control over all connected endpoints</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Threat Detection & SOC */}
-        <div id='threat-detection-soc' className='akash scroll-anchor' data-heading='Threat Detection & SOC'>
-          <div className='text-2xl'>Threat Detection & SOC</div>
-          <div>Cyber threats require constant vigilance. Xorvo's Threat Detection and SOC services provide continuous monitoring to identify and respond to security incidents in real time.</div>
-          
-          <div>Using SIEM, threat intelligence, behavioral analytics, and expert-led monitoring, we detect suspicious activity, investigate threats, and initiate rapid response actions. Our SOC ensures proactive defense, reduced response time, and continuous security assurance for your business.</div>
-          
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Enables 24/7 monitoring of security events and suspicious activity</li>
-            <li>• Detects threats early before they cause major damage</li>
-            <li>• Reduces response time to cyber incidents</li>
-            <li>• Provides expert-led investigation and threat containment</li>
-            <li>• Ensures continuous security oversight without internal overhead</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Vulnerability Management */}
-        <div id='vulnerability-management' className='john scroll-anchor' data-heading='Vulnerability Management'>
-          <div className='text-2xl'>Vulnerability Management</div>
-          <div>Unidentified vulnerabilities can expose organizations to serious security risks. Xorvo's Vulnerability Management services help identify, assess, and remediate security weaknesses across your IT environment.</div>
-          
-          <div>We conduct regular vulnerability scans, configuration assessments, and risk-based prioritization to address critical issues efficiently. Our approach helps strengthen system security while reducing exposure to known and emerging threats.</div>
-          
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Identifies security weaknesses before attackers exploit them</li>
-            <li>• Prioritizes risks based on business impact</li>
-            <li>• Reduces exposure to known vulnerabilities and exploits</li>
-            <li>• Supports secure patching and configuration management</li>
-            <li>• Strengthens long-term security posture</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Incident Response & Forensics */}
-        <div id='incident-response-forensics' className='felix scroll-anchor' data-heading='Incident Response & Forensics'>
-          <div className='text-2xl'>Incident Response & Forensics</div>
-          <div>When a cyber incident occurs, rapid response is critical. Xorvo provides structured incident response and digital forensics services to minimize damage and restore operations quickly.</div>
-          
-          <div>Our experts contain active threats, investigate the root cause, collect forensic evidence, and support recovery while ensuring regulatory and legal compliance. We help organizations recover with confidence and prevent future incidents.</div>
-          
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Minimizes business disruption during cyber incidents</li>
-            <li>• Quickly contains and eradicates active threats</li>
-            <li>• Identifies root causes to prevent recurrence</li>
-            <li>• Preserves digital evidence for compliance and legal needs</li>
-            <li>• Accelerates recovery and restores normal operations</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Email & Web Security */}
-        <div id='email-web-security' className='akash scroll-anchor' data-heading='Email & Web Security'>
-          <div className='text-2xl'>Email & Web Security</div>
-          <div>Email and web channels remain the most common attack vectors. Xorvo delivers advanced email and web security solutions to protect users from phishing, malware, and malicious content.</div>
-          
-          <div>We implement secure email gateways, URL filtering, malware sandboxing, and data protection controls to ensure safe communication and browsing. Our solutions reduce human risk while safeguarding sensitive business information.</div>
-          
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Prevents phishing, spam, and malicious email attacks</li>
-            <li>• Protects users from unsafe websites and malicious links</li>
-            <li>• Reduces risk of credential theft and data leakage</li>
-            <li>• Secures daily communication channels</li>
-            <li>• Lowers chances of human-driven security breaches</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Security Awareness & Training */}
-        <div id='security-awareness-training' className='john scroll-anchor' data-heading='Security Awareness & Training'>
-          <div className='text-2xl'>Security Awareness & Training</div>
-          <div>Technology alone cannot stop cyber threats—people play a vital role. Xorvo's Security Awareness and Training programs educate employees on identifying and responding to cyber risks.</div>
-          
-          <div>We deliver role-based training, phishing simulations, and awareness campaigns designed to build a strong security culture. Our programs reduce human error and strengthen your organization's first line of defense.</div>
-          
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Reduces human error, the leading cause of cyber incidents</li>
-            <li>• Empowers employees to identify and report threats</li>
-            <li>• Strengthens the organization's first line of defense</li>
-            <li>• Builds a security-first culture</li>
-            <li>• Supports regulatory and compliance requirements</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Compliance & Audit */}
-        <div id='compliance-audit' className='felix scroll-anchor' data-heading='Compliance & Audit'>
-          <div className='text-2xl'>Compliance & Audit</div>
-          <div>Meeting regulatory requirements is essential for trust and business continuity. Xorvo supports organizations through the complete compliance and audit lifecycle.</div>
-          
-          <div>We provide gap analysis, policy development, risk assessments, audit preparation, and continuous compliance management aligned with global standards. Our services help organizations achieve compliance while strengthening overall security governance.</div>
-          
-          <div className='text-lg font-semibold mt-4 mb-2'>Why It Matters</div>
-          <ul>
-            <li>• Ensures adherence to ISO, GDPR, PCI DSS, HIPAA, and other standards</li>
-            <li>• Reduces legal, regulatory, and financial risks</li>
-            <li>• Improves governance, risk management, and accountability</li>
-            <li>• Enhances customer and partner trust</li>
-            <li>• Prepares organizations for audits with confidence</li>
-          </ul>
-          <div className='center-row'>
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More</button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Closing CTA */}
-      <div className='intro-card intro-stack p-30 relative' style={{
-        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/60 to-slate-900/80"></div>
-        
-        {/* Content */}
-        <div className='krishna relative z-10 text-white'>Integration is where real digital transformation happens. Xorvo Technologies brings together systems, security, and intelligence into one unified ecosystem — delivering performance without compromise and protection without limits.</div>
-        <div className='cta-row relative z-10'>
-          <Link to="/?contact=true"><button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Integration Consultation</button></Link>
-          <Link to="#service-categories"><button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore All Services</button></Link>
-        </div>
-      </div>
 
       {/* Lazy load trigger for Enterprise IT section */}
       <div id="enterprise-it-trigger" style={{ height: '1px' }}></div>

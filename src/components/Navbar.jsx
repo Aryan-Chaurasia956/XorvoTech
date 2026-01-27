@@ -31,80 +31,80 @@ const Navbar = () => {
   // Determine if navbar should be transparent
   const isTransparent = hasHeroSection && !isScrolled;
 
-  // Map Services columns to their corresponding anchors on /services
+  // Map Services columns to their corresponding new service pages
   const servicesAnchorMap = {
-    'Cybersecurity Services': '#cybersecurity-hero',
-    'Cloud & Infrastructure': '#enterprise-it-hero',
-    'Managed IT Services': '#managed-it-hero',
-    'Workspace & Collaboration': '#workspace-hero',
-    'Data Protection & Compliance': '#data-protection-hero',
-    'IT Consulting & Deployment': '#it-consulting-hero',
+    'Cybersecurity Services': '/cybersecurity-services',
+    'Cloud & Infrastructure': '/cloud-infrastructure-services',
+    'Managed IT Services': '/managed-it-services',
+    'Workspace & Collaboration': '/workspace-collaboration-services',
+    'Data Protection & Compliance': '/data-protection-compliance-services',
+    'IT Consulting & Deployment': '/it-consulting-deployment-services',
   };
 
-  // Map individual services to their corresponding card IDs on /services
+  // Map individual services to their corresponding new service pages and card IDs
   const individualServiceMap = {
     // Cybersecurity Services
-    'Network Security': '#network-security',
-    'Endpoint Protection': '#endpoint-protection',
-    'Threat Detection & SOC': '#threat-detection-soc',
-    'Vulnerability Management': '#vulnerability-management',
-    'Incident Response & Forensics': '#incident-response-forensics',
-    'Email & Web Security': '#email-web-security',
-    'Security Awareness & Training': '#security-awareness-training',
-    'Compliance & Audit (ISO / GDPR / PCI DSS / HIPAA)': '#compliance-audit',
+    'Network Security': { page: '/cybersecurity-services', anchor: '#network-security' },
+    'Endpoint Protection': { page: '/cybersecurity-services', anchor: '#endpoint-protection' },
+    'Threat Detection & SOC': { page: '/cybersecurity-services', anchor: '#threat-detection-soc' },
+    'Vulnerability Management': { page: '/cybersecurity-services', anchor: '#vulnerability-management' },
+    'Incident Response & Forensics': { page: '/cybersecurity-services', anchor: '#incident-response-forensics' },
+    'Email & Web Security': { page: '/cybersecurity-services', anchor: '#email-web-security' },
+    'Security Awareness & Training': { page: '/cybersecurity-services', anchor: '#security-awareness-training' },
+    'Compliance & Audit (ISO / GDPR / PCI DSS / HIPAA)': { page: '/cybersecurity-services', anchor: '#compliance-audit' },
     
     // Cloud & Infrastructure
-    'Cloud Migration': '#cloud-migration',
-    'VPS Hosting': '#vps-hosting',
-    'Infrastructure Design': '#infrastructure-design',
-    'Hybrid & Multi-Cloud Management': '#hybrid-multi-cloud',
-    'Backup & Disaster Recovery': '#backup-disaster-recovery',
-    'Infrastructure Monitoring (NOC)': '#infrastructure-monitoring',
+    'Cloud Migration': { page: '/cloud-infrastructure-services', anchor: '#cloud-migration' },
+    'VPS Hosting': { page: '/cloud-infrastructure-services', anchor: '#vps-hosting' },
+    'Infrastructure Design': { page: '/cloud-infrastructure-services', anchor: '#infrastructure-design' },
+    'Hybrid & Multi-Cloud Management': { page: '/cloud-infrastructure-services', anchor: '#hybrid-multi-cloud' },
+    'Backup & Disaster Recovery': { page: '/cloud-infrastructure-services', anchor: '#backup-disaster-recovery' },
+    'Infrastructure Monitoring (NOC)': { page: '/cloud-infrastructure-services', anchor: '#infrastructure-monitoring' },
     
     // Managed IT Services
-    'Monitoring & Maintenance': '#monitoring-maintenance',
-    'Remote Support (Helpdesk & RMM)': '#remote-support',
-    'Asset & Patch Management': '#asset-management',
-    'SLA & Reporting': '#sla-reporting',
-    'IT Strategy & Budget Planning': '#it-strategy',
+    'Monitoring & Maintenance': { page: '/managed-it-services', anchor: '#monitoring-maintenance' },
+    'Remote Support (Helpdesk & RMM)': { page: '/managed-it-services', anchor: '#remote-support' },
+    'Asset & Patch Management': { page: '/managed-it-services', anchor: '#asset-management' },
+    'SLA & Reporting': { page: '/managed-it-services', anchor: '#sla-reporting' },
+    'IT Strategy & Budget Planning': { page: '/managed-it-services', anchor: '#it-strategy' },
     
     // Workspace & Collaboration
-    'Microsoft 365': '#microsoft-365',
-    'Zoho Workspace': '#zoho-workspace',
-    'Google Workspace': '#google-workspace',
-    'Email Migration': '#email-migration',
-    'Identity & Access (SSO, MFA)': '#identity-access',
-    'SaaS Backup (M365/Google/Zoho)': '#saas-backup',
+    'Microsoft 365': { page: '/workspace-collaboration-services', anchor: '#microsoft-365' },
+    'Zoho Workspace': { page: '/workspace-collaboration-services', anchor: '#zoho-workspace' },
+    'Google Workspace': { page: '/workspace-collaboration-services', anchor: '#google-workspace' },
+    'Email Migration': { page: '/workspace-collaboration-services', anchor: '#email-migration' },
+    'Identity & Access (SSO, MFA)': { page: '/workspace-collaboration-services', anchor: '#identity-access' },
+    'SaaS Backup (M365/Google/Zoho)': { page: '/workspace-collaboration-services', anchor: '#saas-backup' },
     
     // Data Protection & Compliance
-    'Backup & Recovery': '#backup-recovery',
-    'DLP (Data Loss Prevention)': '#dlp-data-loss-prevention',
-    'Compliance Audits': '#compliance-audits',
-    'Encryption & Key Management': '#encryption-key-management',
-    'DR Planning & Testing': '#dr-planning-testing',
+    'Backup & Recovery': { page: '/data-protection-compliance-services', anchor: '#backup-recovery' },
+    'DLP (Data Loss Prevention)': { page: '/data-protection-compliance-services', anchor: '#dlp' },
+    'Compliance Audits': { page: '/data-protection-compliance-services', anchor: '#compliance-audits' },
+    'Encryption & Key Management': { page: '/data-protection-compliance-services', anchor: '#encryption-key' },
+    'DR Planning & Testing': { page: '/data-protection-compliance-services', anchor: '#dr-planning' },
     
     // IT Consulting & Deployment
-    'Network Design': '#network-designing',
-    'Application Deployment': '#application-deployment',
-    'CI/CD Automation': '#ci-cd-automation',
-    'Custom Applications': '#custom-applications',
-    'Application Designing (UI/UX)': '#application-designing',
-    'Deployment Automation': '#deployment-automation',
-    'Monitoring & NOC Setup': '#monitoring-noc-setup',
-    'Website Development': '#website-development',
-    'SEO Optimization': '#seo-optimization',
-    'AEO (Answer Engine Optimization)': '#aeo-optimization',
-    'GEO (Local SEO)': '#geo-local-seo',
-    'CRM Implementation': '#crm-implementation',
-    'ERP Implementation': '#erp-implementation',
-    'HRMS Implementation': '#hrms-implementation',
-    'Network Designing': '#network-designing',
+    'Network Design': { page: '/it-consulting-deployment-services', anchor: '#network-designing' },
+    'Application Deployment': { page: '/it-consulting-deployment-services', anchor: '#application-deployment' },
+    'CI/CD Automation': { page: '/it-consulting-deployment-services', anchor: '#ci-cd-automation' },
+    'Custom Applications': { page: '/it-consulting-deployment-services', anchor: '#custom-applications' },
+    'Application Designing (UI/UX)': { page: '/it-consulting-deployment-services', anchor: '#application-designing' },
+    'Deployment Automation': { page: '/it-consulting-deployment-services', anchor: '#deployment-automation' },
+    'Monitoring & NOC Setup': { page: '/it-consulting-deployment-services', anchor: '#monitoring-noc-setup' },
+    'Website Development': { page: '/it-consulting-deployment-services', anchor: '#website-development' },
+    'SEO Optimization': { page: '/it-consulting-deployment-services', anchor: '#seo-optimization' },
+    'AEO (Answer Engine Optimization)': { page: '/it-consulting-deployment-services', anchor: '#aeo-optimization' },
+    'GEO (Local SEO)': { page: '/it-consulting-deployment-services', anchor: '#geo-local-seo' },
+    'CRM Implementation': { page: '/it-consulting-deployment-services', anchor: '#crm-implementation' },
+    'ERP Implementation': { page: '/it-consulting-deployment-services', anchor: '#erp-implementation' },
+    'HRMS Implementation': { page: '/it-consulting-deployment-services', anchor: '#hrms-implementation' },
+    'Network Designing': { page: '/it-consulting-deployment-services', anchor: '#network-designing' },
     
     // Resources
-    'Blog': '#insights-industry-updates',
-    'Case Studies': '#case-studies',
-    'Guides & Whitepapers': '#technical-papers',
-    'Security Alerts': '#security-updates',
+    'Blog': { page: '/resources', anchor: '#insights-industry-updates' },
+    'Case Studies': { page: '/resources', anchor: '#case-studies' },
+    'Guides & Whitepapers': { page: '/resources', anchor: '#technical-papers' },
+    'Security Alerts': { page: '/resources', anchor: '#security-updates' },
   };
 
   // Map Solutions columns to anchors on /solutions
@@ -328,7 +328,7 @@ const Navbar = () => {
                         navigate('/resources');
                       }
                       if (item.name === 'Services') {
-                        navigate('/services');
+                        navigate('/services-overview');
                       }
                       if (item.name === 'Solutions') {
                         navigate('/solutions');
@@ -405,7 +405,7 @@ const Navbar = () => {
                   ?.columns.map((column, idx) => (
                     <div key={idx} className="space-y-5">
                       <Link 
-                        to={activeDropdown === 'Services' ? `/services${servicesAnchorMap[column.title] || ''}` : 
+                        to={activeDropdown === 'Services' ? servicesAnchorMap[column.title] || '/cybersecurity-services' : 
                              activeDropdown === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : 
                              activeDropdown === 'Resources' ? '/resources' : 
                              '#'}
@@ -423,9 +423,9 @@ const Navbar = () => {
                           const individualServiceAnchor = individualServiceMap[itemName] || '';
                           
                           // For Services dropdown, use individual service anchor; for Solutions, use solutions anchor; for Resources, use resources anchor
-                          const finalPath = activeDropdown === 'Services' ? individualServiceAnchor ? `/services${individualServiceAnchor}` : `/services` :
+                          const finalPath = activeDropdown === 'Services' ? individualServiceAnchor ? `${individualServiceAnchor.page}${individualServiceAnchor.anchor}` : servicesAnchorMap[column.title] || '/cybersecurity-services' :
                                           activeDropdown === 'Solutions' ? `/solutions${solutionsAnchorMap[column.title] || ''}` : 
-                                          activeDropdown === 'Resources' ? `/resources${individualServiceMap[itemName] || ''}` :
+                                          activeDropdown === 'Resources' ? `/resources${individualServiceMap[itemName]?.anchor || ''}` :
                                           itemPath;
 
                           return (

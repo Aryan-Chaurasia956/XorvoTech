@@ -8,6 +8,13 @@ import Index from "./pages/Index";
 const About = lazy(() => import("./pages/About"));
 import Solution from "@/components/Solution";
 import Services from "@/components/Services";
+import ServicesOverview from "@/components/ServicesOverview";
+import CybersecurityServices from "@/components/CybersecurityServices";
+import CloudInfrastructureServices from "@/components/CloudInfrastructureServices";
+import ManagedITServices from "@/components/ManagedITServices";
+import WorkspaceCollaborationServices from "@/components/WorkspaceCollaborationServices";
+import DataProtectionComplianceServices from "@/components/DataProtectionComplianceServices";
+import ITConsultingDeploymentServices from "@/components/ITConsultingDeploymentServices";
 import Resource from "@/components/Resource";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
@@ -35,6 +42,13 @@ const App = () => (
           />
           <Route path="/solutions" element={<Solution />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services-overview" element={<ServicesOverview />} />
+          <Route path="/cybersecurity-services" element={<CybersecurityServices />} />
+          <Route path="/cloud-infrastructure-services" element={<CloudInfrastructureServices />} />
+          <Route path="/managed-it-services" element={<ManagedITServices />} />
+          <Route path="/workspace-collaboration-services" element={<WorkspaceCollaborationServices />} />
+          <Route path="/data-protection-compliance-services" element={<DataProtectionComplianceServices />} />
+          <Route path="/it-consulting-deployment-services" element={<ITConsultingDeploymentServices />} />
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/terms" element={<Privacy />} />
           <Route path="/disclaimer" element={<Privacy />} />
