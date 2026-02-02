@@ -80,19 +80,11 @@ const ServicesOverview = () => {
       </section>
 
       {/* Services Overview Section */}
-      <section id="services-overview" className="py-20 px-4 md:px-8 lg:px-12 relative overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/growtika-3C0SWyusdS8-unsplash.jpg')"}}></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-gray-900/90"></div>
-        
-        {/* Gradient Mesh Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-purple-900/20"></div>
-        <div className="absolute inset-0 bg-gradient-to-bl from-cyan-900/15 via-transparent to-indigo-900/15"></div>
-        
+      <section id="services-overview" className="py-20 px-4 md:px-8 lg:px-12 relative">
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-lg text-gray-200 max-w-3xl mx-auto">Explore our comprehensive range of services designed to transform your business operations</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4" style={{ color: '#727CAB' }}>Our Services</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">Explore our comprehensive range of services designed to transform your business operations</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
@@ -237,6 +229,172 @@ const ServicesOverview = () => {
 
           </div>
         </div>
+      </section>
+
+      {/* Our Partners Section */}
+      <section className="relative py-20 px-4 md:px-8 lg:px-12 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          {/* Floating gradient orbs */}
+          <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-tr from-cyan-400/10 to-indigo-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-purple-400/8 to-pink-400/8 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+          
+          {/* Grid pattern */}
+          <div className="absolute inset-0 bg-grid-slate-900/[0.02] bg-[size:60px_60px]"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: '#727CAB' }}>
+              Our Partners
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We collaborate with world-class technology leaders to deliver cutting-edge solutions that drive innovation and excellence for our clients
+            </p>
+          </div>
+
+          {/* Partners Grid with Motion Graphics */}
+          <div className="relative">
+            {/* Glow effect behind grid */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5 rounded-3xl blur-2xl"></div>
+            
+            <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8 p-8 bg-white/40 backdrop-blur-sm rounded-3xl border border-white/50 shadow-2xl">
+              {[
+                { src: "/microsoft-365.png", alt: "Microsoft 365", height: 60, delay: 0 },
+                { src: "/checkpoint.png", alt: "Check Point", height: 50, delay: 100 },
+                { src: "/zoho.png", alt: "Zoho", height: 60, delay: 200 },
+                { src: "/aws.png", alt: "AWS", height: 50, delay: 300 },
+                { src: "/kaspersky.png", alt: "Kaspersky", height: 50, delay: 400 },
+                { src: "/fortinet.png", alt: "Fortinet", height: 45, delay: 500 },
+                { src: "/rapid7.png", alt: "Rapid7", height: 45, delay: 600 },
+                { src: "/emsisoft.png", alt: "EMSISOFT", height: 40, delay: 700 },
+                { src: "/partner logo/acer-5.svg", alt: "Acer", height: 35, delay: 800 },
+                { src: "/partner logo/adobe-2.svg", alt: "Adobe", height: 50, delay: 900 },
+                { src: "/partner logo/apple-13.svg", alt: "Apple", height: 50, delay: 1000 },
+                { src: "/partner logo/aruba-networks.svg", alt: "Aruba Networks", height: 50, delay: 1100 },
+                { src: "/partner logo/crowdstrike-1.svg", alt: "CrowdStrike", height: 50, delay: 1200 },
+                { src: "/partner logo/d-link.svg", alt: "D-Link", height: 50, delay: 1300 },
+                { src: "/partner logo/dell-2.svg", alt: "Dell", height: 50, delay: 1400 },
+                { src: "/partner logo/eset-logo.svg", alt: "ESET", height: 50, delay: 1500 },
+                { src: "/partner logo/hp-5.svg", alt: "HP", height: 50, delay: 1600 },
+                { src: "/partner logo/lenovo-2.svg", alt: "Lenovo", height: 50, delay: 1700 },
+                { src: "/partner logo/palo-alto-networks-1.svg", alt: "Palo Alto", height: 50, delay: 1800 },
+                { src: "/partner logo/sophos-logo.svg", alt: "Sophos", height: 50, delay: 1900 },
+                { src: "/partner logo/trellix.svg", alt: "Trellix", height: 50, delay: 2000 },
+                { src: "/partner logo/veeam-3.svg", alt: "Veeam", height: 50, delay: 2100 },
+              ].map((partner, index) => (
+                <div
+                  key={index}
+                  className="group relative flex items-center justify-center p-6 bg-white rounded-2xl shadow-lg cursor-pointer border border-gray-100"
+                >
+                  {/* Logo */}
+                  <div className="relative z-10 flex items-center justify-center h-20">
+                    <img
+                      src={partner.src}
+                      alt={partner.alt}
+                      className="max-h-full w-auto object-contain"
+                      style={{ height: `${partner.height}px` }}
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Partnership Stats */}
+          <div className="mt-20">
+            <div className="relative">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-blue-50/30 to-slate-50 rounded-3xl"></div>
+              
+              <div className="relative grid grid-cols-1 md:grid-cols-3 gap-0 rounded-3xl overflow-hidden shadow-2xl border border-white/50">
+                {/* Partners Count */}
+                <div className="relative bg-white/80 backdrop-blur-sm p-8 text-center border-r border-gray-200/50 first:rounded-l-3xl last:rounded-r-3xl md:last:rounded-r-none">
+                  <div className="relative">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl mb-6 shadow-lg">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                      </svg>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h3 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
+                        21+
+                      </h3>
+                      <p className="text-sm font-medium text-gray-600 uppercase tracking-wider">Strategic Partners</p>
+                      <p className="text-xs text-gray-500 mt-2 max-w-[180px] mx-auto">Leading technology providers worldwide</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Support */}
+                <div className="relative bg-white/80 backdrop-blur-sm p-8 text-center border-r border-gray-200/50 last:rounded-r-3xl md:last:rounded-r-none">
+                  <div className="relative">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-700 rounded-2xl mb-6 shadow-lg">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h3 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-700 bg-clip-text text-transparent">
+                        24/7
+                      </h3>
+                      <p className="text-sm font-medium text-gray-600 uppercase tracking-wider">Partner Support</p>
+                      <p className="text-xs text-gray-500 mt-2 max-w-[180px] mx-auto">Round-the-clock assistance and expertise</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Certified Solutions */}
+                <div className="relative bg-white/80 backdrop-blur-sm p-8 text-center last:rounded-r-3xl">
+                  <div className="relative">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-600 to-blue-700 rounded-2xl mb-6 shadow-lg">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                      </svg>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h3 className="text-5xl font-bold bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent">
+                        100%
+                      </h3>
+                      <p className="text-sm font-medium text-gray-600 uppercase tracking-wider">Certified Solutions</p>
+                      <p className="text-xs text-gray-500 mt-2 max-w-[180px] mx-auto">Industry-recognized standards and compliance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link to="/?contact=true&partner=true" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:from-blue-700 hover:to-purple-700 group">
+              <span>Become a Partner</span>
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+
+        {/* Custom Animation Styles */}
+        <style jsx>{`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}</style>
       </section>
 
       {/* Final CTA Section */}

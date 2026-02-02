@@ -258,6 +258,158 @@ const CybersecurityServices = () => {
         </div>
       </div>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#727CAB' }}>Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our cybersecurity services, partnerships, and how we protect your business from evolving threats
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What cybersecurity services does Xorvo Technologies offer?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Xorvo Technologies provides comprehensive cybersecurity services including network security, endpoint protection, cloud security, threat detection and response, vulnerability management, security compliance, and incident response. We partner with industry leaders like Fortinet, Palo Alto Networks, CrowdStrike, Check Point, Sophos, and ESET to deliver enterprise-grade protection.</p>
+                  <p>Our services cover everything from firewall management and intrusion detection to advanced threat hunting, security awareness training, and 24/7 security monitoring. We also specialize in VPS security, ensuring your virtual private servers are hardened against attacks while maintaining optimal performance.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you ensure 24/7 security monitoring?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our 24/7 security monitoring is powered by advanced Security Information and Event Management (SIEM) systems combined with our Security Operations Center (SOC) staffed by certified security professionals. We utilize AI-powered threat detection from partners like CrowdStrike and Palo Alto Networks to identify potential threats in real-time.</p>
+                  <p>We implement automated incident response playbooks, continuous vulnerability scanning, and proactive threat hunting. Our monitoring covers all endpoints, network traffic, cloud environments, and VPS infrastructure, ensuring immediate detection and response to security incidents across your entire IT ecosystem.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">Which cybersecurity partners and technologies do you use?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We partner with the world's leading cybersecurity companies to provide best-in-class protection. Our key partners include Fortinet for next-generation firewalls and network security, Palo Alto Networks for advanced threat prevention, CrowdStrike for endpoint detection and response, Check Point for comprehensive security solutions, Sophos for synchronized security, and ESET for advanced malware protection.</p>
+                  <p>We also integrate solutions from Kaspersky for threat intelligence, Rapid7 for vulnerability management, and Trellix for extended detection and response (XDR). These partnerships ensure we have access to the latest threat intelligence, advanced security technologies, and expert support to protect your business against sophisticated cyber threats.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What is included in your VPS security services?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our VPS security services include comprehensive hardening of your virtual private servers, firewall configuration, intrusion detection systems, regular security patching, malware scanning, DDoS protection, and secure backup solutions. We deploy both open-source and licensed security tools based on your specific requirements and budget.</p>
+                  <p>We provide 24/7 monitoring of your VPS infrastructure, automated security updates, vulnerability assessments, and incident response services. Our team ensures your servers comply with industry standards and regulations, implementing security best practices for operating systems, applications, and network configurations.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How quickly can you respond to security incidents?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our incident response team operates on a 15-minute SLA for critical security incidents. We have predefined response procedures for different types of threats, including malware outbreaks, data breaches, DDoS attacks, and unauthorized access attempts. Our 24/7 SOC ensures immediate detection and response regardless of when incidents occur.</p>
+                  <p>We maintain a dedicated incident response team with certifications from CompTIA Security+, CISSP, and vendor-specific certifications from our partners like Fortinet and CrowdStrike. Our response includes containment, eradication, recovery, and post-incident analysis to prevent future occurrences and improve your security posture.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">Do you provide cybersecurity compliance and audit support?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Yes, we provide comprehensive compliance support for various regulatory frameworks including GDPR, HIPAA, PCI DSS, ISO 27001, SOC 2, and industry-specific requirements. Our compliance services include gap analysis, policy development, risk assessments, audit preparation, and continuous compliance monitoring.</p>
+                  <p>We help implement security controls that meet regulatory requirements, maintain documentation for audits, conduct regular compliance assessments, and provide training for your staff. Our partnerships with compliance-focused vendors ensure we have the tools and expertise to help you achieve and maintain compliance with evolving regulations.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What makes your cybersecurity services different from other providers?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our cybersecurity services stand out through our integrated approach combining enterprise-grade technologies with personalized service. Unlike generic providers, we offer customized security solutions tailored to your specific industry, size, and risk profile. Our partnerships with 21+ leading security companies give us access to cutting-edge technologies and threat intelligence.</p>
+                  <p>We provide true 24/7 support with local experts who understand your business context, comprehensive reporting, and proactive security posture management. Our unique selling proposition is the combination of advanced threat detection, rapid incident response, compliance expertise, and cost-effective solutions that scale with your business growth.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you handle data protection and privacy in your security services?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Data protection is fundamental to our cybersecurity approach. We implement encryption for data at rest and in transit, strict access controls, comprehensive audit logging, and regular security assessments. Our services comply with GDPR, CCPA, and other data protection regulations, ensuring your sensitive information remains protected.</p>
+                  <p>We use privacy-enhancing technologies, conduct privacy impact assessments, maintain data residency requirements, and provide transparent data handling policies. Our security operations include data loss prevention (DLP) solutions, secure data backup and recovery, and continuous monitoring for data breaches or unauthorized access attempts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link to="/?contact=true&security=true" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <span>Get a Free Security Assessment</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-4xl mx-auto text-center">

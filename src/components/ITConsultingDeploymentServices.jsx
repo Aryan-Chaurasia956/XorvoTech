@@ -390,6 +390,158 @@ const ITConsultingDeploymentServices = () => {
         </div>
       </div>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#727CAB' }}>Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our IT consulting and deployment services, custom application development, network infrastructure design, and partnerships with leading technology providers
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What IT consulting and deployment services does Xorvo Technologies provide?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Xorvo Technologies offers comprehensive IT consulting and deployment services including custom application development, network infrastructure design, IT strategy consulting, system integration, cloud migration planning, and digital transformation consulting. We partner with leading technology providers including Microsoft, Cisco, Aruba Networks, Dell, HP, and various software vendors to deliver end-to-end IT solutions.</p>
+                  <p>Our consulting services encompass technology roadmaps, vendor selection, project management, implementation planning, and post-deployment support. We specialize in developing custom applications, designing scalable network architectures, implementing enterprise systems, and ensuring seamless integration between different technology platforms.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you approach custom application development?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our custom application development follows agile methodologies with comprehensive requirements gathering, system design, development, testing, and deployment phases. We develop applications using modern frameworks including .NET, Java, Python, React, Angular, and mobile development platforms. Our team creates web applications, mobile apps, desktop software, and enterprise systems tailored to your specific business requirements.</p>
+                  <p>We implement best practices in software architecture, database design, security, and performance optimization. Our development process includes continuous integration, automated testing, code reviews, and regular client feedback sessions. We ensure applications are scalable, maintainable, and integrate seamlessly with your existing IT infrastructure.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">Which technology partners and vendors do you work with?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We maintain strategic partnerships with leading technology vendors to provide comprehensive IT solutions. Our networking partners include Cisco and Aruba Networks for enterprise networking equipment, while our hardware partnerships cover Dell, HP, and Lenovo for servers, workstations, and storage solutions. We work with Microsoft for development platforms, database systems, and cloud services.</p>
+                  <p>Our software partnerships include various database providers, development tools, and specialized application vendors. We maintain certified partnerships ensuring access to enterprise support, training resources, and the latest technologies. These relationships enable us to recommend and implement the best-fit solutions for your specific requirements while ensuring reliable vendor backing.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you design and deploy network infrastructure?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our network infrastructure design services include comprehensive network assessments, topology design, security architecture, capacity planning, and implementation. We design LAN, WAN, wireless networks, and data center infrastructure using enterprise-grade equipment from Cisco and Aruba Networks. Our solutions include network segmentation, VLAN configuration, QoS implementation, and redundancy planning.</p>
+                  <p>We implement network security with next-generation firewalls, intrusion detection systems, VPN solutions, and secure wireless networks. Our deployment services include hardware installation, configuration, testing, and documentation. We ensure networks are designed for scalability, performance, and security while meeting your business requirements and budget constraints.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What is your approach to IT strategy and digital transformation?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our IT strategy consulting begins with comprehensive business analysis, current state assessment, and future-state visioning. We develop multi-year technology roadmaps aligned with your business objectives, budget cycles, and industry trends. Our digital transformation services include cloud adoption strategies, process automation, modernization of legacy systems, and implementation of emerging technologies.</p>
+                  <p>We provide strategic guidance on technology investments, vendor selection, risk management, and change management. Our consultants help you navigate digital transformation challenges while minimizing disruption to business operations. We ensure your IT strategy supports business growth, improves operational efficiency, and maintains competitive advantage.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you handle system integration and data migration?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our system integration services connect disparate systems, applications, and data sources to create unified business processes. We implement API integrations, middleware solutions, data synchronization, and workflow automation. Our integration expertise covers ERP systems, CRM platforms, custom applications, and third-party services using modern integration platforms and custom development.</p>
+                  <p>Our data migration services include comprehensive planning, data mapping, cleansing, validation, and secure transfer between systems. We utilize specialized migration tools and custom scripts to ensure data integrity and minimal downtime. We support migrations between databases, applications, cloud platforms, and on-premises systems with detailed testing and rollback procedures.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What project management methodologies do you follow?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We follow both agile and waterfall project management methodologies based on project requirements and client preferences. Our agile approach includes Scrum and Kanban frameworks with sprint planning, daily stand-ups, sprint reviews, and retrospectives. For larger enterprise projects, we implement hybrid methodologies combining agile development with traditional project governance.</p>
+                  <p>Our project management includes comprehensive planning, risk management, resource allocation, timeline tracking, and stakeholder communication. We utilize project management tools like Jira, Microsoft Project, and Asana for transparent project tracking. Our certified project managers ensure projects are delivered on time, within budget, and to the specified quality standards.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What kind of post-deployment support do you provide?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our post-deployment support includes comprehensive warranty periods, technical support, performance monitoring, bug fixes, and system optimization. We provide different support tiers ranging from basic business hours support to 24/7 enterprise support with guaranteed response times. Our team conducts post-implementation reviews, user training, and knowledge transfer sessions.</p>
+                  <p>We offer ongoing maintenance services including system updates, security patches, performance tuning, and capacity planning. Our support includes help desk services, remote monitoring, proactive system health checks, and regular reporting. We maintain detailed documentation and provide escalation procedures for critical issues to ensure continuous system availability and performance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link to="/?contact=true&consulting=true" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <span>Get a Free IT Consulting Assessment</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900">
         <div className="max-w-4xl mx-auto text-center">

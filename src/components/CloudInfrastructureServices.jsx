@@ -202,6 +202,158 @@ const CloudInfrastructureServices = () => {
         </div>
       </div>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#727CAB' }}>Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our cloud infrastructure services, partnerships with AWS and other providers, and how we modernize your IT infrastructure
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What cloud infrastructure services does Xorvo Technologies provide?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Xorvo Technologies offers comprehensive cloud infrastructure services including cloud migration, hybrid cloud setup, multi-cloud management, infrastructure as code (IaC), container orchestration, serverless computing, and cloud-native application development. We partner with leading cloud providers including AWS, Microsoft Azure, and Google Cloud Platform to deliver scalable, secure, and cost-effective cloud solutions.</p>
+                  <p>Our services encompass cloud architecture design, implementation, optimization, and ongoing management. We specialize in DevOps automation, CI/CD pipeline setup, cloud security, compliance management, and cost optimization strategies to ensure your cloud infrastructure delivers maximum business value while maintaining security and performance standards.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you ensure seamless cloud migration with zero downtime?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our cloud migration methodology ensures zero downtime through careful planning, phased migrations, and comprehensive testing. We begin with thorough assessment of your current infrastructure, application dependencies, and business requirements. Our team creates detailed migration roadmaps with rollback strategies, data synchronization plans, and performance benchmarks.</p>
+                  <p>We utilize advanced migration tools from AWS and Microsoft to ensure data integrity and application continuity. Our approach includes pilot migrations, parallel running environments, and cutover strategies that minimize risk. We provide 24/7 monitoring during migration phases and have experienced engineers on standby to address any issues immediately.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">Which cloud platforms and partners do you work with?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We are certified partners with major cloud platforms including AWS (Amazon Web Services), Microsoft Azure, and Google Cloud Platform. Our AWS partnership includes certifications in Solutions Architecture, DevOps Engineering, and Cloud Security. We maintain strong relationships with hardware partners like Dell, HP, and Lenovo for hybrid infrastructure deployments.</p>
+                  <p>Our technology ecosystem includes partnerships with VMware for virtualization, Cisco and Aruba Networks for networking, Fortinet and Palo Alto Networks for cloud security, and Veeam for cloud backup and disaster recovery. These partnerships ensure we have access to the latest cloud technologies, expert support, and competitive pricing for our clients.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you optimize cloud costs and prevent overspending?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our cloud cost optimization strategy combines automated monitoring, right-sizing recommendations, reserved instance planning, and usage pattern analysis. We implement cost governance frameworks with AWS Cost Explorer and Azure Cost Management to provide real-time visibility into cloud spending. Our team identifies underutilized resources, recommends instance optimizations, and implements auto-scaling policies to match demand.</p>
+                  <p>We establish tagging strategies, budget alerts, and regular cost reviews to prevent overspending. Our optimization includes storage tier management, data transfer cost reduction, and scheduling non-critical workloads during off-peak hours. We typically achieve 20-40% cost savings for our clients through systematic optimization.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What security measures do you implement for cloud infrastructure?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our cloud security framework implements defense-in-depth strategies with network security, identity and access management, data encryption, threat detection, and compliance monitoring. We utilize AWS Security Hub, Azure Security Center, and advanced security tools from partners like Palo Alto Networks and Fortinet for comprehensive cloud protection.</p>
+                  <p>We implement security best practices including VPC isolation, security groups, NACLs, WAF configurations, DDoS protection, and regular security assessments. Our team ensures compliance with SOC 2, ISO 27001, PCI DSS, HIPAA, and GDPR requirements through automated compliance checks and continuous monitoring.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">Do you provide hybrid cloud and multi-cloud solutions?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Yes, we specialize in hybrid cloud and multi-cloud architectures that combine the best of on-premises and cloud environments. Our hybrid solutions enable seamless integration between your existing datacenter infrastructure and public cloud services, providing flexibility, scalability, and optimal resource placement based on performance, security, and compliance requirements.</p>
+                  <p>For multi-cloud environments, we implement unified management platforms using tools like Kubernetes, Terraform, and Ansible to ensure consistent operations across AWS, Azure, and Google Cloud. Our approach avoids vendor lock-in while leveraging each platform's strengths for specific workloads and applications.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you handle disaster recovery and business continuity?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our disaster recovery solutions leverage cloud infrastructure for reliable, cost-effective business continuity. We implement multi-region deployments, automated backup strategies, and failover mechanisms using AWS Route 53, Azure Traffic Manager, and Veeam backup solutions. Our DR plans include RTO/RPO definitions, regular testing, and comprehensive recovery procedures.</p>
+                  <p>We provide both pilot light and warm standby configurations based on your business requirements and budget. Our team conducts quarterly disaster recovery tests, maintains updated documentation, and ensures 24/7 monitoring of backup integrity and replication status to guarantee rapid recovery when needed.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What kind of support and monitoring do you provide for cloud infrastructure?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We provide comprehensive 24/7 cloud infrastructure monitoring and support using advanced tools like AWS CloudWatch, Azure Monitor, and third-party solutions. Our monitoring covers performance metrics, security events, cost tracking, and application health. We implement automated alerting, incident response procedures, and proactive capacity planning.</p>
+                  <p>Our support team includes certified cloud architects and engineers who provide strategic guidance, performance optimization, security updates, and troubleshooting. We offer different support tiers from basic monitoring to fully managed services, ensuring you have the right level of expertise and response times for your business needs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link to="/?contact=true&cloud=true" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-700 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <span>Get a Free Cloud Assessment</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-4xl mx-auto text-center">

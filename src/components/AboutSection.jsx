@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import SplitText from "./SplitText";
 
 const AboutSection = () => {
   return (
@@ -27,20 +26,9 @@ const AboutSection = () => {
           <div className="text-white drop-shadow-md">
             {/* Main Title */}
             <div className="mb-6">
-              <SplitText 
-                text="Who We Are"
-                tag="h2"
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg"
-                delay={60}
-                duration={0.8}
-                ease="power3.out"
-                splitType="chars"
-                from={{ opacity: 0, y: 50, rotationX: -90 }}
-                to={{ opacity: 1, y: 0, rotationX: 0 }}
-                threshold={0.2}
-                rootMargin="-50px"
-                textAlign="left"
-              />
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">
+                Who We Are
+              </h2>
             </div>
 
             {/* Subtitle */}
