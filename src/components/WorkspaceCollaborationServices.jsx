@@ -214,6 +214,158 @@ const WorkspaceCollaborationServices = () => {
         </div>
       </div>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#727CAB' }}>Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our workspace and collaboration services, Microsoft 365 and Google Workspace migrations, and partnerships with leading productivity platforms
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What workspace and collaboration services does Xorvo Technologies provide?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Xorvo Technologies offers comprehensive workspace and collaboration services including Microsoft 365 migration and management, Google Workspace deployment, Zoho Workplace implementation, team communication solutions, document management systems, and video conferencing setups. We partner with Microsoft, Google, Zoho, and other leading collaboration platform providers to deliver seamless productivity solutions.</p>
+                  <p>Our services encompass complete migration planning, data transfer, user training, security configuration, integration with existing systems, and ongoing management. We specialize in hybrid work environments, ensuring your team can collaborate effectively regardless of location while maintaining security and compliance standards.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you ensure zero-downtime migration to Microsoft 365 or Google Workspace?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our zero-downtime migration methodology utilizes advanced migration tools from Microsoft, Google, and specialized third-party solutions to ensure seamless data transfer without business interruption. We conduct thorough pre-migration assessments, pilot migrations, and comprehensive testing to identify and resolve potential issues before the final cutover.</p>
+                  <p>We implement phased migration strategies with coexistence periods, allowing gradual user transition and minimal disruption. Our team provides 24/7 monitoring during migration, rollback capabilities, and user support to address any immediate needs. We typically achieve 99.9% migration success rates with zero data loss and minimal user impact.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">Which collaboration platforms and partners do you specialize in?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We are certified partners with Microsoft for Microsoft 365 (Office 365) and Azure services, Google for Google Workspace (formerly G Suite), and Zoho for Zoho Workplace. Our Microsoft partnership includes certifications in Enterprise Mobility + Security, Teams administration, and SharePoint deployment. We maintain deep expertise in these platforms' latest features and security capabilities.</p>
+                  <p>Our technology ecosystem includes partnerships with communication providers like Zoom and Microsoft Teams, document management solutions, and security vendors like Fortinet and Palo Alto Networks for securing collaboration environments. These partnerships ensure we have access to enterprise support, training resources, and advanced migration tools.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you handle data security and compliance in collaboration platforms?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our collaboration security framework implements comprehensive data protection including encryption for data at rest and in transit, multi-factor authentication, conditional access policies, data loss prevention (DLP), and advanced threat protection. We configure security settings in Microsoft 365, Google Workspace, and Zoho to meet industry standards and regulatory requirements.</p>
+                  <p>We ensure compliance with GDPR, HIPAA, PCI DSS, and other regulations through proper data classification, retention policies, audit logging, and regular security assessments. Our team implements information protection, rights management, and secure sharing controls to prevent unauthorized data access while maintaining user productivity.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What kind of user training and adoption support do you provide?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our user adoption programs include comprehensive training sessions tailored to different user roles and skill levels. We provide hands-on workshops, video tutorials, quick reference guides, and best practices documentation. Our training covers Microsoft 365 applications (Teams, SharePoint, OneDrive), Google Workspace tools (Gmail, Drive, Meet), and Zoho Workplace applications.</p>
+                  <p>We implement change management strategies including communication plans, champion programs, and ongoing support resources. Our team provides post-migration support with help desk services, adoption metrics tracking, and continuous improvement recommendations. We typically achieve 85-90% user adoption within the first 60 days.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you support hybrid and remote work environments?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our hybrid work solutions enable seamless collaboration between office-based and remote employees through unified communication platforms, cloud-based document sharing, virtual meeting rooms, and mobile device management. We implement Microsoft Teams, Zoom, or Google Meet with proper licensing, security configurations, and integration with existing phone systems.</p>
+                  <p>We provide secure remote access solutions, virtual desktop infrastructure (VDI), and endpoint management for home office setups. Our team ensures consistent user experience across all locations while maintaining security compliance and performance standards. We also implement digital workspace solutions that provide single sign-on and unified access to all applications.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What backup and archiving solutions do you offer for collaboration data?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We provide comprehensive backup and archiving solutions for Microsoft 365, Google Workspace, and Zoho environments using enterprise-grade tools from Veeam, Barracuda, and other specialized backup providers. Our services include automated daily backups of emails, documents, Teams conversations, and SharePoint sites with point-in-time recovery capabilities.</p>
+                  <p>Our archiving solutions ensure compliance with legal and regulatory requirements through long-term data retention, e-discovery capabilities, and litigation hold features. We implement backup strategies that protect against ransomware, accidental deletion, and service outages while maintaining data integrity and accessibility for authorized users.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you integrate collaboration platforms with existing business systems?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our integration services connect collaboration platforms with your existing business systems including CRM, ERP, HR systems, and custom applications. We utilize Microsoft Power Platform, Google Workspace APIs, Zoho's integration capabilities, and third-party middleware to create seamless workflows and data synchronization across systems.</p>
+                  <p>We implement custom workflows, automated processes, and unified dashboards that enhance productivity while maintaining data integrity and security. Our team ensures proper API configurations, authentication setups, and data mapping to enable efficient information flow between collaboration tools and business applications.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link to="/?contact=true&workspace=true" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-700 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <span>Get a Free Workspace Assessment</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <div className="max-w-4xl mx-auto text-center">

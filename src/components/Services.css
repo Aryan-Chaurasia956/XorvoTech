@@ -59,9 +59,37 @@
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #0f172a 100%);
 }
 
-/* Services cards: overlay face shows only heading on first view */
+/* Content fade animation */
+.noah>div > *:not(.center-row) {
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+}
+
+.noah>div:hover > *:not(.center-row) {
+    opacity: 1;
+}
+
+.noah>div.john {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #0f172a 100%);
+}
+
+.noah>div.felix {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #2563eb 100%);
+}
+
+.noah>div.akash {
+    background: linear-gradient(135deg, #059669 0%, #047857 50%, #064e3b 100%);
+}
+
+.noah>div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Services cards: fade animation instead of slide */
 .services-cards.noah > div::after {
     content: attr(data-heading);
     position: absolute;
@@ -73,53 +101,58 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 800;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
     text-align: center;
     line-height: 1.2;
     letter-spacing: -0.02em;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     border-radius: 16px;
     z-index: 10;
     opacity: 1;
-    transform: translateX(0);
-    transition: transform 0.5s ease;
+    transition: opacity 0.4s ease;
     pointer-events: none;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(30, 64, 175, 0.5) 100%);
 }
 
 .services-cards.noah > div:hover::after {
-    transform: translateX(-100%);
+    opacity: 0;
 }
 
 /* Background images for Cloud & Infrastructure service cards - First Face Overlay */
 #cloud-migration::after {
-  background-image: url('/pexels-ivan-cujic-20495-109479.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(30, 64, 175, 0.5) 100%), url('/pexels-ivan-cujic-20495-109479.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #cloud-native::after {
-  background-image: url('/pexels-alexander-suhorucov-6457560.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(139, 92, 246, 0.5) 100%), url('/pexels-alexander-suhorucov-6457560.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #devops::after {
-  background-image: url('/pexels-christian-morillo-1181244.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(59, 130, 246, 0.5) 100%), url('/pexels-christian-morillo-1181244.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #hybrid-cloud::after {
-  background-image: url('/pexels-mitchell-rosen-576919.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(16, 185, 129, 0.5) 100%), url('/pexels-mitchell-rosen-576919.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #cloud-security::after {
-  background-image: url('/pexels-sora-shimazaki-5926382.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(239, 68, 68, 0.5) 100%), url('/pexels-sora-shimazaki-5926382.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 /* Background images for IT Consulting & Deployment service cards - First Face Overlay */
@@ -306,52 +339,46 @@
 }
 
 #vps-hosting::after {
-  background-image: url('/pexels-divinetechygirl-1181354.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(6, 182, 212, 0.5) 100%), url('/pexels-divinetechygirl-1181354.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #infrastructure-design::after {
-  background-image: url('/1ftgjbeeee_generated.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(139, 92, 246, 0.5) 100%), url('/1ftgjbeeee_generated.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #hybrid-multi-cloud::after {
-  background-image: url('/sigmund-_dJCBtdUu74-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(59, 130, 246, 0.5) 100%), url('/sigmund-_dJCBtdUu74-unsplash.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #backup-disaster-recovery::after {
-  background-image: url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(239, 68, 68, 0.5) 100%), url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 #infrastructure-monitoring::after {
-  background-image: url('/green-prophet-WUHtXGyJa_Q-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(16, 185, 129, 0.5) 100%), url('/green-prophet-WUHtXGyJa_Q-unsplash.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 /* Compliance & Audit card - First Face Overlay */
 #compliance-audit::after {
-  background-image: url('/pexels-kunitsky-210990.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white !important;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(168, 85, 247, 0.5) 100%), url('/pexels-kunitsky-210990.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: overlay, normal;
 }
 
 /* Add dark gradient overlay on first face for text readability */
@@ -428,39 +455,20 @@
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
 } */ */
 
-/* Decorative gradient overlay */
-.noah>div::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
+/* Decorative gradient overlay - REMOVED to fix conflicts */
 
-.noah>div:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.noah>div:hover::before {
-    opacity: 1;
-}
-
-/* Section titles inside cards */
+/* Section titles inside cards - moved to top */
 .noah .text-2xl {
     color: white;
     font-weight: 700;
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     text-align: left;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 2;
+    order: -1;
 }
 
 /* Content inside cards */
@@ -471,6 +479,7 @@
     position: relative;
     z-index: 2;
     font-size: 0.95rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Lists */
@@ -487,6 +496,7 @@
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons */
@@ -516,10 +526,14 @@
 }
 
 /* Button container */
-.noah .flex.justify-center {
+.noah .flex.justify-center,
+.noah .center-row {
     margin-top: auto;
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Stack container for intro cards */
@@ -537,6 +551,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 16px;
+  width: 100%;
 }
 
 .cta-row {
@@ -546,6 +561,49 @@
   gap: 12px;
   margin-top: 8px;
   flex-wrap: wrap;
+}
+
+/* Professional card overrides for Solutions page */
+.solution-cards.noah > div {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%) !important;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-cards.noah > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.solution-cards .text-2xl {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.solution-cards.noah > div > div:not(.text-2xl) {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.solution-cards.noah ul {
+  margin: 0.75rem 0 1rem 0;
+}
+
+.solution-cards.noah li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.solution-cards.noah button {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.solution-cards.noah button:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
 }
 
 /* Professional card overrides for Resources page */

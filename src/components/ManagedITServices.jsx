@@ -192,6 +192,158 @@ const ManagedITServices = () => {
         </div>
       </div>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#727CAB' }}>Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our managed IT services, 24/7 support, partnerships with leading technology providers, and how we optimize your IT infrastructure
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What managed IT services does Xorvo Technologies offer?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Xorvo Technologies provides comprehensive managed IT services including 24/7 network monitoring, server management, help desk support, cybersecurity management, backup and disaster recovery, cloud infrastructure management, and strategic IT planning. We partner with industry leaders like Microsoft, Dell, HP, Lenovo, Fortinet, and Veeam to deliver enterprise-grade IT management.</p>
+                  <p>Our services cover complete IT infrastructure management from hardware procurement and deployment to ongoing maintenance, security patching, performance optimization, and technology refresh planning. We act as your dedicated IT department, providing expertise across all aspects of your technology environment while ensuring alignment with your business objectives.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How does your 24/7 monitoring and support work?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our 24/7 monitoring and support system utilizes advanced Network Operations Center (NOC) tools combined with our Security Operations Center (SOC) for comprehensive IT oversight. We monitor network performance, server health, application availability, security threats, and backup status around the clock using enterprise-grade monitoring platforms from partners like Microsoft and Fortinet.</p>
+                  <p>Our support team operates on tiered response times with immediate response for critical issues. We provide multiple support channels including phone, email, chat, and remote access. Our proactive monitoring identifies potential issues before they impact your business, with automated alerts and predefined response procedures ensuring rapid resolution of any IT problems.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">Which technology partners and vendors do you work with?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We partner with leading technology vendors to provide comprehensive IT solutions. Our hardware partners include Dell, HP, and Lenovo for servers, workstations, and networking equipment. We work with Microsoft for Windows Server, Microsoft 365, and Azure services, and partner with Fortinet, Palo Alto Networks, and Check Point for network security solutions.</p>
+                  <p>Our software partnerships include Veeam for backup and disaster recovery, VMware for virtualization, and various cloud providers. We maintain certified partnerships ensuring access to enterprise support, training, and the latest technologies. These relationships enable us to provide cost-effective solutions with reliable vendor backing and expert technical support.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What is included in your help desk and user support services?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our help desk services provide comprehensive user support including hardware and software troubleshooting, account management, password resets, software installation, and user training. We offer multiple support channels with guaranteed response times based on priority levels. Our team supports Windows, Mac, and mobile devices, along with Microsoft 365, Adobe, and other business applications.</p>
+                  <p>We implement ticketing systems for issue tracking, knowledge bases for self-service support, and regular user training sessions. Our help desk operates during business hours with 24/7 emergency support available. We maintain detailed service level agreements (SLAs) and provide regular performance reports to ensure transparency and accountability in our support services.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you handle backup and disaster recovery?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our backup and disaster recovery solutions utilize Veeam and other enterprise backup platforms to ensure comprehensive data protection. We implement 3-2-1 backup strategies with local, cloud, and offsite backups. Our services include automated daily backups, regular restore testing, encryption for data security, and detailed backup reporting and monitoring.</p>
+                  <p>We develop comprehensive disaster recovery plans with defined recovery time objectives (RTO) and recovery point objectives (RPO). Our DR solutions include server failover, cloud recovery options, and rapid restoration capabilities. We conduct quarterly disaster recovery tests to ensure business continuity and maintain updated documentation for all recovery procedures.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you ensure cybersecurity in managed IT services?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our managed cybersecurity services include network security with next-generation firewalls from Fortinet and Palo Alto Networks, endpoint protection with CrowdStrike and ESET, email security, web filtering, and security awareness training. We provide 24/7 security monitoring, vulnerability assessments, patch management, and incident response services.</p>
+                  <p>We implement defense-in-depth security strategies with regular security audits, penetration testing, and compliance monitoring for GDPR, HIPAA, PCI DSS, and other regulations. Our security team maintains up-to-date threat intelligence and provides strategic security planning to protect your business against evolving cyber threats.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What makes your managed IT services cost-effective?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our managed IT services provide cost-effectiveness through predictable monthly pricing, elimination of unexpected IT expenses, and optimized resource utilization. We leverage our partnerships with vendors like Dell, HP, and Microsoft to obtain enterprise discounts on hardware and software. Our proactive maintenance reduces costly downtime and extends equipment lifespan.</p>
+                  <p>We provide access to enterprise-grade tools and expertise at a fraction of the cost of building an in-house IT team. Our services include strategic IT planning, technology roadmaps, and budget forecasting to help you make informed technology investments. We typically reduce IT operational costs by 20-30% while improving service quality and reliability.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you handle IT asset management and lifecycle planning?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our IT asset management services include comprehensive inventory tracking, lifecycle management, and technology refresh planning. We maintain detailed records of all hardware, software licenses, warranties, and maintenance agreements. Our team monitors asset performance, plans for end-of-life replacements, and ensures compliance with software licensing requirements.</p>
+                  <p>We develop 3-5 year technology roadmaps aligned with your business goals, budget cycles, and technology trends. Our lifecycle planning includes hardware refresh schedules, software upgrade paths, and migration strategies for legacy systems. We help optimize your IT investments through strategic procurement, vendor negotiation, and disposal planning for outdated equipment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link to="/?contact=true&managed-it=true" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-emerald-700 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <span>Get a Free IT Assessment</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-gray-900 via-emerald-900 to-gray-900">
         <div className="max-w-4xl mx-auto text-center">

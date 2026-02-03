@@ -192,6 +192,158 @@ const DataProtectionComplianceServices = () => {
         </div>
       </div>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#727CAB' }}>Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our data protection and compliance services, GDPR and HIPAA compliance, partnerships with security vendors, and how we safeguard your sensitive information
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What data protection and compliance services does Xorvo Technologies offer?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Xorvo Technologies provides comprehensive data protection and compliance services including GDPR compliance implementation, HIPAA security solutions, PCI DSS compliance, ISO 27001 certification support, data loss prevention (DLP), encryption services, and privacy impact assessments. We partner with leading security vendors like Fortinet, Palo Alto Networks, CrowdStrike, and ESET to deliver enterprise-grade data protection.</p>
+                  <p>Our services encompass data classification, access control management, security policy development, compliance auditing, risk assessments, and continuous monitoring. We help organizations protect sensitive data, meet regulatory requirements, and maintain customer trust through robust privacy and security frameworks.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you ensure GDPR compliance for businesses?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our GDPR compliance services include comprehensive gap analysis, data mapping, privacy policy development, consent management implementation, data subject rights procedures, and breach notification protocols. We implement technical and organizational measures including encryption, pseudonymization, access controls, and audit logging to ensure GDPR compliance.</p>
+                  <p>We provide Data Protection Officer (DPO) services, privacy impact assessments, vendor compliance management, and employee training programs. Our team helps you maintain Records of Processing Activities (ROPA), implement privacy by design principles, and establish data protection frameworks that adapt to evolving regulatory requirements.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">Which security partners and technologies do you use for data protection?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>We partner with industry-leading security vendors to provide comprehensive data protection solutions. Our network security partners include Fortinet and Palo Alto Networks for next-generation firewalls and intrusion prevention. For endpoint protection, we utilize CrowdStrike, ESET, and Kaspersky for advanced malware detection and prevention.</p>
+                  <p>Our data protection partnerships include Microsoft Azure Information Protection, Varonis for data security, and specialized DLP solutions. We work with Veeam for secure backup and recovery, and maintain relationships with compliance-focused vendors to ensure access to the latest data protection technologies and threat intelligence.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you implement HIPAA compliance for healthcare organizations?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our HIPAA compliance services include comprehensive risk assessments, security rule implementation, privacy rule compliance, breach notification procedures, and Business Associate Agreement (BAA) management. We implement administrative, physical, and technical safeguards as required by HIPAA, including access controls, audit controls, integrity controls, and transmission security.</p>
+                  <p>We provide HIPAA training for healthcare staff, policy and procedure development, security awareness programs, and ongoing compliance monitoring. Our team ensures electronic Protected Health Information (ePHI) is properly encrypted, access is logged and monitored, and all systems meet the technical requirements of the HIPAA Security Rule.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What data loss prevention (DLP) solutions do you implement?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our DLP solutions utilize enterprise-grade platforms from Microsoft, Forcepoint, and specialized security vendors to prevent unauthorized data exfiltration. We implement data classification, content inspection, policy enforcement, and real-time monitoring across endpoints, networks, and cloud environments. Our DLP strategies include data discovery, sensitive data tracking, and automated response to potential data breaches.</p>
+                  <p>We configure DLP policies to detect and block unauthorized transfers of confidential information, implement encryption for sensitive data, and provide detailed reporting and alerting. Our solutions cover data in motion, data at rest, and data in use, ensuring comprehensive protection against both accidental and malicious data loss.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you handle PCI DSS compliance for payment processing?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our PCI DSS compliance services cover all 12 requirements of the Payment Card Industry Data Security Standard. We implement network security, cardholder data protection, vulnerability management, access control measures, network monitoring, and information security policies. We help achieve and maintain PCI compliance through gap analysis, remediation planning, and validation support.</p>
+                  <p>We provide secure payment processing architecture, tokenization solutions, encryption implementation, and secure coding practices for payment applications. Our team conducts quarterly vulnerability scans, annual penetration testing, and maintains documentation required for PCI DSS validation with Qualified Security Assessors (QSAs).</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">What encryption and key management services do you provide?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our encryption services include comprehensive data protection for data at rest, in transit, and in use. We implement AES-256 encryption for databases and files, TLS/SSL for network communications, email encryption, and full disk encryption for endpoints. We utilize Microsoft BitLocker, Azure Information Protection, and enterprise encryption solutions from partners like Thales and Gemalto.</p>
+                  <p>Our key management services include Hardware Security Module (HSM) implementation, key lifecycle management, secure key generation and distribution, and compliance with encryption standards. We implement proper key rotation policies, secure key storage, and disaster recovery procedures for encrypted data to ensure business continuity while maintaining security.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <button className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900">How do you conduct compliance audits and assessments?</h3>
+                <svg className="w-5 h-5 text-gray-500 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="px-8 pb-6">
+                <div className="text-gray-600 space-y-4">
+                  <p>Our compliance audit services include comprehensive assessments against GDPR, HIPAA, PCI DSS, ISO 27001, SOC 2, and other regulatory frameworks. We conduct gap analysis, risk assessments, policy reviews, technical evaluations, and documentation audits. Our team provides detailed findings, remediation plans, and implementation support to address compliance gaps.</p>
+                  <p>We offer pre-audit preparation, continuous compliance monitoring, and support during external audits by certification bodies. Our assessments include security control testing, vulnerability assessments, penetration testing, and employee awareness evaluations. We provide comprehensive reporting and maintain evidence of compliance for regulatory requirements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link to="/?contact=true&compliance=true" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-orange-700 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <span>Get a Free Compliance Assessment</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-gray-900 via-orange-900 to-gray-900">
         <div className="max-w-4xl mx-auto text-center">

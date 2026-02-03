@@ -86,9 +86,9 @@ const Solution = () => {
 
       <div className="divider"></div>
 
-      <div className=' noah '>
+      <div className='noah solution-cards'>
         <div id='business-solutions' className='john scroll-anchor' data-heading='Business Automation Solutions'>
-          <div className='text-2xl flex justify-center'>
+          <div className='text-2xl'>
             Business Automation Solutions
           </div>
           <div>
@@ -369,20 +369,27 @@ const Solution = () => {
 
         {/* Closing Section (Final CTA / Confidence Message) */}
       </div>
-      <div className='intro-card intro-stack p-30 relative' style={{
-        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/60 to-slate-900/80"></div>
-        
+      <div className='intro-card intro-stack p-30 relative bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800'>
         {/* Content */}
-        <div className='krishna relative z-10 text-white'>Integration is where real digital transformation happens. Xorvo Technologies brings together systems, security, and intelligence into one unified ecosystem — delivering performance without compromise and protection without limits.</div>
-        <div className='cta-row relative z-10'>
-          <Link to="/?contact=true"><button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Integration Consultation</button></Link>
-          <Link to="/services"><button type="button" className="bg-[#727CAB] hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore All Services</button></Link>
+        <div className='krishna relative z-10 text-black text-center max-w-4xl mx-auto px-8'>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-lg md:text-xl text-gray-800 mb-8">
+            Integration is where real digital transformation happens. Xorvo Technologies brings together systems, security, and intelligence into one unified ecosystem — delivering performance without compromise and protection without limits.
+          </p>
+        </div>
+        <div className='cta-row relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4 px-8'>
+          <Link to="/?contact=true">
+            <button type="button" className="bg-black text-white hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-black/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
+              Request Integration Consultation
+            </button>
+          </Link>
+          <Link to="/services">
+            <button type="button" className="border-2 border-black text-black hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-black/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
+              Explore All Services
+            </button>
+          </Link>
         </div>
       </div>
 

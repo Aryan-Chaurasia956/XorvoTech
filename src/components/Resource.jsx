@@ -175,26 +175,21 @@ const Resource = () => {
       </div>
 
       {/* Closing Section (Final CTA) */}
-      <div className='intro-card intro-stack p-30 relative' style={{
-        backgroundImage: "url('/franz-hajak-LmmmhFhWA7k-unsplash.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-blue-900/60 to-slate-900/80" />
-        
-        <div className='krishna relative z-10 text-white'>
-          Stay informed, stay prepared, and stay ahead with Xorvo Technologies.
-          <br />
-          Explore our insights, access research, and see how real solutions deliver real results.
+      <div className='intro-card intro-stack p-30 relative bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800'>
+        <div className='krishna relative z-10 text-black text-center max-w-4xl mx-auto px-8'>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Stay Ahead with Expert Resources
+          </h2>
+          <p className="text-lg md:text-xl text-gray-800 mb-8">
+            Stay informed, stay prepared, and stay ahead with Xorvo Technologies. Explore our insights, access research, and see how real solutions deliver real results.
+          </p>
         </div>
-        <div className='center-row gap-4 relative z-10'>
+        <div className='center-row gap-4 relative z-10 flex flex-col sm:flex-row items-center justify-center px-8'>
           <Link to="/solutions">
-            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Solutions</button>
+            <button type="button" className="bg-black text-white hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-black/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">Explore Solutions</button>
           </Link>
           <Link to="/?contact=true">
-            <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Contact Us</button>
+            <button type="button" className="border-2 border-black text-black hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-black/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">Contact Us</button>
           </Link>
         </div>
       </div>

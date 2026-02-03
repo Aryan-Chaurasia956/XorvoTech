@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { FaShieldAlt, FaServer, FaCloud, FaCogs, FaRocket } from 'react-icons/fa';
 
@@ -33,20 +32,6 @@ const ServiceGrid = ({ services = [], solutions = [] }) => {
     return gradients[Math.abs(title.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % gradients.length];
   }
 
-  // Animation variants for better performance
-  const cardVariants = {
-    hidden: { 
-      opacity: 0
-    },
-    visible: (i) => ({
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        delay: i * 0.1,
-        ease: "easeIn"
-      }
-    })
-  };
 
   // Default services if no solutions provided
   const defaultServices = [
@@ -142,13 +127,8 @@ const ServiceGrid = ({ services = [], solutions = [] }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-20 lg:gap-32 w-full max-w-7xl mx-auto px-4">
       {finalServices.map((s, i) => (
-        <motion.div
+        <div
           key={s.id}
-          custom={i}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={cardVariants}
           className="group relative overflow-hidden rounded-2xl bg-white border border-gray-200 transition-all duration-400 hover:shadow-xl hover:-translate-y-1"
           style={{
             boxShadow: `0 8px 24px ${s.color}22`
@@ -257,7 +237,7 @@ const ServiceGrid = ({ services = [], solutions = [] }) => {
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000" />
           </div>
-        </motion.div>
+        </div>
       ))}
     </div>
   );

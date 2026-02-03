@@ -1,6 +1,5 @@
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import SplitText from './SplitText';
 import LazyImage from './LazyImage';
 
 const WhyChooseSection = () => {
@@ -34,37 +33,9 @@ const WhyChooseSection = () => {
           <div>
             <div>
             <div className="text-center mb-8">
-              <SplitText 
-                text="WHY CHOOSE "
-                tag="h2"
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 inline"
-                delay={60}
-                duration={0.7}
-                ease="power3.out"
-                splitType="chars"
-                from={{ opacity: 0, y: 40, scale: 0.8 }}
-                to={{ opacity: 1, y: 0, scale: 1 }}
-                threshold={0.2}
-                rootMargin="-50px"
-                textAlign="center"
-                style={{ fontFamily: "'Rostex', 'Arial Black', sans-serif" }}
-              />
-              {' '}
-              <SplitText 
-                text="XORVO"
-                tag="span"
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent inline ml-1 md:ml-2"
-                delay={80}
-                duration={0.9}
-                ease="power3.out"
-                splitType="chars"
-                from={{ opacity: 0, y: 60, rotationY: 180 }}
-                to={{ opacity: 1, y: 0, rotationY: 0 }}
-                threshold={0.2}
-                rootMargin="-50px"
-                textAlign="center"
-                style={{ fontFamily: "'Rostex', 'Arial Black', sans-serif" }}
-              />
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 inline" style={{ fontFamily: "'Rostex', 'Arial Black', sans-serif" }}>
+                WHY CHOOSE <span className="text-accent ml-1 md:ml-2">XORVO</span>
+              </h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 relative">
@@ -148,7 +119,7 @@ const WhyChooseSection = () => {
             </div>
             
             {/* CTA Section */}
-            <div className="text-center animate-fadeInUp">
+            <div className="text-center">
               <Link to="/?contact=true&partner=true" className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-accent via-accent/90 to-accent/80 text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:from-accent hover:to-accent/90 backdrop-blur-sm border border-white/20 cursor-pointer">
                 <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
                   <ArrowRight className="h-3 w-3 text-white" />
