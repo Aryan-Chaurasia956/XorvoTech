@@ -86,9 +86,9 @@ const Solution = () => {
 
       <div className="divider"></div>
 
-      <div className=' noah '>
+      <div className='noah solution-cards'>
         <div id='business-solutions' className='john scroll-anchor' data-heading='Business Automation Solutions'>
-          <div className='text-2xl flex justify-center'>
+          <div className='text-2xl'>
             Business Automation Solutions
           </div>
           <div>
