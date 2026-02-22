@@ -336,56 +336,57 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact-section" className="bg-gradient-to-r from-[#001f3f] via-[#003366] to-[#001f3f] text-white py-20">
+    <section id="contact-section" style={{ backgroundColor: '#727CAB' }} className="text-white py-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column - Info */}
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: "'Rostex', 'Arial Black', sans-serif" }}>
-                Ready to <span className="text-gray-300">get started?</span>
+                Ready to <span className="text-white">get started?</span>
               </h2>
-              <p className="text-gray-300 text-lg mb-8">
+              <p className="text-white text-lg mb-8">
                 We're here to help. Reach out to schedule an introductory call with one of our team members
                 and learn more about how Xorvo can benefit your organization.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold mb-6">Contact Information:</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">Contact Information:</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                  <span className="text-lg">+91 97929 08405</span>
+                  <Phone className="h-5 w-5 text-white mt-1 flex-shrink-0" />
+                  <span className="text-lg text-white">+91 97929 08405</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                  <span className="text-lg">tech@avinyax.com</span>
+                  <Mail className="h-5 w-5 text-white mt-1 flex-shrink-0" />
+                  <span className="text-lg text-white">tech@avinyax.com</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                  <div className="text-lg">
+                  <MapPin className="h-5 w-5 text-white mt-1 flex-shrink-0" />
+                  <div className="text-lg text-white">
                     <p className="font-semibold mb-2">Registered Office:</p>
-                    <p className="text-gray-300">403 B Wing, Vakola Bridge, Santacruz, Mumbai MH – 400055</p>
+                    <p className="text-gray-100">403 B Wing, Vakola Bridge, Santacruz, Mumbai MH – 400055</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                  <div className="text-lg">
+                  <MapPin className="h-5 w-5 text-white mt-1 flex-shrink-0" />
+                  <div className="text-lg text-white">
                     <p className="font-semibold mb-2">Corporate Office:</p>
-                    <p className="text-gray-300">Majestic Signia, 1st Floor, Plot No. A-27, Sector 62 Noida UP- 201309</p>
+                    <p className="text-gray-100">Majestic Signia, 1st Floor, Plot No. A-27, Sector 62 Noida UP- 201309</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-8">
-                <h4 className="text-xl font-bold mb-4">Follow Us:</h4>
+                <h4 className="text-xl font-bold mb-4 text-white">Follow Us:</h4>
                 <div className="flex gap-4">
                   <a
                     href="https://www.linkedin.com/company/xorvo-technologies-private-limited/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-accent transition-colors"
+                    className="hover:text-white transition-colors bg-white/10 p-2 rounded-full hover:bg-white/20"
+                    title="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
                   </a>
@@ -393,7 +394,8 @@ const ContactSection = () => {
                     href="https://www.instagram.com/xorvo_tech/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-accent transition-colors"
+                    className="hover:text-white transition-colors bg-white/10 p-2 rounded-full hover:bg-white/20"
+                    title="Instagram"
                   >
                     <Instagram className="h-6 w-6" />
                   </a>
@@ -401,7 +403,8 @@ const ContactSection = () => {
                     href="https://www.facebook.com/profile.php?id=61579183072232"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-accent transition-colors"
+                    className="hover:text-white transition-colors bg-white/10 p-2 rounded-full hover:bg-white/20"
+                    title="Facebook"
                   >
                     <Facebook className="h-6 w-6" />
                   </a>
@@ -409,7 +412,8 @@ const ContactSection = () => {
                     href="https://x.com/xorvotechno"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-accent transition-colors"
+                    className="hover:text-white transition-colors bg-white/10 p-2 rounded-full hover:bg-white/20"
+                    title="Xorvo Twitter"
                   >
                     <img
                       src="/twitter-logo.png"

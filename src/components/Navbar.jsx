@@ -101,7 +101,7 @@ const Navbar = () => {
     'Network Designing': { page: '/it-consulting-deployment-services', anchor: '#network-designing' },
     
     // Resources
-    'Blog': { page: '/resources', anchor: '#insights-industry-updates' },
+    'Blog': { page: '/blog', anchor: '' },
     'Case Studies': { page: '/resources', anchor: '#case-studies' },
     'Guides & Whitepapers': { page: '/resources', anchor: '#technical-papers' },
     'Security Alerts': { page: '/resources', anchor: '#security-updates' },

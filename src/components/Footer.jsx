@@ -22,6 +22,13 @@ const Footer = () => {
     "Data Protection & Compliance": "/data-protection-compliance-services",
     "IT Consulting & Deployment": "/it-consulting-deployment-services"
   };
+  // Map Resources footer items to their respective routes
+  const resourcesFooterMap = {
+    "Blog": "/blog",
+    "Case Studies": "/resources#case-studies",
+    "Webinars": "/resources"
+  };
+  
   const footerLinks = {
     Solutions: [
       "Managed Detection and Response",
@@ -170,6 +177,13 @@ const Footer = () => {
                       ) : title === "Services" ? (
                         <Link
                           to={servicesFooterMap[link] || "/services-overview"}
+                          className="text-muted-foreground hover:text-accent transition-colors"
+                        >
+                          {link}
+                        </Link>
+                      ) : title === "Resources" ? (
+                        <Link
+                          to={resourcesFooterMap[link] || "/resources"}
                           className="text-muted-foreground hover:text-accent transition-colors"
                         >
                           {link}
