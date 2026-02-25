@@ -370,8 +370,8 @@ function LandingExtension() {
         "Custom analytics dashboards",
         "Dedicated account manager",
         "SLA guarantees",
-        "On-premise deployment option",
-        "White-label capabilities"
+        "On premise deployment option",
+        "White label capabilities"
       ],
       cta: "Contact Sales",
       popular: false
