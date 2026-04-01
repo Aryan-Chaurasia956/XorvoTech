@@ -1671,7 +1671,7 @@ function LandingExtension() {
               <span style={{ color: '#727CAB' }}>Services</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              avinyaX provides comprehensive IT helpdesk outsourcing solutions, handling everything from basic user support to advanced enterprise infrastructure management. Our multi-tiered approach ensures rapid resolution and maximum uptime for your business operations.
+              avinyaX delivers comprehensive IT helpdesk outsourcing solutions, from basic user support to advanced enterprise infrastructure management. Our multi-tiered approach ensures rapid resolution and maximum uptime for your business.
             </p>
           </AnimatedSection>
 
