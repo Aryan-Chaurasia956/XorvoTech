@@ -78,6 +78,7 @@ function LandingExtension() {
   const [nocPlan, setNocPlan] = useState('');
   const [nocDevices, setNocDevices] = useState(0);
   const [nocShift, setNocShift] = useState('');
+  const [nocTier, setNocTier] = useState(''); // New state for L1/L2 tier
   const [nocTickets, setNocTickets] = useState(0);
   const [nocSla, setNocSla] = useState('');
   const [helpdeskPlan, setHelpdeskPlan] = useState('');
@@ -87,104 +88,121 @@ function LandingExtension() {
   const [currentSpend, setCurrentSpend] = useState('');
   const [selectedCalculator, setSelectedCalculator] = useState('');
 
-  // Pricing Configuration
-  const pricingConfig = {
-    noc: {
-      basic: 4,
-      standard: 20,
-      advanced: null // Custom pricing
+  // Pricing Configuration - New Enhanced NOC Logic
+  const CONFIG = {
+    coverageHours: {
+      "24x7": 720,
+      "8x5": 176,
+      "8x5_weekend": 245
     },
-    helpdesk: {
-      basic: 5, // per ticket
-      standard: 20, // per user
-      custom: null
+    
+    engineerProductiveHours: 123,
+    
+    ticketCapacity: {
+      L1: 600,
+      L2: 300
     },
-    rmm: {
-      basic: 20,
-      standard: 40,
-      custom: null
+    
+    slaMultiplier: {
+      "2hr": 1,
+      "15min": 0.7
+    },
+    
+    baseTierCost: {
+      basic: {
+        L1: 600,
+        L2: 1100
+      },
+      standard: {
+        L1: 1200,
+        L2: 2400
+      }
+    },
+    
+    devicePricing: {
+      basic: {
+        perDevice: 4,
+        baseBlockCost: 100,   // 4 × 25
+        breakpoint: 25
+      },
+      standard: {
+        perDevice: 20,
+        baseBlockCost: 500,   // 20 × 25
+        breakpoint: 25
+      }
     }
   };
 
-  // Calculate NOC cost with complex logic
+  // Calculate NOC cost with new enhanced logic
   const calculateNocCost = () => {
     if (nocPlan === 'advanced') {
       return 0; // Custom pricing - will show "Custom Quote Required"
     }
 
-    // Step 1+2: Plan + Number of Devices (with $100 minimum bill if <25 devices)
-    let deviceCost = 0;
-    if (nocDevices < 25) {
-      deviceCost = 100.0;
+    if (!nocPlan || !nocTier || !nocShift) {
+      return 0;
+    }
+
+    // Create input object
+    const input = {
+      category: nocPlan,
+      tier: nocTier,
+      coverage: nocShift,
+      devices: nocDevices || 0,
+      ticketVolume: nocTickets || 0,
+      sla: nocSla || "2hr"
+    };
+
+    // 1️⃣ Coverage Staff Calculation
+    const coverageHours = CONFIG.coverageHours[input.coverage];
+    const productiveHours = CONFIG.engineerProductiveHours;
+    const coverageStaff = Math.ceil(coverageHours / productiveHours);
+
+    // 2️⃣ Ticket Capacity Adjustment
+    const baseCapacity = CONFIG.ticketCapacity[input.tier];
+    const slaFactor = CONFIG.slaMultiplier[input.sla];
+    const effectiveCapacity = baseCapacity * slaFactor;
+    const ticketStaff = input.ticketVolume > 0 ? Math.ceil(input.ticketVolume / effectiveCapacity) : 1;
+
+    // 3️⃣ Final Staff Required
+    const finalStaff = Math.max(coverageStaff, ticketStaff);
+
+    // 4️⃣ Tier Cost
+    const baseTierCost = CONFIG.baseTierCost[input.category][input.tier];
+    const tierCost = baseTierCost * finalStaff;
+
+    // 5️⃣ Device Cost
+    const deviceConfig = CONFIG.devicePricing[input.category];
+    let deviceCost;
+
+    if (input.devices <= deviceConfig.breakpoint) {
+      deviceCost = deviceConfig.baseBlockCost;
     } else {
-      let perDevice = 0;
-      if (nocPlan === 'basic') {
-        // Basic is always 24/7 at $4/device (no shift choice)
-        perDevice = 4.0;
-      } else if (nocPlan === 'standard') {
-        // Base $20/device, then apply shift multipliers
-        const basePerDevice = 20.0;
-        if (nocShift === '24/7') {
-          perDevice = basePerDevice * 2.0;      // doubled to $40
-        } else if (nocShift === '8/5') {
-          perDevice = basePerDevice * 1.5;      // becomes $30
-        } else if (nocShift === 'weekend') {
-          perDevice = basePerDevice * 1.25;     // becomes $25
-        } else {
-          perDevice = basePerDevice * 1.5;      // default to 8/5 if invalid
-        }
-      }
-      deviceCost = nocDevices * perDevice;
+      const extraDevices = input.devices - deviceConfig.breakpoint;
+      deviceCost = deviceConfig.baseBlockCost + (extraDevices * deviceConfig.perDevice);
     }
 
-    // Step 4: Tentative Tickets per Month
-    let ticketCost = 0;
-    if (nocPlan === 'basic') {
-      if (nocTickets <= 25) {
-        ticketCost = 0.0;
-      } else {
-        ticketCost = (nocTickets - 25) * 12.0;
-      }
-    } else if (nocPlan === 'standard') {
-      if (nocTickets <= 50) {
-        ticketCost = 0.0;
-      } else {
-        ticketCost = (nocTickets - 50) * 8.0;
-      }
-    }
+    // 6️⃣ Final Price
+    const totalCost = tierCost + deviceCost;
 
-    // Step 5: SLA (only Standard plan)
-    let slaCost = 0.0;
-    if (nocPlan === 'standard' && nocSla === '30min') {
-      slaCost = deviceCost * 0.20;
-    }
+    // Store breakdown for display
+    window.nocCalculationBreakdown = {
+      finalStaff,
+      coverageStaff,
+      ticketStaff,
+      tierCost,
+      deviceCost,
+      totalCost
+    };
 
-    // Total
-    return deviceCost + ticketCost + slaCost;
-  };
-
-  const calculateNocTicketCost = () => {
-    if (nocPlan === 'basic') {
-      if (nocTickets <= 25) {
-        return 0.0;
-      } else {
-        return (nocTickets - 25) * 12.0;
-      }
-    } else if (nocPlan === 'standard') {
-      if (nocTickets <= 50) {
-        return 0.0;
-      } else {
-        return (nocTickets - 50) * 8.0;
-      }
-    }
-    return 0;
+    return totalCost;
   };
 
   // Calculate costs
   const nocCost = calculateNocCost();
-  const helpdeskCost = helpdeskPlan && pricingConfig.helpdesk[helpdeskPlan] !== null ? 
-    (helpdeskPlan === 'basic' ? helpdeskQuantity * pricingConfig.helpdesk[helpdeskPlan] : helpdeskQuantity * pricingConfig.helpdesk[helpdeskPlan]) : 0;
-  const rmmCost = rmmPlan && pricingConfig.rmm[rmmPlan] !== null ? rmmEndpoints * pricingConfig.rmm[rmmPlan] : 0;
+  const helpdeskCost = helpdeskPlan && helpdeskPlan !== 'custom' ? 
+    (helpdeskPlan === 'basic' ? helpdeskQuantity * 5 : helpdeskQuantity * 20) : 0;
+  const rmmCost = rmmPlan && rmmPlan !== 'custom' ? rmmEndpoints * (rmmPlan === 'basic' ? 20 : 40) : 0;
   
   const requiresSalesContact = nocPlan === 'advanced' || helpdeskPlan === 'custom' || rmmPlan === 'custom';
   const totalMonthlyCost = requiresSalesContact ? null : (nocCost + helpdeskCost + rmmCost);
@@ -197,12 +215,13 @@ function LandingExtension() {
   // Handler functions
   const handleNocPlanChange = (e) => setNocPlan(e.target.value);
   const handleNocDevicesChange = (e) => setNocDevices(e.target.value === '' ? '' : Math.max(0, parseInt(e.target.value) || 0));
+  const handleNocShiftChange = (e) => setNocShift(e.target.value);
+  const handleNocTierChange = (e) => setNocTier(e.target.value);
   const handleHelpdeskPlanChange = (e) => setHelpdeskPlan(e.target.value);
   const handleHelpdeskQuantityChange = (e) => setHelpdeskQuantity(e.target.value === '' ? '' : Math.max(0, parseInt(e.target.value) || 0));
   const handleRmmPlanChange = (e) => setRmmPlan(e.target.value);
   const handleRmmEndpointsChange = (e) => setRmmEndpoints(e.target.value === '' ? '' : Math.max(0, parseInt(e.target.value) || 0));
   const handleCurrentSpendChange = (e) => setCurrentSpend(e.target.value);
-  const handleNocShiftChange = (e) => setNocShift(e.target.value);
   const handleNocTicketsChange = (e) => setNocTickets(e.target.value === '' ? '' : Math.max(0, parseInt(e.target.value) || 0));
   const handleNocSlaChange = (e) => setNocSla(e.target.value);
 
@@ -579,7 +598,7 @@ function LandingExtension() {
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-12">
               Our <span style={{ color: '#727CAB' }}>Partners</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center">
               We collaborate with industry leaders to deliver cutting-edge solutions and exceptional service quality.
             </p>
           </div>
@@ -2844,54 +2863,111 @@ function LandingExtension() {
                           <div>
                             <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
                               <span className="w-2 h-2 bg-[#727CAB] rounded-full mr-2"></span>
-                              Support Hours
+                              Coverage Hours
                             </label>
                             <select
                               value={nocShift || ''}
                               onChange={handleNocShiftChange}
                               className="w-full p-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#727CAB] focus:border-[#727CAB] bg-white shadow-sm hover:border-[#727CAB]/50 transition-colors text-black"
                             >
-                              <option value="">Choose Hours</option>
-                              <option value="24/7">24/7 Support ($40/device)</option>
-                              <option value="8/5">Business Hours ($30/device)</option>
-                              <option value="weekend">Weekend Only ($25/device)</option>
+                              <option value="">Choose Coverage</option>
+                              <option value="24x7">24/7 Coverage (720 hrs)</option>
+                              <option value="8x5">Business Hours (176 hrs)</option>
+                              <option value="8x5_weekend">Business + Weekend (245 hrs)</option>
                             </select>
                           </div>
 
                           <div>
                             <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
                               <span className="w-2 h-2 bg-[#727CAB] rounded-full mr-2"></span>
-                              Tentative Tickets/Month
+                              Support Tier
                             </label>
-                            <input
-                              type="number"
-                              min="0"
-                              value={nocTickets || ''}
-                              onChange={handleNocTicketsChange}
+                            <select
+                              value={nocTier || ''}
+                              onChange={handleNocTierChange}
                               className="w-full p-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#727CAB] focus:border-[#727CAB] bg-white shadow-sm hover:border-[#727CAB]/50 transition-colors text-black"
-                              placeholder="0"
-                            />
+                            >
+                              <option value="">Choose Tier</option>
+                              <option value="L1">L1 Support (600 tickets/mo)</option>
+                              <option value="L2">L2 Support (300 tickets/mo)</option>
+                            </select>
                           </div>
                         </div>
                       )}
 
-                      {nocPlan === 'standard' && (
-                        <div className="mb-6">
-                          <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                            <span className="w-2 h-2 bg-[#727CAB] rounded-full mr-2"></span>
-                            SLA Level
-                          </label>
-                          <select
-                            value={nocSla || ''}
-                            onChange={handleNocSlaChange}
-                            className="w-full md:w-auto p-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#727CAB] focus:border-[#727CAB] bg-white shadow-sm hover:border-[#727CAB]/50 transition-colors"
-                          >
-                            <option value="">Choose SLA</option>
-                            <option value="2hours">2 Hours Response (Included)</option>
-                            <option value="30min">30 Minutes Response (+20% premium)</option>
-                          </select>
+                      {nocPlan === 'basic' && (
+                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                          <div>
+                            <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+                              <span className="w-2 h-2 bg-[#727CAB] rounded-full mr-2"></span>
+                              Coverage Hours
+                            </label>
+                            <select
+                              value={nocShift || ''}
+                              onChange={handleNocShiftChange}
+                              className="w-full p-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#727CAB] focus:border-[#727CAB] bg-white shadow-sm hover:border-[#727CAB]/50 transition-colors text-black"
+                            >
+                              <option value="">Choose Coverage</option>
+                              <option value="24x7">24/7 Coverage (720 hrs)</option>
+                              <option value="8x5">Business Hours (176 hrs)</option>
+                              <option value="8x5_weekend">Business + Weekend (245 hrs)</option>
+                            </select>
+                          </div>
+
+                          <div>
+                            <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+                              <span className="w-2 h-2 bg-[#727CAB] rounded-full mr-2"></span>
+                              Support Tier
+                            </label>
+                            <select
+                              value={nocTier || ''}
+                              onChange={handleNocTierChange}
+                              className="w-full p-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#727CAB] focus:border-[#727CAB] bg-white shadow-sm hover:border-[#727CAB]/50 transition-colors text-black"
+                            >
+                              <option value="">Choose Tier</option>
+                              <option value="L1">L1 Support (600 tickets/mo)</option>
+                              <option value="L2">L2 Support (300 tickets/mo)</option>
+                            </select>
+                          </div>
                         </div>
                       )}
+
+                      <div className="mb-6">
+                        <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+                          <span className="w-2 h-2 bg-[#727CAB] rounded-full mr-2"></span>
+                          SLA Level
+                        </label>
+                        <select
+                          value={nocSla || ''}
+                          onChange={handleNocSlaChange}
+                          className="w-full p-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#727CAB] focus:border-[#727CAB] bg-white shadow-sm hover:border-[#727CAB]/50 transition-colors text-black"
+                        >
+                          <option value="">Choose SLA</option>
+                          <option value="2hr">2 Hours Response</option>
+                          <option value="15min">15 Minutes Response</option>
+                        </select>
+                        <p className="text-xs text-gray-500 mt-1">
+                          15min SLA reduces ticket capacity by 30%
+                        </p>
+                      </div>
+
+                      <div className="mb-6">
+                        <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+                          <span className="w-2 h-2 bg-[#727CAB] rounded-full mr-2"></span>
+                          Expected Monthly Tickets
+                        </label>
+                        <input
+                          type="number"
+                          min="0"
+                          value={nocTickets || ''}
+                          onChange={handleNocTicketsChange}
+                          className="w-full p-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#727CAB] focus:border-[#727CAB] bg-white shadow-sm hover:border-[#727CAB]/50 transition-colors text-black"
+                          placeholder="0"
+                        />
+                        <p className="text-xs text-gray-500 mt-1">
+                          Base capacity: L1 (600 tickets/mo) | L2 (300 tickets/mo)
+                        </p>
+                      </div>
 
                       <div className="bg-[#727CAB]/5 rounded-lg p-6 border border-[#727CAB]/20">
                         <div className="flex items-center justify-between mb-4">
@@ -2904,11 +2980,13 @@ function LandingExtension() {
                             )}
                           </span>
                         </div>
-                        {nocPlan === 'standard' && (
+                        {window.nocCalculationBreakdown && nocPlan !== 'advanced' && (
                           <div className="text-sm text-gray-600 space-y-1">
-                            <div>Base Device Cost: ${Math.max(nocDevices * (nocShift === '24/7' ? 40 : nocShift === '8/5' ? 30 : nocShift === 'weekend' ? 25 : 20), nocDevices < 25 ? 100 : 0).toLocaleString()}</div>
-                            <div>Ticket Cost: ${calculateNocTicketCost().toLocaleString()}</div>
-                            {nocSla === '30min' && <div>SLA Premium: ${(nocCost * 0.2).toLocaleString()}</div>}
+                            <div>Coverage Staff: {window.nocCalculationBreakdown.coverageStaff} engineers</div>
+                            <div>Ticket Staff: {window.nocCalculationBreakdown.ticketStaff} engineers</div>
+                            <div>Final Staff: {window.nocCalculationBreakdown.finalStaff} engineers</div>
+                            <div>Device Cost: ${window.nocCalculationBreakdown.deviceCost.toLocaleString()}</div>
+                            <div>Staff Cost: ${window.nocCalculationBreakdown.tierCost.toLocaleString()}</div>
                           </div>
                         )}
                       </div>
@@ -3368,26 +3446,26 @@ function LandingExtension() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#727CAB] to-[#5a6b99]">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#727CAB] mb-6">
               Ready to streamline your IT?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Start with Basic at $5/ticket.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="#contact-section">
-                <Button className="bg-white text-[#727CAB] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button className="bg-[#727CAB] hover:bg-[#5a6b99] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                   Contact Sales
                 </Button>
               </a>
-              <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#727CAB] px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
+              <Button className="bg-transparent border-2 border-[#727CAB] text-[#727CAB] hover:bg-[#727CAB] hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300">
                 Live Demo
               </Button>
             </div>
-            <p className="text-white/80 text-sm">
+            <p className="text-gray-600 text-sm">
               <strong>Limited spots this month.</strong> Get started before our capacity fills up.
             </p>
           </AnimatedSection>

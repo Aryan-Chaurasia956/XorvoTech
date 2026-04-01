@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     host: "0.0.0.0",
     port: 8080,
     allowedHosts: [
-      'jadwiga-unrevoked-lynelle.ngrok-free.dev'
+      'junita-crumbly-abysmally.ngrok-free.dev'
     ]
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
