@@ -6,6 +6,9 @@ import AboutSection from "@/components/AboutSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import JsonLdSchema from "@/components/JsonLdSchema";
+import StickyFeatureSection from "@/components/ui/sticky-scroll-cards-section";
+import RotatingGradientRight from "@/components/ui/rotating-gradient-right";
+import ClientReviewsMarquee from "@/components/ui/marquee-card";
 
 // Lazy load below-the-fold components for better performance 
 const SolutionsSection = lazy(() => import("@/components/SolutionsSection"));
@@ -52,6 +55,28 @@ const Index = () => {
       </ErrorBoundary>
       
       <WhyChooseSection />
+      
+      {/* Services Sticky Stack Section */}
+      <ErrorBoundary fallback={<SectionLoader />}>
+        <StickyFeatureSection />
+      </ErrorBoundary>
+
+      {/* Rotating Gradient Callout to Avinyax */}
+      <ErrorBoundary fallback={<SectionLoader />}>
+        <RotatingGradientRight />
+      </ErrorBoundary>
+
+      {/* Standalone Client Reviews Section */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#727CAB] mb-12 text-center" style={{ fontFamily: "'Rostex', sans-serif" }}>
+            CLIENT <span className="text-[#727CAB]/85">REVIEWS</span>
+          </h2>
+          <ErrorBoundary fallback={<SectionLoader />}>
+            <ClientReviewsMarquee />
+          </ErrorBoundary>
+        </div>
+      </section>
       
       <ErrorBoundary fallback={<SectionLoader />}>
         <Suspense fallback={<SectionLoader />}>

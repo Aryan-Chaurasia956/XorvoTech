@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect'
 
 import "./Services.css"
 
@@ -24,6 +25,25 @@ const ServicesOverview = () => {
       }
     }
   }, [location]);
+
+  const words = [
+    {
+      text: "Global",
+    },
+    {
+      text: "Partners.",
+    },
+    {
+      text: "Expert",
+    },
+    {
+      text: "Support.",
+    },
+    {
+      text: "Certified.",
+      className: "text-[#727CAB] dark:text-[#727CAB]",
+    },
+  ];
 
   return (
     <div className="bg-gradient-to-br from-cyan-50 via-blue-50 to-white">
@@ -143,7 +163,7 @@ const ServicesOverview = () => {
                 <div>
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4 backdrop-blur-sm">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Managed IT Services</h3>
@@ -304,82 +324,47 @@ const ServicesOverview = () => {
             </div>
           </div>
 
-          {/* Partnership Stats */}
-          <div className="mt-20">
-            <div className="relative">
-              {/* Background decoration */}
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-blue-50/30 to-slate-50 rounded-3xl"></div>
-              
-              <div className="relative grid grid-cols-1 md:grid-cols-3 gap-0 rounded-3xl overflow-hidden shadow-2xl border border-white/50">
-                {/* Partners Count */}
-                <div className="relative bg-white/80 backdrop-blur-sm p-8 text-center border-r border-gray-200/50 first:rounded-l-3xl last:rounded-r-3xl md:last:rounded-r-none">
-                  <div className="relative">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl mb-6 shadow-lg">
-                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                      </svg>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <h3 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
-                        21+
-                      </h3>
-                      <p className="text-sm font-medium text-gray-600 uppercase tracking-wider">Strategic Partners</p>
-                      <p className="text-xs text-gray-500 mt-2 max-w-[180px] mx-auto">Leading technology providers worldwide</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Support */}
-                <div className="relative bg-white/80 backdrop-blur-sm p-8 text-center border-r border-gray-200/50 last:rounded-r-3xl md:last:rounded-r-none">
-                  <div className="relative">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-700 rounded-2xl mb-6 shadow-lg">
-                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                      </svg>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <h3 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-700 bg-clip-text text-transparent">
-                        24/7
-                      </h3>
-                      <p className="text-sm font-medium text-gray-600 uppercase tracking-wider">Partner Support</p>
-                      <p className="text-xs text-gray-500 mt-2 max-w-[180px] mx-auto">Round-the-clock assistance and expertise</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Certified Solutions */}
-                <div className="relative bg-white/80 backdrop-blur-sm p-8 text-center last:rounded-r-3xl">
-                  <div className="relative">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-600 to-blue-700 rounded-2xl mb-6 shadow-lg">
-                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                      </svg>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <h3 className="text-5xl font-bold bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent">
-                        100%
-                      </h3>
-                      <p className="text-sm font-medium text-gray-600 uppercase tracking-wider">Certified Solutions</p>
-                      <p className="text-xs text-gray-500 mt-2 max-w-[180px] mx-auto">Industry-recognized standards and compliance</p>
-                    </div>
-                  </div>
-                </div>
+          {/* Aceternity Typewriter Stats & Merged CTA Block */}
+          <div className="mt-20 bg-white/60 backdrop-blur-sm rounded-3xl border border-white/50 p-8 md:p-12 shadow-2xl flex flex-col items-center text-center">
+            <p className="text-neutral-500 text-sm md:text-base font-semibold uppercase tracking-wider mb-2">
+              Empowering Global Enterprise Infrastructure
+            </p>
+            <TypewriterEffectSmooth words={words} />
+            
+            {/* Split Stats grid with clean matching colors */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl mt-8 mb-12 border-t border-b border-[#727CAB]/10 py-8">
+              <div className="space-y-1">
+                <p className="text-3xl font-extrabold text-[#727CAB]">21+</p>
+                <p className="text-sm font-bold text-gray-700 uppercase tracking-wide">Strategic Partners</p>
+                <p className="text-xs text-gray-500 max-w-[200px] mx-auto">Leading technology providers worldwide</p>
               </div>
+              <div className="space-y-1">
+                <p className="text-3xl font-extrabold text-[#727CAB]">24/7</p>
+                <p className="text-sm font-bold text-gray-700 uppercase tracking-wide">Partner Support</p>
+                <p className="text-xs text-gray-500 max-w-[200px] mx-auto">Round-the-clock assistance and expertise</p>
+              </div>
+              <div className="space-y-1">
+                <p className="text-3xl font-extrabold text-[#727CAB]">100%</p>
+                <p className="text-sm font-bold text-gray-700 uppercase tracking-wide">Certified Solutions</p>
+                <p className="text-xs text-gray-500 max-w-[200px] mx-auto">Industry-recognized standards and compliance</p>
+              </div>
+            </div>
+
+            {/* Custom CTA buttons merged directly to the typewriter */}
+            <div className="flex flex-col md:flex-row gap-4">
+              <Link to="/?contact=true&partner=true">
+                <button className="w-48 h-12 rounded-xl bg-[#727CAB] text-white hover:bg-[#727CAB]/90 border border-transparent text-sm font-bold shadow-lg shadow-[#727CAB]/20 transition-all duration-300 hover:scale-105">
+                  Become a Partner
+                </button>
+              </Link>
+              <Link to="/?contact=true">
+                <button className="w-48 h-12 rounded-xl bg-white text-[#727CAB] border border-[#727CAB] text-sm font-bold transition-all duration-300 hover:bg-[#727CAB]/5 hover:scale-105">
+                  Get Started Today
+                </button>
+              </Link>
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="text-center mt-12">
-            <Link to="/?contact=true&partner=true" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:from-blue-700 hover:to-purple-700 group">
-              <span>Become a Partner</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </Link>
-          </div>
         </div>
 
         {/* Custom Animation Styles */}
@@ -397,29 +382,6 @@ const ServicesOverview = () => {
         `}</style>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Partner with Xorvo Technologies to accelerate your digital transformation journey. Our expert team is ready to deliver tailored solutions that drive your business forward.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/?contact=true">
-              <button type="button" className="bg-[#727CAB] text-white hover:bg-[#5a6695] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
-                Get Started Today
-              </button>
-            </Link>
-            <Link to="/about">
-              <button type="button" className="border-2 border-white text-white hover:bg-white hover:text-[#727CAB] focus:ring-4 focus:outline-none focus:ring-[#727CAB]/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
-                Learn More About Us
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

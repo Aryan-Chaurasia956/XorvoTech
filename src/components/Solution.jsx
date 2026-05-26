@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, Link } from 'react-router-dom'
 import GradientBlinds from './GradientBlinds'
+import { ArrowUpRight } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import FlowArt, { FlowSection } from '@/components/ui/story-scroll'
+import SolutionsCTA from '@/components/ui/cta-with-marquee'
  
 import "./Solution.css"
 
@@ -26,6 +30,7 @@ const Solution = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
   return (
     <div className="bg-gradient-to-br from-cyan-50 via-blue-50 to-white">
       {/* Xorvo Technologies Solutions - Full Screen Hero */}
@@ -86,314 +91,253 @@ const Solution = () => {
 
       <div className="divider"></div>
 
-      <div className='noah solution-cards'>
-        <div id='business-solutions' className='john scroll-anchor' data-heading='Business Automation Solutions'>
-          <div className='text-2xl'>
-            Business Automation Solutions
+      {/* Story Scroll Panels for Business Solutions */}
+      <FlowArt aria-label="Solutions Panels Story Scroll">
+        
+        {/* Panel 1: Business Automation Solutions (Brand Purple Background) */}
+        <FlowSection aria-label="Business Automation Solutions" style={{ backgroundColor: '#727CAB', color: '#ffffff' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full w-full">
+            <div className="space-y-6">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">01 — Operations & Workflow</p>
+              <hr className="border-white/20" />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                BUSINESS
+                <br />
+                AUTOMATION
+              </h2>
+              <p className="text-lg text-gray-100 leading-relaxed max-w-xl">
+                Our business automation suite helps organizations digitize processes and create smarter workflows with CRM, ERP, and custom applications.
+              </p>
+              <ul className="space-y-3 pl-4 border-l-2 border-white/30 text-gray-200 font-medium">
+                <li>• CRM Solutions & Sales Pipelines</li>
+                <li>• ERP Systems & Operations</li>
+                <li>• HRMS Platforms & Compliance</li>
+                <li>• Custom Application Development</li>
+                <li>• UI/UX Application Design</li>
+              </ul>
+              <div className="pt-4">
+                <Link to="/?contact=true">
+                  <Button variant="outline" className="rounded-full bg-white text-[#727CAB] hover:bg-gray-100 hover:text-[#727CAB] border-none font-semibold px-6 py-5">
+                    Explore Business Automation
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block relative h-[80%] rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                alt="Business Automation"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
           </div>
-          <div>
-            Our business automation suite helps organizations digitize processes and create smarter workflows.
-            <ul>
-              <li>• CRM Solutions - Manage client relationships, automate sales pipelines, and enhance customer engagement.</li>
-              <li>• ERP Systems - Centralize operations, accounting, and inventory in one secure, unified platform.</li>
-              <li>• HRMS Platforms - Simplify HR operations, employee data management, and compliance tracking.</li>
-              <li>•	Custom Applications - Tailored applications designed to fit your specific operational requirements.</li>
-              <li>•	Application Designing (UI/UX) - Modern interfaces that enhance usability and deliver functional aesthetics.</li>
-            </ul>
+        </FlowSection>
+
+        {/* Panel 2: Web & Application Solutions (White Background) */}
+        <FlowSection aria-label="Web & Application Solutions" style={{ backgroundColor: '#ffffff', color: '#727CAB' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full w-full">
+            <div className="hidden lg:block relative h-[80%] rounded-3xl overflow-hidden shadow-2xl order-last lg:order-first">
+              <img
+                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80"
+                alt="Web Development"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#727CAB]/70">02 — Digital Presence</p>
+              <hr className="border-[#727CAB]/20" />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#727CAB]">
+                WEB & APP
+                <br />
+                DEVELOPMENT
+              </h2>
+              <p className="text-lg text-[#727CAB]/90 leading-relaxed max-w-xl">
+                Your digital presence is first impression. We design, develop, and deploy web and mobile applications optimized for performance and scalability.
+              </p>
+              <ul className="space-y-3 pl-4 border-l-2 border-[#727CAB]/30 text-[#727CAB]/85 font-medium">
+                <li>• Website Development & SEO</li>
+                <li>• Mobile App Development</li>
+                <li>• VPS Hosting & Servers</li>
+                <li>• Cloud Migration Services</li>
+                <li>• CI/CD Deployment Automation</li>
+              </ul>
+              <div className="pt-4">
+                <Link to="/?contact=true">
+                  <Button className="rounded-full bg-[#727CAB] text-white hover:bg-[#727CAB]/90 border-none font-semibold px-6 py-5">
+                    View Application Services
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="flex justify-center">
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Explore Business Automation </button>
+        </FlowSection>
+
+        {/* Panel 3: Infrastructure & Cloud Solutions (Brand Purple Background) */}
+        <FlowSection aria-label="Infrastructure & Cloud Solutions" style={{ backgroundColor: '#727CAB', color: '#ffffff' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full w-full">
+            <div className="space-y-6">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">03 — Cloud Integration</p>
+              <hr className="border-white/20" />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                CLOUD &
+                <br />
+                INFRASTRUCTURE
+              </h2>
+              <p className="text-lg text-gray-100 leading-relaxed max-w-xl">
+                Digital visibility and operational intelligence are essential. Our optimization services help you stay competitive in search and data-driven decisions.
+              </p>
+              <ul className="space-y-3 pl-4 border-l-2 border-white/30 text-gray-200 font-medium">
+                <li>• SEO Optimization & Content</li>
+                <li>• AEO (Answer Engine Optimization)</li>
+                <li>• GEO Optimization & Local Search</li>
+                <li>• 24×7 NOC Integration</li>
+                <li>• Enterprise Network Design</li>
+              </ul>
+              <div className="pt-4">
+                <Link to="/?contact=true">
+                  <Button variant="outline" className="rounded-full bg-white text-[#727CAB] hover:bg-gray-100 hover:text-[#727CAB] border-none font-semibold px-6 py-5">
+                    Improve Online Visibility
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block relative h-[80%] rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+                alt="Cloud Infrastructure"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
           </div>
-        </div>
+        </FlowSection>
 
-        <div id='development-hosting' className='felix scroll-anchor' data-heading='Web & Application Solutions'>
-          <div className='text-2xl '>
-            Web & Application Solutions
+        {/* Panel 4: Infrastructure Architecture (White Background) */}
+        <FlowSection aria-label="Infrastructure Architecture" style={{ backgroundColor: '#ffffff', color: '#727CAB' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full w-full">
+            <div className="hidden lg:block relative h-[80%] rounded-3xl overflow-hidden shadow-2xl order-last lg:order-first">
+              <img
+                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
+                alt="Infrastructure Architecture"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#727CAB]/70">04 — Enterprise Hardware</p>
+              <hr className="border-[#727CAB]/20" />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#727CAB]">
+                ENTERPRISE
+                <br />
+                ARCHITECTURE
+              </h2>
+              <p className="text-lg text-[#727CAB]/90 leading-relaxed max-w-xl">
+                We design, build, and implement enterprise-ready infrastructure that delivers stability, scalability, and security.
+              </p>
+              <ul className="space-y-3 pl-4 border-l-2 border-[#727CAB]/30 text-[#727CAB]/85 font-medium">
+                <li>• Network Designing & Topologies</li>
+                <li>• Infrastructure Deployment</li>
+                <li>• Server Virtualization</li>
+                <li>• Data Center Planning</li>
+                <li>• Hardware Provisioning</li>
+              </ul>
+              <div className="pt-4">
+                <Link to="/?contact=true">
+                  <Button className="rounded-full bg-[#727CAB] text-white hover:bg-[#727CAB]/90 border-none font-semibold px-6 py-5">
+                    Explore Infrastructure Services
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div>
-            Your digital presence is the first impression of your business.
-            We design, develop, and deploy web and mobile applications optimized for performance, scalability, and seamless user experience.
+        </FlowSection>
+
+        {/* Panel 5: Monitoring & Automation (Brand Purple Background) */}
+        <FlowSection aria-label="Monitoring & Automation" style={{ backgroundColor: '#727CAB', color: '#ffffff' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full w-full">
+            <div className="space-y-6">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">05 — Real-time Analytics</p>
+              <hr className="border-white/20" />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                MONITORING &
+                <br />
+                AUTOMATION
+              </h2>
+              <p className="text-lg text-gray-100 leading-relaxed max-w-xl">
+                Visibility and control are at core of every efficient IT ecosystem. Our real-time monitoring and automation solutions ensure optimal performance.
+              </p>
+              <ul className="space-y-3 pl-4 border-l-2 border-white/30 text-gray-200 font-medium">
+                <li>• 24×7 NOC Setup & Monitoring</li>
+                <li>• Automation Frameworks</li>
+                <li>• CI/CD Pipelines</li>
+                <li>• Performance Analytics</li>
+                <li>• Real-time Rollback & Testing</li>
+              </ul>
+              <div className="pt-4">
+                <Link to="/?contact=true">
+                  <Button variant="outline" className="rounded-full bg-white text-[#727CAB] hover:bg-gray-100 hover:text-[#727CAB] border-none font-semibold px-6 py-5">
+                    Learn About Monitoring
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:block relative h-[80%] rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                alt="Monitoring & Automation"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
           </div>
-          <ul>
-            <li>•	Website Development - High-speed, responsive websites optimized for SEO, GEO, and AEO.</li>
-            <li>•	Mobile App Development - Secure, cross-platform mobile apps built for modern business environments.</li>
-            <li>•	VPS Hosting - Private and secure servers with full control and superior performance.</li>
-            <li>•	Cloud Migration - Seamless workload transfer across AWS, Azure, and Google Cloud.</li>
-            <li>•	Deployment Automation - CI/CD frameworks for continuous application delivery.</li>
-          </ul>
-          <div className="flex justify-center">
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">View Application Services </button>
+        </FlowSection>
+
+        {/* Panel 6: Cloud Enablement (Premium Slate-900 Background) */}
+        <FlowSection aria-label="Cloud Enablement" style={{ backgroundColor: '#0f172a', color: '#ffffff' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full w-full">
+            <div className="hidden lg:block relative h-[80%] rounded-3xl overflow-hidden shadow-2xl order-last lg:order-first">
+              <img
+                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80"
+                alt="Cloud Enablement"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">06 — Multi-Region Delivery</p>
+              <hr className="border-white/10" />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                CLOUD
+                <br />
+                ENABLEMENT
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
+                We help enterprises modernize with scalable, hybrid cloud architectures — seamlessly connecting private and public environments.
+              </p>
+              <ul className="space-y-3 pl-4 border-l-2 border-white/20 text-gray-300 font-medium">
+                <li>• Cloud Migration Services</li>
+                <li>• Hybrid Cloud Management</li>
+                <li>• Multi-cloud Setups</li>
+                <li>• Backup & Disaster Recovery</li>
+                <li>• Multi-region Data Resilience</li>
+              </ul>
+              <div className="pt-4">
+                <Link to="/?contact=true">
+                  <Button className="rounded-full bg-[#727CAB] text-white hover:bg-[#727CAB]/90 border-none font-semibold px-6 py-5">
+                    Optimize My Cloud
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </FlowSection>
 
-        <div id='digital-marketing-infrastructure' className='akash scroll-anchor' data-heading='Infrastructure & Cloud Solutions'>
-          <div className='text-2xl'>
-            Infrastructure & Cloud Solutions
-          </div>
-          <div>
-            Digital visibility and operational intelligence are essential to performance.
-            Our optimization services help you stay competitive in both search visibility and data-driven decision-making.
-          </div>
-          <ul>
-            <li>•	SEO Optimization - Complete website health, structure, and content optimization.</li>
-            <li>•	AEO (Answer Engine Optimization) - Voice and AI-driven search readiness for intelligent discovery.</li>
-            <li>•	GEO Optimization - Local visibility through map listings and regional indexing.</li>
-            <li>•	Monitoring & NOC Integration - 24×7 infrastructure visibility for uptime and reliability.</li>
-            <li>•	Network Designing - Enterprise LAN/WAN and multi-site connectivity design.</li>
-          </ul>
-          <div className='flex flex-col gap-2 items-center'>
-            <p>All three are merged into one integrated optimization platform — ensuring better visibility, ranking, and local reach.</p>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Improve Online Visibility </button>
-          </div>
-        </div>
+      </FlowArt>
 
-        {/* Infrastructure Architecture & Deployment */}
-        <div id='infrastructure-architecture' className='john scroll-anchor' data-heading='Infrastructure Architecture'>
-          <div className='text-2xl flex justify-center'>Infrastructure Architecture & Deployment</div>
-          <div>We design, build, and implement enterprise-ready infrastructure that delivers stability, scalability, and security.</div>
-          <ul>
-            <li>• Network Designing – Advanced LAN/WAN topologies, VPNs, and hybrid connectivity.</li>
-            <li>• Infrastructure Deployment – Data center planning, hardware provisioning, and topology setup.</li>
-            <li>• Server Virtualization – Efficient compute resource management and optimization.</li>
-          </ul>
-          <div className='flex justify-center'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Infrastructure Services</button>
-          </div>
-        </div>
-
-        {/* Monitoring & Automation Solutions */}
-        <div id='monitoring-automation' className='felix scroll-anchor' data-heading='Monitoring & Automation'>
-          <div className='text-2xl'>Monitoring & Automation Solutions</div>
-          <div>Visibility and control are at the core of every efficient IT ecosystem. Our real-time monitoring and automation solutions ensure every component performs at its best — continuously.</div>
-          <ul>
-            <li>• Monitoring & NOC Setup – 24×7 operational visibility across all systems and endpoints.</li>
-            <li>• Automation Frameworks – Scripted task orchestration for faster deployments and fewer errors.</li>
-            <li>• CI/CD Pipelines – Continuous integration and delivery with real-time rollback and testing.</li>
-            <li>• Performance Analytics – Advanced metrics for capacity planning and infrastructure optimization.</li>
-          </ul>
-          <div className='flex justify-center'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn About Monitoring Solutions</button>
-          </div>
-        </div>
-
-        {/* Cloud Enablement & Scalability */}
-        <div id='cloud-enablement' className='akash scroll-anchor' data-heading='Cloud Enablement'>
-          <div className='text-2xl'>Cloud Enablement & Scalability</div>
-          <div>We help enterprises modernize with scalable, hybrid cloud architectures — seamlessly connecting private and public environments.</div>
-          <ul>
-            <li>• Cloud Migration – Move workloads to AWS, Azure, or GCP with precision and zero downtime.</li>
-            <li>• Hybrid Cloud Management – Unified visibility and control for multi-cloud setups.</li>
-            <li>• Backup & Disaster Recovery – Multi-region data resilience and policy-based recovery automation.</li>
-          </ul>
-          <div className='flex justify-center'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Optimize My Cloud</button>
-          </div>
-        </div>
-
-        {/* Optimization & Digital Reach (SEO / AEO / GEO) */}
-        <div id='optimization-digital-reach' className='john scroll-anchor' data-heading='Digital Optimization'>
-          <div className='text-2xl'>Optimization & Digital Reach (SEO / AEO / GEO)</div>
-          <div>Xorvo helps your business remain discoverable across every digital platform. Our integrated optimization framework covers visibility from search engines to AI-powered assistants — all in a single solution.</div>
-          <ul>
-            <li>• SEO Optimization – Structured content, performance tuning, and keyword integrity.</li>
-            <li>• AEO (Answer Engine Optimization) – Conversational and voice-search readiness for AI platforms.</li>
-            <li>• GEO Optimization – Enhanced local discovery with accurate business indexing and map listings.</li>
-          </ul>
-          <div className='flex flex-col gap-2 items-center'>
-            <p>All three are combined into one managed optimization program for consistent growth across regions and platforms.</p>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Improve Digital Presence</button>
-          </div>
-        </div>
-
-        {/* Application Engineering & Customization */}
-        <div id='application-engineering' className='felix scroll-anchor' data-heading='Application Engineering'>
-          <div className='text-2xl'>Application Engineering & Customization</div>
-          <div>Every enterprise operates differently — your applications should too. We design and deploy solutions tailored to your operational needs and long-term scalability.</div>
-          <ul>
-            <li>• Application Deployment – Seamless app rollouts with environment validation.</li>
-            <li>• Custom Application Development – Tailored solutions integrated with business workflows.</li>
-            <li>• Application Designing (UI/UX) – User-focused front-end architecture aligned with enterprise standards.</li>
-            <li>• API & System Integration – Secure connectivity between platforms and data sources.</li>
-          </ul>
-          <div className='flex justify-center'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Application Services</button>
-          </div>
-        </div>
-
-        {/* Enterprise Network Security Integration */}
-        <div id='network-security' className='akash scroll-anchor' data-heading='Network Security'>
-          <div className='text-2xl'>Enterprise Network Security Integration</div>
-          <div>Security is not a product — it’s a design principle. Our network and infrastructure solutions include integrated security layers that align with enterprise compliance standards.</div>
-          <ul>
-            <li>• Firewall & Access Policy Design – Layered protection with segmentation and rule enforcement.</li>
-            <li>• VPN & Remote Access – Secure connectivity for distributed environments.</li>
-            <li>• Traffic Optimization & SD-WAN – Intelligent routing for cloud-first networks.</li>
-            <li>• Compliance Alignment – Network controls mapped to ISO, GDPR, and NIST frameworks.</li>
-          </ul>
-          <div className='flex justify-center'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Network Assessment</button>
-          </div>
-        </div>
-
-        {/* Unified Deployment Ecosystem */}
-        <div id='unified-deployment' className='john scroll-anchor' data-heading='Unified Deployment'>
-          <div className='text-2xl'>Unified Deployment Ecosystem</div>
-          <div>We ensure every deployment — whether an application, server, or security stack — is part of a unified, automated environment. From CI/CD pipelines to integrated monitoring, Xorvo’s engineering approach ensures consistent performance and simplified management.</div>
-          <div className='flex justify-center'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Talk to a Deployment Engineer</button>
-          </div>
-        </div>
-
-      </div>
-
-      {/* INTEGRATION & ENGINEERING SOLUTIONS (Xorvo Technologies) */}
-      <div className=' noah '>
-        {/* Overview */}
-        <div id='integration-overview' className='john scroll-anchor' data-heading='Integration Solutions'>
-          <div className='text-2xl flex justify-center'>INTEGRATION & ENGINEERING SOLUTIONS (Xorvo Technologies)</div>
-          <div className='krishna'>(Overview)</div>
-          <div>Modern enterprises demand more than individual tools — they require complete ecosystems that integrate seamlessly across security, cloud, and application layers. Xorvo Technologies delivers unified engineering and integration frameworks that help organizations build cohesive, automated, and scalable IT environments.</div>
-          <div className='flex justify-center'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Talk to an Integration Expert</button>
-          </div>
-        </div>
-
-        {/* System Integration Framework */}
-        <div id='system-integration-framework' className='felix scroll-anchor' data-heading='System Integration'>
-          <div className='text-2xl'>System Integration Framework</div>
-          <div>We specialize in connecting diverse platforms, applications, and cloud infrastructures into one synchronized ecosystem. Our integration models ensure performance consistency, data integrity, and seamless interoperability.</div>
-          <ul>
-            <li>• API Integration and Middleware Development</li>
-            <li>• Cloud-to-Cloud and Cloud-to-On-Premise Sync</li>
-            <li>• Network-to-Application Orchestration</li>
-            <li>• Secure Identity Federation and Access Management</li>
-            <li>• Automation via CI/CD and ITSM platforms</li>
-          </ul>
-
-
-
-
-          
-          <div className='center-row'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Integration Services</button>
-          </div>
-        </div>
-
-        {/* Enterprise Architecture & Engineering */}
-        <div id='enterprise-architecture-engineering' className='akash scroll-anchor' data-heading='Enterprise Architecture'>
-          <div className='text-2xl'>Enterprise Architecture & Engineering</div>
-          <div>Our engineers design enterprise architectures that combine cloud efficiency, security compliance, and automation intelligence. We align every component — from infrastructure to applications — with your business performance goals.</div>
-          <ul>
-            <li>• Enterprise Architecture Planning and Blueprinting</li>
-            <li>• Hybrid Infrastructure Design (Cloud + On-Prem)</li>
-            <li>• Multi-layer Security and Compliance Architecture</li>
-            <li>• Virtualization and Resource Pooling (VMware, Hyper-V, KVM)</li>
-            <li>• Unified Monitoring and Performance Benchmarking</li>
-          </ul>
-          <div className='center-row'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Architecture Review</button>
-          </div>
-        </div>
-
-        {/* Hybrid & Multi-Cloud Integration */}
-        <div id='hybrid-multi-cloud' className='john scroll-anchor' data-heading='Multi-Cloud Integration'>
-          <div className='text-2xl'>Hybrid & Multi-Cloud Integration</div>
-          <div>Enterprises today operate across multiple cloud environments — AWS, Azure, GCP, and private data centers. We simplify this complexity through hybrid cloud integration frameworks that enhance visibility, security, and control.</div>
-          <ul>
-            <li>• Unified Cloud Management Consoles</li>
-            <li>• Automated Workload Distribution and Migration</li>
-            <li>• Identity and Access Synchronization</li>
-            <li>• Multi-Region High Availability Architecture</li>
-            <li>• Security Compliance Across Cloud Environments</li>
-          </ul>
-          <div className='center-row'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Learn More About Cloud Integration</button>
-          </div>
-        </div>
-
-        {/* Continuous Engineering & Automation */}
-        <div id='continuous-engineering-automation' className='felix scroll-anchor' data-heading='Continuous Engineering'>
-          <div className='text-2xl'>Continuous Engineering & Automation</div>
-          <div>Automation ensures speed, reliability, and consistency across every deployment. We enable continuous engineering pipelines that connect development, security, and operations in real time.</div>
-          <ul>
-            <li>• CI/CD Automation Pipelines</li>
-            <li>• DevSecOps Implementation and Integration</li>
-            <li>• Infrastructure as Code (IaC) with Terraform and Ansible</li>
-            <li>• Automated Testing and Rollback</li>
-            <li>• Centralized Observability and Monitoring</li>
-          </ul>
-          <div className='center-row'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Automate My Environment</button>
-          </div>
-        </div>
-
-        {/* Unified Security and Performance Operations */}
-        <div id='unified-security-performance-ops' className='akash scroll-anchor' data-heading='Security Operations'>
-          <div className='text-2xl'>Unified Security and Performance Operations</div>
-          <div>Integration is only complete when security and monitoring operate as one system. Our solutions bring SOC and NOC together — enabling predictive defense and proactive performance optimization.</div>
-          <ul>
-            <li>• SOC & NOC Integration</li>
-            <li>• Threat Intelligence Automation</li>
-            <li>• Centralized Alert Management and Response</li>
-            <li>• Compliance-driven Reporting and Logging</li>
-            <li>• SLA-driven Operations Frameworks</li>
-          </ul>
-          <div className='center-row'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Request Integrated Ops Demo</button>
-          </div>
-        </div>
-
-        {/* Full-Stack Application Ecosystem */}
-        <div id='full-stack-application-ecosystem' className='john scroll-anchor' data-heading='Full-Stack Applications'>
-          <div className='text-2xl'>Full-Stack Application Ecosystem</div>
-          <div>From backend systems to user-facing interfaces, we build application ecosystems that work across every layer of your enterprise.</div>
-          <ul>
-            <li>• Application Layer Integration with Databases and APIs</li>
-            <li>• Secure Data Exchange Across Systems</li>
-            <li>• Scalable Middleware Development</li>
-            <li>• Performance Engineering and Optimization</li>
-          </ul>
-          <div className='center-row'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Explore Application Engineering</button>
-          </div>
-        </div>
-
-        {/* Collaborative Engineering (Cross-Platform Alignment) */}
-        <div id='collaborative-engineering' className='felix scroll-anchor' data-heading='Collaborative Engineering'>
-          <div className='text-2xl'>Collaborative Engineering (Cross-Platform Alignment)</div>
-          <div>Our team works closely with technology leaders — Fortinet, Cisco, Check Point, Microsoft, AWS, and ServiceNow — to ensure your stack remains integrated and future-proof. We align engineering practices across platforms, ensuring compatibility, scalability, and ongoing optimization.</div>
-          <div className='center-row'>
-            <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View Partner Ecosystem</button>
-          </div>
-        </div>
-
-        {/* Closing Section (Final CTA / Confidence Message) */}
-      </div>
-      <div className='intro-card intro-stack p-30 relative bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800'>
-        {/* Content */}
-        <div className='krishna relative z-10 text-black text-center max-w-4xl mx-auto px-8'>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-lg md:text-xl text-gray-800 mb-8">
-            Integration is where real digital transformation happens. Xorvo Technologies brings together systems, security, and intelligence into one unified ecosystem — delivering performance without compromise and protection without limits.
-          </p>
-        </div>
-        <div className='cta-row relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4 px-8'>
-          <Link to="/?contact=true">
-            <button type="button" className="bg-black text-white hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-black/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
-              Request Integration Consultation
-            </button>
-          </Link>
-          <Link to="/services">
-            <button type="button" className="border-2 border-black text-black hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-black/50 font-semibold rounded-lg text-lg px-8 py-4 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
-              Explore All Services
-            </button>
-          </Link>
-        </div>
-      </div>
-
- 
+      {/* Closing Section */}
+      <SolutionsCTA />
     </div>
   )
 }
