@@ -12,9 +12,21 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// CORS setup
+// CORS setup supporting multiple comma-separated origins
+const allowedOrigins = process.env.CORS_ORIGIN 
+  ? process.env.CORS_ORIGIN.split(",").map(o => o.trim()) 
+  : ["http://localhost:8081"];
+
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || "http://localhost:8081",
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes("*")) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
