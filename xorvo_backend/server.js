@@ -204,7 +204,11 @@ app.post("/api/contact/submit", limiter, speedLimiter, async (req, res) => {
   }
 });
 
-// Start Express Server
-app.listen(PORT, () => {
-  console.log(`Xorvo Contact Form Backend listening on port ${PORT}`);
-});
+// Start Express Server only if not running in a Vercel Serverless Environment
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    console.log(`Xorvo Contact Form Backend listening on port ${PORT}`);
+  });
+}
+
+export default app;
